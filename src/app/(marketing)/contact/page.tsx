@@ -12,9 +12,9 @@ import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 import { LocalBusinessSchema } from "@/lib/schema/local-business";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Get a Bird-Proofing Quote",
+  title: "Send Photos for a Bird-Control Quote",
   description:
-    "Request a free quote for balcony bird netting, pigeon spikes, balcony cleaning, pet-safe netting, or commercial bird control in Vancouver and across Metro Vancouver.",
+    "Send photos for a free quote for balcony bird netting, bird spikes, pigeon-dropping cleanup, deterrents, commercial, or strata bird control in Vancouver and the Lower Mainland.",
   path: "/contact",
   image: "/images/balcony-netting-focused-installation.jpg",
 });
@@ -32,28 +32,28 @@ export default function ContactPage() {
 
       <PageHero
         eyebrow="Contact"
-        title="Request a free quote for bird netting, pigeon spikes, cleaning, or commercial bird control."
-        description="Use the quote form to send the practical details first, or call now if you already know the property issue and want a faster conversation."
+        title="Send photos for a clear bird-control quote."
+        description="Share the problem area, city, and property context. It is the fastest way to make the first conversation useful."
         image={{
           src: "/images/balcony-netting-focused-installation.jpg",
-          alt: "Balcony bird netting installation supporting the Pigeon Defenders quote page",
+          alt: "Balcony bird-netting installation supporting a Bird Control BC quote request",
         }}
         actions={[
           { href: "#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[
-          "Prepared for future API or CRM integration",
-          "Photo upload field reserved for backend wiring",
-          "Direct contact path for urgent property issues",
+          "A quote form built around useful property details",
+          "Photo upload is ready for future backend handling",
+          "Call when a direct conversation is better",
         ]}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Contact" },
         ]}
         note={{
-          eyebrow: "Lead flow",
-          body: "This is the main quote page for Vancouver and Metro Vancouver bird-proofing requests, with fields set up to support a future backend, CRM, or booking workflow.",
+          eyebrow: "Quote request",
+          body: "This page keeps the first request organized around the details needed to understand the property, not an unnecessarily long checklist.",
         }}
       />
 
@@ -65,8 +65,8 @@ export default function ContactPage() {
           <div data-reveal>
             <QuoteFormSection
               source="contact_page"
-              title="Request a free quote with the details that matter."
-              description="This form collects the practical details needed for balcony bird netting, pigeon spikes, cleaning, pet-safe netting, and commercial bird-control quotes without adding extra friction."
+              title="Show us what is happening."
+              description="A few clear photos and short practical notes are enough to start. Full upload delivery can be connected to a backend when the business workflow is selected."
             />
           </div>
         </Container>

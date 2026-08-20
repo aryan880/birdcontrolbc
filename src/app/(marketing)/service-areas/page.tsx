@@ -15,9 +15,9 @@ import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 import { LocalBusinessSchema } from "@/lib/schema/local-business";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Metro Vancouver Bird Proofing Service Areas",
+  title: "Bird Control Service Areas | Lower Mainland",
   description:
-    "Bird-proofing service areas across Metro Vancouver, including Vancouver, Burnaby, Richmond, Surrey, Coquitlam, New Westminster, North Vancouver, West Vancouver, Delta, and Langley.",
+    "Bird-control service areas across Vancouver and the Lower Mainland, including Vancouver, Burnaby, Richmond, North Vancouver, West Vancouver, Coquitlam, and Surrey.",
   path: "/service-areas",
   image: "/images/condo-balcony-netting-focused.jpg",
 });
@@ -27,7 +27,7 @@ export default function ServiceAreasPage() {
     <>
       <LocalBusinessSchema
         url={`${siteConfig.url}/service-areas`}
-        description="Metro Vancouver service area pages for balcony bird netting, pigeon spikes, balcony cleaning, pet-safe netting, and commercial bird control."
+        description="Lower Mainland service area pages for balcony bird netting, bird spikes, cleanup, deterrents, strata, and commercial bird control."
       />
       <BreadcrumbSchema
         items={[
@@ -38,28 +38,28 @@ export default function ServiceAreasPage() {
 
       <PageHero
         eyebrow="Service Areas"
-        title="Bird-proofing service areas across Metro Vancouver."
-        description="Browse city pages for Vancouver, Burnaby, Richmond, Surrey, Coquitlam, New Westminster, North Vancouver, West Vancouver, Delta, and Langley to find more local context around bird netting, pigeon spikes, cleaning, and commercial bird control."
+        title="Bird-control service areas across Vancouver and the Lower Mainland."
+        description="Browse local pages for Vancouver, Burnaby, Richmond, the North Shore, Coquitlam, and Surrey. Each adds useful property context without duplicating the core service information."
         image={{
           src: "/images/condo-balcony-netting-focused.jpg",
-          alt: "Condo balcony netting installation representing Metro Vancouver bird-proofing service areas",
+          alt: "Condo balcony netting installation representing Lower Mainland bird-control service areas",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[
-          "Residential, strata, and commercial bird-proofing coverage",
-          "City-specific pages with internal links and local context",
-          "Quote-first workflow that still starts with photos",
+          "Residential, strata, and commercial property context",
+          "Local pages linked to core services and projects",
+          "Start a quote by sharing photos",
         ]}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Service Areas" },
         ]}
         note={{
-          eyebrow: "Local SEO structure",
-          body: "Each city page keeps the local angle clear while linking back to the core service routes, project examples, and quote path instead of acting like a thin duplicate landing page.",
+          eyebrow: "Local service context",
+          body: "Each city page adds a useful local angle and connects back to core services, project examples, and the quote path.",
         }}
       />
 
@@ -68,8 +68,8 @@ export default function ServiceAreasPage() {
           <div data-reveal>
             <SectionHeading
               eyebrow="Cities"
-              title="Metro Vancouver cities currently covered by Pigeon Defenders."
-              description="Each local page adds city-specific context for the types of balcony, ledge, roofline, and commercial bird issues that tend to show up there."
+              title="Local pages for the Lower Mainland areas we serve."
+              description="Each page adds city-specific context for balcony, ledge, roofline, strata, and commercial bird issues."
               align="center"
             />
           </div>
@@ -96,7 +96,7 @@ export default function ServiceAreasPage() {
                 {
                   title: "Condo balconies",
                   description:
-                    "Bird netting, pet-safe netting, and cleaning support for balconies where pigeons keep returning.",
+                    "Bird netting and cleanup support for balconies where pigeons keep returning.",
                 },
                 {
                   title: "Residential ledges and rooflines",
@@ -120,7 +120,7 @@ export default function ServiceAreasPage() {
             <SectionHeading
               eyebrow="Core Services"
               title="Core bird-proofing services linked from every service-area page."
-              description="These routes handle the main search intent for balcony bird netting, pigeon spike installation, balcony cleaning, pet-safe netting, and commercial bird control."
+              description="These routes handle the main search intent for balcony netting, bird spikes, pigeon-dropping cleanup, deterrents, strata, and commercial bird control."
               align="center"
             />
           </div>

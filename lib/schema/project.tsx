@@ -22,7 +22,7 @@ export function ProjectSchema({ project }: ProjectSchemaProps) {
       name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
-        url: `${siteConfig.url}/images/pigeon-defenders-logo.png`,
+        url: `${siteConfig.url}${siteConfig.brandIcon}`,
       },
     },
   };

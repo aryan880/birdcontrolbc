@@ -12,13 +12,13 @@ export function CTASection() {
         >
           <div className="max-w-3xl">
             <p className="eyebrow-pill-dark">
-              Fast Local Quotes
+              Start with the property details
             </p>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.03em] text-balance sm:text-5xl">
-              A cleaner, faster first step for people who want the issue handled properly.
+              Send photos for a quote that starts with real context.
             </h2>
             <p className="mt-5 text-base leading-7 text-slate-200 sm:text-lg">
-              Start with the quote form if you want the details organized first, or call now if speaking directly is faster for the property issue in front of you.
+              A clear photo of the affected area, the city, and a short note about access can make the first conversation much more productive. Call when a direct conversation is easier.
             </p>
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0">

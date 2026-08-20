@@ -17,24 +17,21 @@ export function LocalBusinessSchema({
     "Coquitlam",
     "North Vancouver",
     "West Vancouver",
-    "Delta",
-    "New Westminster",
-    "Langley",
   ],
 }: LocalBusinessSchemaProps) {
-  const localBusinessSchema = {
+  const localBusinessSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: siteConfig.name,
-    image: `${siteConfig.url}/images/pigeon-defenders-logo.png`,
-    telephone: siteConfig.phoneDisplay,
-    email: siteConfig.email,
+    image: `${siteConfig.url}${siteConfig.brandIcon}`,
     url,
     description,
     areaServed,
-    priceRange: "$$",
     slogan: siteConfig.slogan,
   };
+
+  if (siteConfig.phoneHref) localBusinessSchema.telephone = siteConfig.phoneHref;
+  if (siteConfig.email && siteConfig.mailtoHref !== "mailto:") localBusinessSchema.email = siteConfig.email;
 
   return (
     <script

@@ -26,10 +26,10 @@ export const homeFaqs: FAQ[] = [
       "Yes. Balcony cleaning can be completed before spikes or netting are installed so the area starts clean and protected.",
   },
   {
-    id: "pet-safe-netting",
-    question: "Is the netting safe for cats and pets?",
+    id: "netting-visibility",
+    question: "How do I know whether netting is the right fit?",
     answer:
-      "Pet and cat netting is presented as a safer balcony option for homes with pets while also helping to keep birds out.",
+      "Netting is generally the more relevant starting point when birds can enter the full balcony opening, rather than only land on one narrow edge.",
   },
   {
     id: "quote-process",
@@ -45,8 +45,8 @@ export const trustHighlights = [
     description: "Text balcony, ledge, or roofline photos to start the quoting process quickly.",
   },
   {
-    title: "Metro Vancouver",
-    description: "Messaging stays focused on the real service area already claimed by the business.",
+    title: "Lower Mainland",
+    description: "Service messaging stays focused on Vancouver and the active Lower Mainland coverage areas.",
   },
   {
     title: "Humane systems",

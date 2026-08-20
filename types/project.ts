@@ -21,4 +21,5 @@ export type Project = {
   solution: ContentPoint[];
   results: string[];
   relatedServiceSlugs: string[];
+  relatedCitySlug: string;
 };

@@ -8,6 +8,7 @@ import { ServiceLinksGrid } from "@/components/sections/ServiceLinksGrid";
 import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 import { ProjectSchema } from "@/lib/schema/project";
 import { getServicesBySlugs } from "@/content/services";
+import { getCityBySlug } from "@/content/cities";
 import { siteConfig } from "@/content/site";
 import type { Project } from "@/types/project";
 
@@ -17,6 +18,7 @@ type ProjectPageTemplateProps = {
 
 export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
   const relatedServices = getServicesBySlugs(project.relatedServiceSlugs);
+  const relatedCity = getCityBySlug(project.relatedCitySlug);
   const hasGallery = project.gallery.length > 0;
   const hasChallenges = project.challenges.length > 0;
   const hasSolutions = project.solution.length > 0;
@@ -156,6 +158,21 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
             </div>
             <div className="section-gap">
               <ServiceLinksGrid services={relatedServices} />
+            </div>
+          </Container>
+        </section>
+      ) : null}
+
+      {relatedCity ? (
+        <section className="section-wrap-tight">
+          <Container>
+            <div className="section-surface grid gap-5 p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">Related service area</p>
+                <h2 className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-brand-navy">Bird control in {relatedCity.name}.</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-brand-slate">See the local property context and linked services for this project area.</p>
+              </div>
+              <a className="inline-flex items-center justify-center rounded-2xl border border-brand-line bg-brand-mist px-5 py-3 text-sm font-semibold text-brand-navy hover:bg-brand-limeSoft" href={relatedCity.routeHref}>View {relatedCity.name} <span aria-hidden="true" className="ml-2">→</span></a>
             </div>
           </Container>
         </section>

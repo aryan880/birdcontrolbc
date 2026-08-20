@@ -17,7 +17,7 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
   return (
     <article
       data-reveal
-      className="surface-card group flex overflow-hidden rounded-[1.9rem]"
+      className="surface-card reveal-load group flex overflow-hidden rounded-[1.9rem]"
       style={{ ["--reveal-delay" as string]: `${index * 55}ms` }}
     >
       <div className="relative min-h-[240px] overflow-hidden">
@@ -30,7 +30,7 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-transparent" />
         <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">
-          Metro Vancouver
+          Lower Mainland, BC
         </div>
       </div>
       <div className="flex flex-1 flex-col p-6 sm:p-7">
@@ -42,7 +42,7 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
         </p>
         <SmartLink
           href={primaryHref}
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-mist px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-brand-limeSoft/40 hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime sm:mt-auto sm:self-start"
+          className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-mist px-4 py-2 text-sm font-semibold text-brand-navy transition duration-300 hover:translate-x-1 hover:bg-brand-limeSoft/40 hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime sm:mt-auto sm:self-start"
         >
           {linkLabel}
           <span aria-hidden="true">→</span>

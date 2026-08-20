@@ -21,8 +21,8 @@ export function BeforeAfterGallery({ projects }: BeforeAfterGalleryProps) {
       <Container>
         <SectionHeading
           eyebrow="Project Proof"
-          title="Visual proof that feels more like a finished project than a generic contractor gallery."
-          description="The section now uses the existing imagery with more editorial hierarchy, stronger before-and-after framing, and cleaner card treatment while staying grounded in the real assets already in the project."
+          title="Recent project examples, shown with honest context."
+          description="Existing project photography gives the work a more tangible feel. Each example links to the related service and local area rather than making unsupported performance claims."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.16fr_0.84fr]">
@@ -42,15 +42,15 @@ export function BeforeAfterGallery({ projects }: BeforeAfterGalleryProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-brand-navy/15 to-transparent" />
               <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">
-                Featured transformation
+                Featured project
               </div>
               <div className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4">
                 <div className="rounded-[1.4rem] border border-white/10 bg-white/10 px-4 py-3 backdrop-blur">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
-                    Before / after style proof
+                    Project detail
                   </p>
                   <p className="mt-1 text-sm text-white">
-                    Existing image asset used as the strongest conversion proof on the page, with structure ready for future before-and-after enhancements.
+                    An existing project image, captioned as a visual reference for the type of property issue shown.
                   </p>
                 </div>
               </div>

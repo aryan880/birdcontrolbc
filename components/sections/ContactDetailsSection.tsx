@@ -7,7 +7,7 @@ type ContactDetailsSectionProps = {
 };
 
 export function ContactDetailsSection({
-  title = "Talk to Pigeon Defenders directly.",
+  title = "Talk to Bird Control BC directly.",
   description = "Use the quote form if you want to package the details first, or reach out directly if a call is faster for the property issue in front of you.",
   theme = "light",
 }: ContactDetailsSectionProps) {

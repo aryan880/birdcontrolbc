@@ -121,7 +121,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
       {featuredProject ? (
         <ProjectShowcase
           project={featuredProject}
-          description={`A relevant Metro Vancouver project example that supports the kinds of balcony, ledge, or building-edge issues described on the ${city.name} page.`}
+          description={`A relevant Lower Mainland project example that supports the kinds of balcony, ledge, or building-edge issues described on the ${city.name} page.`}
         />
       ) : null}
 

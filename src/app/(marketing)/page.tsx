@@ -20,9 +20,9 @@ import { LocalBusinessSchema } from "@/lib/schema/local-business";
 import { TrustBadgeRow } from "@/components/sections/TrustBadgeRow";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Bird Netting, Pigeon Spikes & Bird Control Vancouver",
+  title: "Bird Control Vancouver & Lower Mainland",
   description:
-    "Pigeon Defenders provides balcony bird netting, pigeon spikes, balcony cleaning, pet-safe netting, and commercial bird control in Vancouver and across Metro Vancouver. Request a free quote or call 236-999-5739.",
+    "Bird Control BC provides balcony bird netting, bird spikes, pigeon-dropping cleanup, deterrents, and commercial bird-control solutions across Vancouver and the Lower Mainland.",
   path: "/",
 });
 
@@ -44,9 +44,9 @@ export default function HomePage() {
         <Container>
           <div data-reveal>
             <SectionHeading
-              eyebrow="Bird Control Vancouver"
-              title="Bird-proofing services for balconies, ledges, rooflines, and commercial properties."
-              description="Choose the service that matches the actual issue, whether pigeons are nesting inside the balcony, roosting on a ledge, or creating mess around a storefront, roofline, or shared building."
+              eyebrow="Core Services"
+              title="A clear solution for the surface birds keep using."
+              description="Start with the part of the property that needs attention: the balcony opening, a narrow ledge, an entry, a roofline, or a larger shared building area."
               align="center"
             />
           </div>
@@ -54,35 +54,27 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section
-        id="why-us"
-        className="bg-[linear-gradient(180deg,rgba(255,255,255,0.98)_0%,rgba(244,248,245,0.72)_100%)] py-16 sm:py-20"
-      >
+      <section id="why-us" className="bg-[linear-gradient(180deg,rgba(247,248,243,0.92)_0%,rgba(255,255,255,0.98)_100%)] py-16 sm:py-20">
         <Container className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div
             data-reveal
             className="panel-sheen rounded-[2rem] bg-gradient-to-br from-brand-navy via-brand-blue to-[#0d4058] p-8 text-white shadow-panel sm:p-10"
           >
             <p className="inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-brand-limeSoft">
-              Built For Real Balcony Problems
+              What good bird control considers
             </p>
             <h2 className="mt-5 max-w-xl text-3xl font-semibold tracking-[-0.03em] text-balance sm:text-5xl">
-              Cleaner balconies, safer ledges, quieter buildings.
+              Better-used spaces begin with a practical read of the problem.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">
-              Pigeon problems usually show up as droppings, nesting, blocked
-              outdoor space, repeat landing zones, and cleanup that never seems
-              to hold. This homepage is designed to make the first decision
-              clearer: netting for entry problems, spikes for narrow landing
-              edges, cleaning for reset work, and commercial support where the
-              issue affects a larger property.
+              Bird activity is rarely just one thing. A useful plan considers where birds land or enter, what needs cleaning, how the building is used, and whether access or strata coordination affects the work.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                "Discreet systems that protect the view where possible",
-                "Humane methods for homes, condos, strata, and commercial spaces",
-                "Quote-first workflow that works well from phone photos",
-                "Practical recommendations based on access, cleaning, and property type",
+                "The actual entry or landing point",
+                "Cleaning needs before protection",
+                "Access, approvals, and property use",
+                "A clear way to begin from photos",
               ].map((item) => (
                 <div
                   key={item}
@@ -97,20 +89,20 @@ export default function HomePage() {
           <div className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                title: "Condo balconies",
-                body: "Bird netting for balconies where pigeons keep returning, nesting, or leaving droppings behind.",
+                title: "Balcony openings",
+                body: "Netting is best suited to bird access across an open balcony rather than a single landing edge.",
               },
               {
-                title: "Roosting ledges",
-                body: "Low-profile pigeon spikes for rooflines, signs, beams, and narrow landing zones.",
+                title: "Ledges and rooflines",
+                body: "Spikes or other deterrents can address repeat perching on defined, narrow surfaces.",
               },
               {
-                title: "Pet safety",
-                body: "Balcony netting options designed for homes with cats, small pets, and family use.",
+                title: "Cleaning and reset work",
+                body: "Dropping cleanup can be scoped before protection so the space starts in better condition.",
               },
               {
-                title: "Cleanup before protection",
-                body: "Balcony cleaning to reset the space before spikes or netting are installed.",
+                title: "Shared properties",
+                body: "Strata and commercial work benefits from a clear problem record, access notes, and a clean scope.",
               },
             ].map((item, index) => (
               <article
@@ -142,17 +134,51 @@ export default function HomePage() {
       </section>
 
       <section className="py-16 sm:py-20">
-        <Container className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <div>
+        <Container className="grid gap-8 lg:grid-cols-[minmax(0,0.98fr)_minmax(0,1.02fr)] lg:items-stretch xl:gap-10">
+          <div
+            data-reveal
+            className="section-surface flex h-full flex-col p-6 sm:p-8"
+          >
             <div data-reveal>
               <SectionHeading
                 eyebrow="Service Areas"
-                title="Bird-proofing service areas across Metro Vancouver."
-                description="The city pages keep the coverage area clear while adding location-specific context for Vancouver, Burnaby, Richmond, Surrey, Coquitlam, New Westminster, Langley, and nearby areas."
+                title="Serving Vancouver and the Lower Mainland."
+                description="Local pages add useful context about property patterns and link directly to the relevant services and project examples."
               />
             </div>
-            <div className="mt-8">
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-[1.5rem] border border-brand-line/70 bg-brand-mist/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-limeDark">
+                  Coverage
+                </p>
+                <p className="mt-2 text-sm leading-6 text-brand-slate">
+                  Vancouver, Burnaby, Richmond, North Vancouver, West Vancouver, Coquitlam, and Surrey.
+                </p>
+              </div>
+              <div className="rounded-[1.5rem] border border-brand-line/70 bg-white p-4 shadow-soft">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-limeDark">
+                  Best way to start
+                </p>
+                <p className="mt-2 text-sm leading-6 text-brand-slate">
+                  Send photos with the city and property type. It gives the first conversation a much clearer starting point.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 rounded-[1.7rem] border border-brand-line/70 bg-white/80 p-4 sm:p-5">
               <CityLinksGrid cities={cities} />
+            </div>
+            <p className="mt-5 text-sm leading-6 text-brand-slate">
+              Not sure which service fits? The quote form works without choosing a city page first.
+            </p>
+            <div className="mt-auto pt-6">
+              <div className="rounded-[1.5rem] bg-gradient-to-r from-brand-navy to-brand-blue p-5 text-white shadow-panel">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeSoft">
+                  A useful first message
+                </p>
+                <p className="mt-2 text-base font-semibold tracking-[-0.02em]">
+                  A few clear photos are usually more helpful than getting every category exactly right.
+                </p>
+              </div>
             </div>
           </div>
           <div data-reveal>
@@ -166,8 +192,8 @@ export default function HomePage() {
           <div data-reveal>
             <SectionHeading
               eyebrow="FAQ"
-              title="Common questions about bird netting, pigeon spikes, and local quotes."
-              description="These answers stay grounded in the current service scope, the photo-first quote process, and the real problems people usually want solved first."
+              title="Questions before you send photos."
+              description="A short guide to the choices people usually need to make first: netting or spikes, cleanup, access, and the right way to begin a quote."
               align="center"
             />
           </div>

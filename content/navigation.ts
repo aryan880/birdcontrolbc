@@ -2,10 +2,11 @@ import type { NavigationGroup } from "@/types/navigation";
 
 export const navigation: NavigationGroup = {
   primary: [
-    { label: "Services", href: "#services", kind: "anchor", futureHref: "/services" },
-    { label: "Projects", href: "#projects", kind: "anchor", futureHref: "/projects" },
-    { label: "FAQ", href: "#faq", kind: "anchor", futureHref: "/#faq" },
-    { label: "Contact", href: "#quote", kind: "anchor", futureHref: "/contact" },
+    { label: "Services", href: "/services", kind: "route" },
+    { label: "Projects", href: "/projects", kind: "route" },
+    { label: "Areas", href: "/service-areas", kind: "route" },
+    { label: "About", href: "/about", kind: "route" },
+    { label: "Contact", href: "/contact", kind: "route" },
   ],
   services: [
     {
@@ -15,41 +16,32 @@ export const navigation: NavigationGroup = {
       futureHref: "/services/balcony-bird-netting",
     },
     {
-      label: "Pigeon Spikes",
-      href: "/services/pigeon-spike-installation",
+      label: "Bird Spike Installation",
+      href: "/services/bird-spike-installation",
       kind: "route",
-      futureHref: "/services/pigeon-spike-installation",
     },
     {
-      label: "Balcony Cleaning",
-      href: "/services/balcony-cleaning",
+      label: "Pigeon Dropping Cleaning",
+      href: "/services/pigeon-dropping-cleaning",
       kind: "route",
-      futureHref: "/services/balcony-cleaning",
     },
     {
-      label: "Pet & Cat Netting",
-      href: "/services/pet-cat-netting",
+      label: "Bird Deterrents",
+      href: "/services/bird-deterrents",
       kind: "route",
-      futureHref: "/services/pet-cat-netting",
     },
     {
       label: "Commercial Bird Control",
       href: "/services/commercial-bird-control",
       kind: "route",
-      futureHref: "/services/commercial-bird-control",
     },
+    { label: "Strata Bird Control", href: "/services/strata-bird-control", kind: "route" },
   ],
   company: [
-    { label: "Home", href: "/", kind: "route" },
-    { label: "Projects", href: "/projects", kind: "route", futureHref: "/projects" },
-    { label: "Free Quote", href: "/contact", kind: "route", futureHref: "/contact" },
-    { label: "Service Areas", href: "/service-areas", kind: "route", futureHref: "/service-areas" },
-    { label: "Contact", href: "/contact", kind: "route", futureHref: "/contact" },
+    { label: "About Bird Control BC", href: "/about", kind: "route" },
+    { label: "Projects", href: "/projects", kind: "route" },
+    { label: "Service Areas", href: "/service-areas", kind: "route" },
+    { label: "Contact", href: "/contact", kind: "route" },
   ],
-  legacy: [
-    { label: "Bird Netting", href: "/balcony-bird-netting.html", kind: "route" },
-    { label: "Spike Installation", href: "/pigeon-spike-installation.html", kind: "route" },
-    { label: "Balcony Cleaning", href: "/balcony-cleaning.html", kind: "route" },
-    { label: "Commercial Bird Control", href: "/commercial-bird-control.html", kind: "route" },
-  ],
+  legacy: [],
 };

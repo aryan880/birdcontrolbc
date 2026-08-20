@@ -11,7 +11,7 @@ import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 
 export const metadata: Metadata = {
   title: "Thank You",
-  description: "Thanks for contacting Pigeon Defenders.",
+  description: "Thanks for contacting Bird Control BC.",
   robots: {
     index: false,
     follow: false,
@@ -34,10 +34,10 @@ export default function ThankYouPage() {
       <PageHero
         eyebrow="Thank You"
         title="Thanks. Your quote request is set up for the next business step."
-        description="The site now has a real on-site lead path, and this page is where the future backend, CRM, or notification workflow can connect without changing the front-end experience."
+        description="Your quote request has been captured. This page keeps the follow-up path clear while business contact details and form delivery are connected for launch."
         image={{
           src: "/images/pigeon-proof-balcony-before-after-focused.jpg",
-          alt: "Thank-you page image for Pigeon Defenders lead flow",
+          alt: "Thank-you page image for the Bird Control BC quote flow",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
@@ -49,7 +49,7 @@ export default function ThankYouPage() {
         ]}
         note={{
           eyebrow: "Next step",
-          body: "If the issue is urgent, calling is still the fastest path. Otherwise, this thank-you route is ready for future confirmation emails, CRM writes, or conversion tracking.",
+          body: "If the issue is urgent, calling is still the fastest path. Otherwise, this thank-you page confirms that the request details have been captured successfully.",
         }}
       />
 
@@ -75,7 +75,7 @@ export default function ThankYouPage() {
           <div data-reveal className="section-surface p-6 sm:p-8">
             <ContactDetailsSection
               title="Need to follow up right away?"
-              description="If the property issue is urgent, use the direct contact options below instead of waiting for the backend-connected phase of the lead flow."
+              description="If the property issue is urgent, use the direct contact options below instead of waiting for the standard follow-up process."
             />
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/services" variant="outline" className="sm:min-w-[180px]">

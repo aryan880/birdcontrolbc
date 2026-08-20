@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/layout/Container";
 import { MobileNav } from "@/components/layout/MobileNav";
@@ -14,24 +12,7 @@ import { useTracking } from "@/lib/analytics/useTracking";
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
   const { trackPhoneClick, trackEmailClick } = useTracking();
-
-  const resolveHref = (href: string, fallback?: string) => {
-    if (pathname === "/") {
-      return href;
-    }
-
-    if (href.startsWith("#") && typeof document !== "undefined") {
-      const id = href.slice(1);
-
-      if (document.getElementById(id)) {
-        return href;
-      }
-    }
-
-    return fallback ?? href;
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +32,7 @@ export function SiteHeader() {
       <div className="border-b border-white/10 bg-gradient-to-r from-brand-navy via-brand-blue to-[#0c3b55] text-white">
         <Container className="flex min-h-10 items-center justify-between gap-4 py-1.5 text-xs font-medium sm:text-sm">
           <p className="text-slate-100/95">
-            Humane bird-proofing for condos, homes, and commercial properties in Metro Vancouver
+            Bird control for homes, strata, and commercial properties across the Lower Mainland
           </p>
           <div className="hidden items-center gap-4 sm:flex">
             <a
@@ -59,7 +40,7 @@ export function SiteHeader() {
               onClick={() => trackPhoneClick("header_top_strip")}
               className="text-brand-limeSoft transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-limeSoft focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
             >
-              Call or Text {siteConfig.phoneDisplay}
+              {siteConfig.phoneDisplay}
             </a>
             <a
               href={siteConfig.mailtoHref}
@@ -73,15 +54,13 @@ export function SiteHeader() {
       </div>
 
       <Container className="relative flex min-h-[4.6rem] items-center justify-between gap-5">
-        <Link href="/" className="flex items-center gap-3 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2">
-          <Image
-            src="/images/pigeon-defenders-logo.png"
-            alt="Pigeon Defenders logo"
-            width={168}
-            height={56}
-            priority
-            className="h-[3.25rem] w-auto drop-shadow-[0_6px_20px_rgba(7,23,44,0.12)]"
-          />
+        <Link
+          href="/"
+          aria-label="Bird Control BC homepage"
+          className="flex items-center gap-3 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2"
+        >
+          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-navy text-lg font-bold text-brand-limeSoft shadow-soft">BC</span>
+          <span className="leading-none text-brand-navy"><span className="block text-lg font-semibold tracking-[-0.04em]">Bird Control</span><span className="block mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">British Columbia</span></span>
         </Link>
 
         <nav
@@ -91,7 +70,7 @@ export function SiteHeader() {
           {navigation.primary.map((item) => (
             <a
               key={item.href}
-              href={resolveHref(item.href, item.futureHref ?? `/${item.href}`)}
+              href={item.href}
               className="rounded-[1.2rem] px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-brand-mist hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
             >
               {item.label}
@@ -106,7 +85,7 @@ export function SiteHeader() {
             className="cta-pulse min-w-[220px]"
             onClick={() => trackPhoneClick("header_primary_cta")}
           >
-            Call or Text {siteConfig.phoneDisplay}
+            {siteConfig.ctaLabels.secondary}
           </ButtonLink>
         </div>
 

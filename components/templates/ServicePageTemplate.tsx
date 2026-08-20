@@ -152,8 +152,8 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <div data-reveal>
               <SectionHeading
                 eyebrow="Service Areas"
-                title={`${service.shortLabel ?? service.name} across key Metro Vancouver service areas.`}
-                description="Use these city pages to see where the service is positioned locally and to move between service intent, local context, and the quote path more easily."
+                title={`${service.shortLabel ?? service.name} across Vancouver and the Lower Mainland.`}
+                description="Use these city pages to move between the service intent, local context, project examples, and the quote path more easily."
                 align="center"
               />
             </div>
@@ -170,7 +170,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <div data-reveal>
               <SectionHeading
                 eyebrow="FAQ"
-                title={`${service.shortLabel ?? service.name} FAQ for Vancouver and Metro Vancouver quotes.`}
+                title={`${service.shortLabel ?? service.name} FAQ for Vancouver and Lower Mainland quotes.`}
                 description="These answers cover the questions people usually ask first before requesting a quote for this service."
                 align="center"
               />

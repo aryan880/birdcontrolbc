@@ -11,9 +11,9 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Bird Proofing Projects in Vancouver",
+  title: "Bird Control Projects | Vancouver & Lower Mainland",
   description:
-    "View project examples for balcony bird netting, pigeon spikes, balcony cleaning, and pet-safe bird-proofing work across Metro Vancouver properties.",
+    "View Bird Control BC project examples for balcony netting, bird spikes, and pigeon-dropping cleanup across Vancouver and the Lower Mainland.",
   path: "/projects",
   image: "/images/pigeon-proof-balcony-before-after-focused.jpg",
 });
@@ -30,28 +30,28 @@ export default function ProjectsPage() {
 
       <PageHero
         eyebrow="Projects"
-        title="Bird-proofing project examples from Metro Vancouver properties."
-        description="Review balcony bird netting, pigeon spike, balcony cleaning, and pet-safe project pages built from the current image library and tied back to the live service routes."
+        title="Project examples grounded in the real image library."
+        description="Review examples for balcony netting, bird spikes, and cleanup work, each linked to the relevant service and local page."
         image={{
           src: "/images/pigeon-proof-balcony-before-after-focused.jpg",
-          alt: "Before and after balcony project representing Metro Vancouver bird-proofing work",
+          alt: "Bird-proofed balcony project representing Bird Control BC work",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[
-          "Before-and-after style proof where available",
-          "Project context tied back to service pages",
-          "Cleaner internal linking for conversion and SEO",
+          "Existing photography, clearly captioned",
+          "Project context linked to services",
+          "Local paths back to quote requests",
         ]}
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Projects" },
         ]}
         note={{
-          eyebrow: "Proof structure",
-          body: "These project pages are grounded in the real image library and written to support service intent, internal linking, and quote-ready browsing.",
+          eyebrow: "Project gallery",
+          body: "Each project page uses existing images honestly and connects the example to the related service and city page.",
         }}
       />
 
@@ -60,8 +60,8 @@ export default function ProjectsPage() {
           <div data-reveal>
             <SectionHeading
               eyebrow="Gallery"
-              title="Bird netting, pigeon spike, and balcony cleaning projects connected to live services."
-              description="Each project page reinforces a real property problem, the related service route, and the next quote action instead of acting like a disconnected portfolio item."
+              title="Bird-control project examples connected to useful next steps."
+              description="Every project links to the relevant service and local area, so the gallery remains useful when a visitor has a similar property issue."
               align="center"
             />
           </div>

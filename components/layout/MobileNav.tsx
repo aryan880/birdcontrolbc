@@ -1,31 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 
 import { navigation } from "@/content/navigation";
 import { cn } from "@/lib/utils";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-
-  const resolveHref = (href: string, fallback?: string) => {
-    if (pathname === "/") {
-      return href;
-    }
-
-    if (href.startsWith("#") && typeof document !== "undefined") {
-      const id = href.slice(1);
-
-      if (document.getElementById(id)) {
-        return href;
-      }
-    }
-
-    return fallback ?? href;
-  };
-
   return (
     <div className="lg:hidden">
       <button
@@ -55,7 +36,7 @@ export function MobileNav() {
           {navigation.primary.map((item) => (
             <a
               key={item.href}
-              href={resolveHref(item.href, item.futureHref ?? `/${item.href}`)}
+              href={item.href}
               className="rounded-2xl px-4 py-3 text-sm font-semibold text-brand-navy hover:bg-brand-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
               onClick={() => setOpen(false)}
             >
