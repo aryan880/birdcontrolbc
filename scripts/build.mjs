@@ -12,4 +12,4 @@ await cp(join(root, "src/styles/main.css"), join(dist, "styles.css"));
 await cp(join(root, "src/scripts/main.js"), join(dist, "script.js"));
 await cp(join(root, "public"), dist, { recursive: true });
 
-console.log("Built Pigeon Defenders site to dist/");
+console.log("Built Bird Control BC site to dist/");

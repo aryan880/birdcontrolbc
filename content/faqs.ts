@@ -1,82 +1,23 @@
 import type { FAQ } from "@/types/faq";
 
 export const homeFaqs: FAQ[] = [
-  {
-    id: "humane-spikes",
-    question: "Are pigeon spikes humane?",
-    answer:
-      "Yes. Pigeon spikes are a landing deterrent that helps prevent roosting without trapping birds.",
-  },
-  {
-    id: "visible-netting",
-    question: "Is balcony netting visible?",
-    answer:
-      "Balcony bird netting is designed to be discreet from normal viewing distance while still creating an effective physical barrier.",
-  },
-  {
-    id: "high-rise-installation",
-    question: "Can you install netting on high-rise balconies?",
-    answer:
-      "The current business messaging indicates high-rise and condo balcony work where building rules and access allow it, so the site keeps that claim and no stronger one.",
-  },
-  {
-    id: "cleaning-before-install",
-    question: "Do you clean pigeon droppings before installation?",
-    answer:
-      "Yes. Balcony cleaning can be completed before spikes or netting are installed so the area starts clean and protected.",
-  },
-  {
-    id: "netting-visibility",
-    question: "How do I know whether netting is the right fit?",
-    answer:
-      "Netting is generally the more relevant starting point when birds can enter the full balcony opening, rather than only land on one narrow edge.",
-  },
-  {
-    id: "quote-process",
-    question: "How do quotes work?",
-    answer:
-      "The quote process is text-first. Homeowners, strata contacts, and property managers can send balcony, ledge, or roofline photos from their phone for a faster Vancouver-area quote.",
-  },
+  { id: "spikes", question: "When are bird spikes the right fit?", answer: "Bird spikes are generally suited to defined landing surfaces such as ledges, signs, beams, and roofline edges. Photos help distinguish those cases from a balcony-access issue." },
+  { id: "netting", question: "When is balcony bird netting the better option?", answer: "Netting is usually the more relevant route when birds can enter and use the balcony itself rather than only land on one edge." },
+  { id: "cleanup", question: "Can pigeon-dropping cleanup be part of the request?", answer: "Yes. Use the quote form to mention cleanup needs and include photos of the existing condition so that context is part of the first review." },
+  { id: "photos", question: "What photos should I send?", answer: "Include one wider image showing the area, a closer view of the surface or opening birds use, and any access detail that may be relevant." },
+  { id: "property-types", question: "Do you work with strata and commercial properties?", answer: "The site includes dedicated strata and commercial service paths. Add the property type and any coordination notes when sending the first request." },
+  { id: "locations", question: "Which areas does Bird Control BC serve?", answer: "Bird Control BC serves Vancouver and key Lower Mainland areas, including Burnaby, Richmond, North Vancouver, West Vancouver, Coquitlam, and Surrey." },
 ];
 
 export const trustHighlights = [
-  {
-    title: "Photo quotes",
-    description: "Text balcony, ledge, or roofline photos to start the quoting process quickly.",
-  },
-  {
-    title: "Lower Mainland",
-    description: "Service messaging stays focused on Vancouver and the active Lower Mainland coverage areas.",
-  },
-  {
-    title: "Humane systems",
-    description: "Balcony netting, pigeon spikes, cleaning, and exclusion-first recommendations.",
-  },
-  {
-    title: "Residential and commercial",
-    description: "Homes, condos, strata properties, storefronts, and building exteriors.",
-  },
+  { title: "Send photos", description: "Show the property issue before spending time on a long first call." },
+  { title: "Property-led scope", description: "The starting point is the surface, access, and purpose of the space." },
+  { title: "Lower Mainland", description: "Vancouver and active coverage across key nearby service areas." },
+  { title: "Homes to commercial", description: "Balconies, strata properties, storefronts, rooflines, and shared exteriors." },
 ];
 
 export const processSteps = [
-  {
-    title: "Share photos or project details",
-    description:
-      "Start with a balcony photo, ledge photo, or a short description of the problem area.",
-  },
-  {
-    title: "Get a practical recommendation",
-    description:
-      "The site positions the business around matching the right system to the issue, not pushing one solution for every job.",
-  },
-  {
-    title: "Confirm scope and access",
-    description:
-      "Cleaning needs, property type, and access are clarified before work is booked.",
-  },
-  {
-    title: "Protect the space",
-    description:
-      "The goal is a cleaner, more usable balcony or building area with a tidier long-term outcome.",
-  },
+  { title: "Send photos", description: "Share the affected balcony, ledge, roofline, entry, or building edge." },
+  { title: "Add property context", description: "Include the city, property type, and any notes about access or timing." },
+  { title: "Get a clear next step", description: "The quote discussion can start with a more useful understanding of the work area." },
 ];
