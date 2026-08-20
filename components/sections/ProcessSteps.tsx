@@ -19,7 +19,7 @@ export function ProcessSteps({ steps }: ProcessStepsProps) {
         </h2>
       </div>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-4">
+      <div className="mt-10 grid gap-5 lg:grid-cols-3">
         {steps.map((step, index) => (
           <article
             key={step.title}

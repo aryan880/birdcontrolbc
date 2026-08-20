@@ -13,7 +13,7 @@ export function ThankYouSummary() {
 
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem("pd_quote_lead");
+      const saved = sessionStorage.getItem("bc_quote_lead");
 
       if (saved) {
         setLead(JSON.parse(saved) as QuoteLeadPayload);
@@ -43,7 +43,7 @@ export function ThankYouSummary() {
         Your request is ready for the next step.
       </h2>
       <p className="mt-4 text-sm leading-7 text-brand-slate sm:text-base">
-        This phase prepares the production lead flow on-site. A future backend can take the same fields and route them into email, CRM, or a dashboard without changing the front-end form structure again.
+        We now have the core details for your quote request, including the service, city, and property type when they were provided.
       </p>
 
       {(service || city || propertyType) ? (
@@ -59,9 +59,9 @@ export function ThankYouSummary() {
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         {[
-          "We now have the core details the future backend will need.",
-          "Photos, approvals, and access notes can plug into the same lead record later.",
-          "Call now if the issue is urgent and you do not want to wait for the next business step.",
+          "Your request summary is saved so the follow-up can start with the right context.",
+          "Photos, approvals, and access notes can still be added during the next conversation if needed.",
+          "Call now if the issue is urgent and you want to move faster than the standard follow-up flow.",
         ].map((item) => (
           <div key={item} className="rounded-[1.4rem] border border-brand-line/80 bg-white p-4 text-sm leading-6 text-brand-slate">
             {item}

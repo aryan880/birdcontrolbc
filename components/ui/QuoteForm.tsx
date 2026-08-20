@@ -50,7 +50,7 @@ export function QuoteForm({
       photoNames: selectedFiles,
     };
 
-    sessionStorage.setItem("pd_quote_lead", JSON.stringify(payload));
+    sessionStorage.setItem("bc_quote_lead", JSON.stringify(payload));
     trackQuoteSubmission(source, {
       service: payload.serviceNeeded,
       city: payload.city,
@@ -177,7 +177,7 @@ export function QuoteForm({
         />
       </Field>
 
-      <Field label="Photo upload placeholder" htmlFor="photos">
+      <Field label="Photos (optional)" htmlFor="photos">
         <div className="grid gap-3">
           <input
             id="photos"
@@ -192,7 +192,7 @@ export function QuoteForm({
             }}
           />
           <p className="text-xs leading-6 text-brand-slate">
-            This field is prepared for backend upload wiring. For now, selected file names are kept with the quote details and the live upload step can be connected later.
+            You can choose photos now so the request stays organized. Selected file names are carried through the thank-you flow until full upload handling is connected.
           </p>
           {selectedFiles.length ? (
             <p className="text-xs leading-6 text-brand-navy">

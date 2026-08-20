@@ -11,7 +11,7 @@ type QuoteFormSectionProps = {
 
 export function QuoteFormSection({
   title = "Send the important details first.",
-  description = "The current quote flow stays ready for a future backend while already giving the site a real lead-capture path today.",
+  description = "Send the property details that matter most so the next conversation can start with useful context instead of back-and-forth guessing.",
   source = "quote_form_section",
   redirectTo = "/thank-you",
   defaultService,
@@ -22,7 +22,7 @@ export function QuoteFormSection({
       className="section-surface overflow-hidden p-6 sm:p-8"
     >
       <p className="eyebrow-pill">
-        Free Quote
+        Send photos for a free quote
       </p>
       <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-brand-navy sm:text-4xl">
         {title}
