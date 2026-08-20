@@ -11,12 +11,12 @@ export function GoogleReviewsPanel({ items }: GoogleReviewsPanelProps) {
 
   return (
     <div className="section-surface p-6 sm:p-8">
-      <p className="eyebrow-pill">Google Reviews</p>
+      <p className="eyebrow-pill">Reviews</p>
       <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-brand-navy sm:text-4xl">
-        Review integration is ready for verified business proof.
+        Verified customer feedback will appear here.
       </h2>
       <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-slate sm:text-base">
-        This panel is intentionally structured for a future Google review feed, rating summary, or approved screenshot-based review block without changing the current design system later.
+        Bird Control BC does not publish ratings, review counts, or customer quotes until they can be verified and approved for public use.
       </p>
       <div className="section-gap section-grid-balanced md:grid-cols-2">
         {items.map((item, index) => (

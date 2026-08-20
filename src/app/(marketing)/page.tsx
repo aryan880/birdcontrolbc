@@ -18,6 +18,8 @@ import { trustBadges } from "@/content/business";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { LocalBusinessSchema } from "@/lib/schema/local-business";
 import { TrustBadgeRow } from "@/components/sections/TrustBadgeRow";
+import { GoogleReviewsPanel } from "@/components/sections/GoogleReviewsPanel";
+import { reviewHighlights } from "@/content/business";
 
 export const metadata: Metadata = buildMetadata({
   title: "Bird Control Vancouver & Lower Mainland",
@@ -126,6 +128,12 @@ export default function HomePage() {
       </section>
 
       <BeforeAfterGallery projects={galleryProjects} />
+
+      <section className="section-wrap-tight">
+        <Container className="max-w-4xl">
+          <GoogleReviewsPanel items={reviewHighlights} />
+        </Container>
+      </section>
 
       <section className="py-16 sm:py-20">
         <Container>
