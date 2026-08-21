@@ -10,28 +10,27 @@ type ProcessStepsProps = {
 export function ProcessSteps({ steps }: ProcessStepsProps) {
   return (
     <div>
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="max-w-3xl">
         <p className="eyebrow-pill">
           Simple Process
         </p>
-        <h2 className="mt-5 text-3xl font-semibold tracking-tight text-brand-navy sm:text-5xl">
-          From first photos to a protected space.
+        <h2 className="font-display mt-5 text-4xl font-medium leading-tight tracking-[-0.035em] text-brand-navy sm:text-6xl">
+          Three steps. No drawn-out first meeting.
         </h2>
       </div>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+      <div className="mt-12 grid border-t border-brand-navy/20 lg:grid-cols-3">
         {steps.map((step, index) => (
           <article
             key={step.title}
             data-reveal
-            className="surface-card relative overflow-hidden rounded-[1.75rem] p-6"
+            className="relative border-b border-brand-navy/20 px-1 py-7 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0"
             style={{ ["--reveal-delay" as string]: `${index * 60}ms` }}
           >
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-lime via-brand-limeSoft to-transparent" />
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">
-              Step {index + 1}
+            <p className="font-display text-4xl text-brand-limeDark/70">
+              0{index + 1}
             </p>
-            <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-brand-navy">
+            <h3 className="mt-6 text-lg font-semibold tracking-[-0.02em] text-brand-navy">
               {step.title}
             </h3>
             <p className="mt-3 text-sm leading-7 text-brand-slate">

@@ -17,32 +17,32 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
   return (
     <article
       data-reveal
-      className="surface-card reveal-load group grid overflow-hidden md:grid-cols-[0.88fr_1.12fr]"
+      className="reveal-load group border-t border-brand-navy/20 pt-5"
       style={{ ["--reveal-delay" as string]: `${index * 55}ms` }}
     >
-      <div className="relative min-h-[230px] overflow-hidden">
+      <div className="relative aspect-[4/3] overflow-hidden bg-brand-mist">
         <Image
           src={service.image.src}
           alt={service.image.alt}
           fill
-          className="object-cover transition duration-500 group-hover:scale-[1.03]"
+          className="object-cover transition duration-700 group-hover:scale-[1.025]"
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 via-transparent to-transparent" />
-        <div className="absolute left-4 top-4 border-l-2 border-brand-lime bg-brand-navy/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white">
-          Bird Control BC
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/20 via-transparent to-transparent" />
       </div>
-      <div className="flex flex-1 flex-col p-6 sm:p-7">
-        <h3 className="text-[1.65rem] font-semibold tracking-[-0.035em] text-brand-navy">
-          {service.name}
-        </h3>
+      <div className="flex flex-1 flex-col py-5">
+        <div className="flex items-start justify-between gap-5">
+          <h3 className="font-display text-[1.75rem] font-medium tracking-[-0.035em] text-brand-navy">
+            {service.name}
+          </h3>
+          <span className="mt-1 text-xs font-semibold text-brand-limeDark">0{index + 1}</span>
+        </div>
         <p className="mt-3 text-sm leading-7 text-brand-slate">
           {service.summary}
         </p>
         <SmartLink
           href={primaryHref}
-          className="mt-6 inline-flex items-center gap-2 border-b border-brand-lime pb-1 text-sm font-semibold text-brand-navy transition duration-300 hover:translate-x-1 hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime sm:mt-auto sm:self-start"
+          className="mt-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-brand-navy transition duration-300 hover:gap-4 hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-limeDark sm:mt-auto sm:self-start"
         >
           {linkLabel}
           <span aria-hidden="true">→</span>

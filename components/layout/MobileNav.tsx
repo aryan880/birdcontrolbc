@@ -15,7 +15,7 @@ export function MobileNav() {
         aria-controls="mobile-nav"
         aria-label="Toggle navigation"
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-brand-line bg-white text-brand-navy shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2"
+        className="inline-flex h-11 w-11 items-center justify-center border border-brand-navy/25 bg-transparent text-brand-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-limeDark focus-visible:ring-offset-2"
       >
         <span className="sr-only">Toggle navigation</span>
         <div className="space-y-1.5">
@@ -28,7 +28,7 @@ export function MobileNav() {
       <div
         id="mobile-nav"
         className={cn(
-          "absolute inset-x-5 top-[calc(100%+0.75rem)] rounded-[1.75rem] border border-brand-line/80 bg-white/95 p-5 shadow-panel backdrop-blur transition",
+          "absolute inset-x-5 top-[calc(100%+0.5rem)] border border-brand-line/80 bg-brand-soft/98 p-5 shadow-panel backdrop-blur transition",
           open ? "visible translate-y-0 opacity-100" : "invisible -translate-y-2 opacity-0"
         )}
       >
@@ -37,7 +37,7 @@ export function MobileNav() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-2xl px-4 py-3 text-sm font-semibold text-brand-navy hover:bg-brand-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
+              className="border-b border-brand-line/70 px-1 py-3 text-sm font-semibold text-brand-navy last:border-0 hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-limeDark"
               onClick={() => setOpen(false)}
             >
               {item.label}

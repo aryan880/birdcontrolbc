@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Container } from "@/components/layout/Container";
-import { ProjectCard } from "@/components/ui/ProjectCard";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import type { Project } from "@/types/project";
 
@@ -12,76 +11,64 @@ type BeforeAfterGalleryProps = {
 
 export function BeforeAfterGallery({ projects }: BeforeAfterGalleryProps) {
   const [featuredProject, ...secondaryProjects] = projects;
+  const beforeImage = featuredProject.gallery.find((image) => image.kind === "before");
+  const afterImage = featuredProject.gallery.find((image) => image.kind === "after") ?? featuredProject.image;
 
   return (
     <section
       id="projects"
-      className="bg-[linear-gradient(180deg,rgba(248,247,239,0.72)_0%,rgba(255,255,255,0.96)_100%)] py-16 sm:py-20"
+      className="bg-brand-navy py-16 text-white sm:py-20 lg:py-24"
     >
       <Container>
         <SectionHeading
           eyebrow="Recent Work"
-          title="Real bird-control work, documented on site."
+          title="See the condition. Then see the work."
           description="The featured balcony project follows cleanup, preparation, and netting installation using photography and video from the actual job."
+          theme="dark"
         />
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.16fr_0.84fr]">
+        <div className="mt-12 grid gap-1 bg-white/10 md:grid-cols-2">
+          {beforeImage ? (
+            <figure className="group bg-brand-navy">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image src={beforeImage.src} alt={beforeImage.alt} fill className="object-cover transition duration-700 group-hover:scale-[1.02]" sizes="(max-width: 768px) 100vw, 50vw" />
+                <span className="absolute left-5 top-5 bg-brand-cream px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-navy">Before</span>
+              </div>
+            </figure>
+          ) : null}
+          <figure className="group bg-brand-navy">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image src={afterImage.src} alt={afterImage.alt} fill className="object-cover transition duration-700 group-hover:scale-[1.02]" sizes="(max-width: 768px) 100vw, 50vw" />
+              <span className="absolute left-5 top-5 bg-brand-limeSoft px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-navy">Installed</span>
+            </div>
+          </figure>
+        </div>
+
+        <div className="grid gap-8 border-b border-white/15 py-8 lg:grid-cols-[1fr_auto] lg:items-end">
           <Link
             href={featuredProject.routeHref}
             data-reveal
             data-before-after-ready="true"
-            className="surface-card group overflow-hidden rounded-[2rem]"
+            className="group max-w-3xl"
           >
-            <div className="relative min-h-[320px] overflow-hidden sm:min-h-[460px]">
-              <Image
-                src={featuredProject.image.src}
-                alt={featuredProject.image.alt}
-                fill
-                className="object-cover transition duration-500 group-hover:scale-[1.02]"
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-brand-navy/15 to-transparent" />
-              <div className="absolute left-5 top-5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">
-                Featured project
-              </div>
-              <div className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4">
-                <div className="rounded-[1.4rem] border border-white/10 bg-white/10 px-4 py-3 backdrop-blur">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-200">
-                    Project detail
-                  </p>
-                  <p className="mt-1 text-sm text-white">
-                    Real job photography with the project scope and installation details clearly captioned.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4 p-6 sm:p-8">
-              <div className="flex flex-wrap gap-2">
-                {featuredProject.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-brand-mist px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-limeDark"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <h3 className="text-2xl font-semibold tracking-[-0.02em] text-brand-navy sm:text-3xl">
+              <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-brand-limeSoft">{featuredProject.location}</p>
+              <h3 className="font-display mt-3 text-3xl font-medium tracking-[-0.025em] text-white sm:text-4xl">
                 {featuredProject.title}
               </h3>
-              <p className="max-w-2xl text-sm leading-7 text-brand-slate sm:text-base">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
                 {featuredProject.summary}
               </p>
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy transition group-hover:text-brand-limeDark">
+              <span className="mt-5 inline-flex items-center gap-3 border-b border-brand-lime/60 pb-1 text-xs font-bold uppercase tracking-[0.16em] text-white transition group-hover:border-brand-lime">
                 View project details
                 <span aria-hidden="true">→</span>
               </span>
-            </div>
           </Link>
 
-          <div className="grid gap-6">
+          <div className="grid min-w-[18rem] gap-3">
             {secondaryProjects.map((project, index) => (
-              <ProjectCard key={project.slug} project={project} index={index} />
+              <Link key={project.slug} href={project.routeHref} className="flex items-center justify-between gap-6 border-t border-white/15 py-4 text-sm text-slate-200 hover:text-white">
+                <span>{project.title}</span><span aria-hidden="true" className="text-brand-limeSoft">0{index + 2} →</span>
+              </Link>
             ))}
           </div>
         </div>

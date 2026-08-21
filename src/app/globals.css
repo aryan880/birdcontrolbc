@@ -5,7 +5,8 @@
 :root {
   color-scheme: light;
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --font-sans: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-sans: "Avenir Next", "Century Gothic", "Helvetica Neue", sans-serif;
+  --font-display: "Iowan Old Style", "Baskerville", "Palatino Linotype", serif;
 }
 
 html {
@@ -15,7 +16,7 @@ html {
 body {
   @apply bg-brand-soft text-brand-charcoal antialiased;
   font-family: var(--font-sans);
-  background-image: linear-gradient(180deg, #fbfbf8 0%, #ffffff 38%, #fbfbf8 100%);
+  background-image: linear-gradient(180deg, #fbfaf6 0%, #ffffff 42%, #f7f5ef 100%);
 }
 
 a,
@@ -48,6 +49,10 @@ summary:focus-visible {
   text-wrap: balance;
 }
 
+.font-display {
+  font-family: var(--font-display);
+}
+
 .panel-sheen {
   position: relative;
   overflow: hidden;
@@ -63,7 +68,7 @@ summary:focus-visible {
 
 @layer components {
   .section-wrap {
-    @apply py-14 sm:py-16 lg:py-20;
+    @apply py-16 sm:py-20 lg:py-24;
   }
 
   .section-wrap-tight {
@@ -83,7 +88,7 @@ summary:focus-visible {
   }
 
   .eyebrow-pill {
-    @apply inline-flex border-l-2 border-brand-lime bg-transparent px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-brand-limeDark;
+    @apply inline-flex border-l border-brand-limeDark bg-transparent px-3 py-1 text-[10px] font-bold uppercase tracking-[0.24em] text-brand-limeDark;
   }
 
   .eyebrow-pill-dark {
@@ -91,7 +96,7 @@ summary:focus-visible {
   }
 
   .surface-card {
-    @apply h-full border border-brand-line/80 bg-white shadow-[0_12px_30px_rgba(7,23,44,0.05)] transition duration-300 hover:-translate-y-1 hover:border-brand-lime/50 hover:shadow-[0_18px_42px_rgba(7,23,44,0.1)];
+    @apply h-full border border-brand-line/80 bg-white shadow-[0_12px_30px_rgba(19,43,37,0.05)] transition duration-300 hover:-translate-y-1 hover:border-brand-lime/70 hover:shadow-[0_18px_42px_rgba(19,43,37,0.1)];
   }
 
   .glass-panel {

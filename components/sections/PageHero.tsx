@@ -39,33 +39,32 @@ export function PageHero({
   note,
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-brand-navy py-10 text-white sm:py-14 lg:py-16">
-      <div className="absolute inset-x-0 top-0 h-px bg-brand-lime/70" />
+    <section className="relative overflow-hidden border-b border-brand-line bg-brand-cream py-8 text-brand-charcoal sm:py-12 lg:py-14">
       <Container className="relative max-w-[88rem]">
         {breadcrumbs ? (
-          <div className="mb-8">
+          <div className="mb-7">
             <Breadcrumbs
               items={breadcrumbs}
-              className="text-slate-200"
-              currentClassName="text-white"
-              linkClassName="hover:text-white"
+              className="text-brand-slate"
+              currentClassName="text-brand-navy"
+              linkClassName="hover:text-brand-navy"
             />
           </div>
         ) : null}
 
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(25rem,1.05fr)] lg:items-stretch lg:gap-12 xl:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(25rem,1.18fr)] lg:items-stretch lg:gap-12 xl:gap-16">
           <div className="max-w-3xl lg:flex lg:flex-col lg:justify-center lg:py-5 xl:max-w-[42rem]">
-            <p className="hero-animate eyebrow-pill-dark" style={{ ["--enter-delay" as string]: "80ms" }}>
+            <p className="hero-animate eyebrow-pill" style={{ ["--enter-delay" as string]: "80ms" }}>
               {eyebrow}
             </p>
             <h1
-              className="hero-animate mt-5 text-4xl font-semibold leading-[0.98] tracking-[-0.05em] text-balance sm:text-5xl lg:text-[4rem]"
+              className="font-display hero-animate mt-6 text-5xl font-medium leading-[0.96] tracking-[-0.05em] text-balance sm:text-6xl lg:text-[4.75rem]"
               style={{ ["--enter-delay" as string]: "160ms" }}
             >
               {title}
             </h1>
             <p
-              className="hero-animate mt-6 max-w-xl text-base leading-8 text-slate-200 sm:text-lg"
+              className="hero-animate mt-6 max-w-xl text-base leading-8 text-brand-slate sm:text-lg"
               style={{ ["--enter-delay" as string]: "240ms" }}
             >
               {description}
@@ -79,7 +78,7 @@ export function PageHero({
                 <ButtonLink
                   key={`${action.href}-${action.label}`}
                   href={action.href}
-                  variant={action.variant ?? "primary"}
+                  variant={action.variant === "light" ? "outline" : action.variant ?? "primary"}
                   className="sm:min-w-[200px]"
                 >
                   {action.label}
@@ -89,13 +88,13 @@ export function PageHero({
 
             {supportingPoints?.length ? (
               <div
-                className="hero-fade mt-10 grid border-t border-white/15 pt-5 sm:grid-cols-3"
+                className="hero-fade mt-10 grid border-t border-brand-navy/15 pt-5 sm:grid-cols-3"
                 style={{ ["--enter-delay" as string]: "420ms" }}
               >
                 {supportingPoints.map((point) => (
                   <div
                     key={point}
-                    className="border-l border-brand-lime/70 px-4 py-1 text-sm leading-6 text-slate-100"
+                    className="border-l border-brand-limeDark/60 px-4 py-1 text-sm leading-6 text-brand-slate"
                   >
                     {point}
                   </div>
@@ -105,7 +104,7 @@ export function PageHero({
           </div>
 
           <div
-            className="hero-fade relative min-h-[320px] border border-white/10 bg-white/5 p-3 shadow-[0_28px_80px_rgba(2,10,22,0.26)] sm:min-h-[420px] lg:min-h-[500px]"
+            className="hero-fade relative min-h-[340px] bg-brand-mist sm:min-h-[440px] lg:min-h-[520px]"
             style={{ ["--enter-delay" as string]: "280ms" }}
           >
             <div className="relative h-full overflow-hidden">
@@ -117,9 +116,9 @@ export function PageHero({
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, (max-width: 1440px) 42vw, 40vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/85 via-brand-navy/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/35 via-transparent to-transparent" />
               {note ? (
-                <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-brand-navy/85 px-5 py-5 backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-brand-navy/92 px-5 py-5 text-white backdrop-blur-sm sm:left-auto sm:max-w-md">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-limeSoft">
                     {note.eyebrow}
                   </p>

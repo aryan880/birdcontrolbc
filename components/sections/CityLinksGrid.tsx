@@ -20,7 +20,7 @@ export function CityLinksGrid({ cities, className }: CityLinksGridProps) {
         <SmartLink
           key={city.slug}
           href={city.routeHref}
-          className="surface-card group flex rounded-2xl px-4 py-3 text-sm font-medium text-brand-navy"
+          className="group flex border-b border-brand-navy/15 px-1 py-3 text-sm font-medium text-brand-navy"
         >
           <span className="flex items-center justify-between gap-3">
             <span>{city.name}</span>

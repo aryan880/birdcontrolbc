@@ -13,7 +13,7 @@ export function StickyMobileCTA() {
         <ButtonLink
           href="/contact"
           variant="dark"
-          className="flex-1"
+          className="flex-1 px-3 text-[12px] leading-4"
           onClick={() => trackCtaClick(siteConfig.ctaLabels.primary, "sticky_mobile_cta")}
         >
           {siteConfig.ctaLabels.primary}

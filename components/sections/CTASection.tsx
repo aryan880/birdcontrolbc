@@ -4,20 +4,20 @@ import { siteConfig } from "@/content/site";
 
 export function CTASection() {
   return (
-    <section className="pb-16 pt-8 sm:pb-20">
+    <section className="bg-brand-soft py-16 sm:py-20">
       <Container>
         <div
           data-reveal
-          className="panel-sheen overflow-hidden rounded-[2.4rem] bg-gradient-to-br from-brand-navy via-brand-blue to-[#0d4058] px-6 py-10 text-white shadow-panel sm:px-10 sm:py-14 lg:flex lg:items-center lg:justify-between lg:gap-10"
+          className="border-y border-brand-navy/20 py-10 lg:flex lg:items-end lg:justify-between lg:gap-12 lg:py-14"
         >
           <div className="max-w-3xl">
-            <p className="eyebrow-pill-dark">
+            <p className="eyebrow-pill">
               Start with the property details
             </p>
-            <h2 className="mt-5 text-3xl font-semibold tracking-[-0.03em] text-balance sm:text-5xl">
+            <h2 className="font-display mt-6 text-4xl font-medium leading-tight tracking-[-0.04em] text-brand-navy text-balance sm:text-6xl">
               Send photos for a quote that starts with real context.
             </h2>
-            <p className="mt-5 text-base leading-7 text-slate-200 sm:text-lg">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-brand-slate sm:text-lg">
               A clear photo of the affected area, the city, and a short note about access can make the first conversation much more productive. Call when a direct conversation is easier.
             </p>
           </div>
@@ -25,7 +25,7 @@ export function CTASection() {
             <ButtonLink href="/contact" variant="primary" className="sm:min-w-[220px]">
               {siteConfig.ctaLabels.primary}
             </ButtonLink>
-            <ButtonLink href={siteConfig.telHref} variant="light" className="sm:min-w-[200px]">
+            <ButtonLink href={siteConfig.telHref} variant="outline" className="sm:min-w-[160px]">
               {siteConfig.ctaLabels.secondary}
             </ButtonLink>
           </div>

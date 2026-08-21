@@ -6,29 +6,20 @@ type TrustBadgeRowProps = {
 };
 
 export function TrustBadgeRow({ items, theme = "light" }: TrustBadgeRowProps) {
-  const surfaceClass =
-    theme === "dark"
-      ? "border-white/10 bg-white/8 text-slate-100"
-      : "border-brand-line/70 bg-white/72 text-brand-slate";
+  const surfaceClass = theme === "dark" ? "border-white/15 text-slate-100" : "border-brand-navy/15 text-brand-slate";
   const headingClass = theme === "dark" ? "text-white" : "text-brand-navy";
-  const accentClass = theme === "dark" ? "bg-brand-lime/18 text-brand-limeSoft" : "bg-brand-mist text-brand-limeDark";
 
   return (
-    <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+    <div className="grid border-y border-brand-navy/15 md:grid-cols-2 xl:grid-cols-4">
       {items.map((item, index) => (
         <article
           key={item.label}
           data-reveal
-          className={`reveal-load sweep-border rounded-[1.35rem] border px-4 py-4 shadow-[0_10px_28px_rgba(7,23,44,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(7,23,44,0.09)] ${surfaceClass}`}
+          className={`reveal-load border-b px-5 py-6 md:border-r xl:border-b-0 ${surfaceClass}`}
           style={{ ["--reveal-delay" as string]: `${index * 40}ms` }}
         >
           <div className="flex items-start gap-3">
-            <span
-              aria-hidden="true"
-              className={`mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold ${accentClass}`}
-            >
-              ✓
-            </span>
+            <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-limeDark" />
             <div>
               <h2 className={`text-sm font-semibold tracking-[-0.01em] ${headingClass}`}>{item.label}</h2>
               <p className="mt-1.5 text-sm leading-6">{item.detail}</p>
