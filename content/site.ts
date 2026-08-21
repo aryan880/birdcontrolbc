@@ -6,7 +6,7 @@ export const siteConfig = {
   defaultDescription:
     "Bird Control BC provides practical bird netting, bird spike installation, pigeon-dropping cleanup, and commercial bird-control solutions across Vancouver and the Lower Mainland.",
   defaultOgImage: "/media/projects/lower-mainland-balcony-netting/project-hero.webp",
-  brandIcon: "/brand/bird-control-bc-mark.svg",
+  brandIcon: "/brand/final/icon.svg",
   phoneDisplay: "(672) 699-4826",
   phoneHref: "+16726994826",
   telHref: "tel:+16726994826",
