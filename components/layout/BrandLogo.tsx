@@ -13,27 +13,20 @@ export function BrandLogo({ tone = "dark", compact = false }: BrandLogoProps) {
     <Link href="/" aria-label="Bird Control BC homepage" className="group inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-limeDark focus-visible:ring-offset-2">
       <svg aria-hidden="true" viewBox="0 0 100 100" className="h-11 w-11 shrink-0">
         <path
-          d="M16 76h80V27M24 85h72"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="5"
-          strokeLinecap="square"
-          className={tone === "dark" ? "text-[#0B2F27]" : "text-white"}
-        />
-        <path
-          d="M88 32v39"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3.2"
-          className={tone === "dark" ? "text-[#8FA84F]" : "text-brand-limeSoft"}
-        />
-        <path
-          d="M13 51c16-18 33-26 53-23 9 1 17-3 27-12-3 10-8 18-17 23l18 6-20 6C61 63 44 67 25 62c9-7 16-15 21-25-12 3-23 8-33 14Z"
+          d="M18 49c15-17 31-24 49-21 8 1 14-1 22-7-3 8-8 14-15 18l15 5-17 4C61 58 48 63 31 62c8-6 14-13 18-21-11 3-21 6-31 8Z"
           fill="currentColor"
           className={tone === "dark" ? "text-[#0B2F27]" : "text-white"}
         />
-        <path d="M29 51c11-11 24-17 38-18-9 7-16 15-21 26-6-2-11-5-17-8Z" fill="currentColor" className={tone === "dark" ? "text-[#8FA84F]" : "text-brand-limeSoft"} />
-        <circle cx="72" cy="34" r="1.8" fill="currentColor" className={tone === "dark" ? "text-brand-cream" : "text-[#0B2F27]"} />
+        <path d="M31 50c10-10 22-16 35-16-9 6-16 13-21 22-5-2-9-4-14-6Z" fill="currentColor" className={tone === "dark" ? "text-[#8FA84F]" : "text-brand-limeSoft"} />
+        <circle cx="72" cy="33" r="1.8" fill="currentColor" className={tone === "dark" ? "text-brand-cream" : "text-[#0B2F27]"} />
+        <path
+          d="M20 72h66M83 72v-10"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3.2"
+          strokeLinecap="square"
+          className={tone === "dark" ? "text-[#0B2F27]" : "text-white"}
+        />
       </svg>
       {!compact ? (
         <span className={`leading-none ${textClass}`}>
