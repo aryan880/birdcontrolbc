@@ -88,8 +88,8 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
             <div data-reveal>
               <SectionHeading
                 eyebrow="On Site"
-                title="A short view of the installation area."
-                description="The clip is compressed for fast playback and shows the real balcony opening and netting layout during the job."
+                title={project.videos?.length === 1 ? "A short view of the project area." : "See the project before and after installation."}
+                description="Each clip is muted and compressed for fast playback, providing additional context beyond the project photographs."
               />
             </div>
             <ProjectVideoGallery videos={project.videos ?? []} />
