@@ -46,9 +46,12 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-5 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
           <a href={siteConfig.telHref} onClick={() => trackPhoneClick("header_phone")} className="text-sm font-semibold text-brand-navy hover:text-brand-limeDark">
             {siteConfig.phoneDisplay}
+          </a>
+          <a href={siteConfig.smsHref} className="hidden border-b border-brand-navy/30 pb-0.5 text-xs font-semibold text-brand-navy hover:border-brand-limeDark hover:text-brand-limeDark xl:inline">
+            Text us
           </a>
           <ButtonLink
             href="/contact"

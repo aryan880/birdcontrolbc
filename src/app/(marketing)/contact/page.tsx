@@ -12,9 +12,9 @@ import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 import { LocalBusinessSchema } from "@/lib/schema/local-business";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Send Photos for a Bird-Control Quote",
+  title: "Free Bird-Control Quote or Inspection",
   description:
-    "Send photos for a free quote for balcony bird netting, bird spikes, pigeon-dropping cleanup, deterrents, commercial, or strata bird control in Vancouver and the Lower Mainland.",
+    "Send photos, call, or text Bird Control BC for a free bird-control quote or inspection in Vancouver and the Lower Mainland.",
   path: "/contact",
   image: "/media/projects/lower-mainland-balcony-netting/completed-netting-railing-detail.webp",
 });
@@ -32,8 +32,8 @@ export default function ContactPage() {
 
       <PageHero
         eyebrow="Contact"
-        title="Send photos for a clear bird-control quote."
-        description="Share the problem area, city, and property context. It is the fastest way to make the first conversation useful."
+        title="Get a free bird-control quote or inspection."
+        description="Share the problem area, city, and property context, or call or text us directly. We can start with photos and arrange a free inspection when an on-site look is appropriate."
         image={{
           src: "/media/projects/lower-mainland-balcony-netting/completed-netting-railing-detail.webp",
           alt: "Completed Vancouver balcony bird netting supporting a Bird Control BC quote request",
@@ -45,7 +45,8 @@ export default function ContactPage() {
         supportingPoints={[
           "A quote form built around useful property details",
           "Photo upload is ready for future backend handling",
-          "Call when a direct conversation is better",
+          "Call or text for a free quote",
+          "Free inspections available in our service area",
         ]}
         breadcrumbs={[
           { label: "Home", href: "/" },
@@ -53,7 +54,7 @@ export default function ContactPage() {
         ]}
         note={{
           eyebrow: "Quote request",
-          body: "This page keeps the first request organized around the details needed to understand the property, not an unnecessarily long checklist.",
+          body: "Start with photos, a call, or a text. If the property needs an on-site assessment, we can arrange a free inspection within our service area.",
         }}
       />
 

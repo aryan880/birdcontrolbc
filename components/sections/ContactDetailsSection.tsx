@@ -8,7 +8,7 @@ type ContactDetailsSectionProps = {
 
 export function ContactDetailsSection({
   title = "Talk to Bird Control BC directly.",
-  description = "Use the quote form if you want to package the details first, or reach out directly if a call is faster for the property issue in front of you.",
+  description = "Send photos, call, or text for a free quote. Free inspections are also available for properties in our service area when an on-site look is the right next step.",
   theme = "light",
 }: ContactDetailsSectionProps) {
   const surfaceClass =
@@ -29,12 +29,14 @@ export function ContactDetailsSection({
       <div className="section-grid-balanced md:grid-cols-2">
         <article className={`rounded-[1.6rem] border p-5 shadow-soft ${surfaceClass}`}>
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">
-            Call
+            Call or text
           </p>
-          <a href={siteConfig.telHref} className={`mt-3 block text-lg font-semibold ${headingClass}`}>
-            {siteConfig.phoneDisplay}
-          </a>
-          <p className="mt-2 text-sm leading-6">Best when you already know the issue and want to talk it through quickly.</p>
+          <div className={`mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-lg font-semibold ${headingClass}`}>
+            <a href={siteConfig.telHref}>Call {siteConfig.phoneDisplay}</a>
+            <span aria-hidden="true" className="text-brand-line">/</span>
+            <a href={siteConfig.smsHref}>Text us</a>
+          </div>
+          <p className="mt-2 text-sm leading-6">Use the same number to call or text for a free quote.</p>
         </article>
 
         <article className={`rounded-[1.6rem] border p-5 shadow-soft ${surfaceClass}`}>

@@ -222,15 +222,19 @@ export function QuoteForm({
       </button>
 
       <p className="text-sm leading-6 text-brand-slate">
-        Prefer a direct call or email? Call{" "}
+        Prefer to talk directly? Call{" "}
         <a
           className="font-semibold text-brand-navy"
           href={siteConfig.telHref}
           onClick={() => trackPhoneClick(source)}
         >
           {siteConfig.phoneDisplay}
-        </a>{" "}
-        or email{" "}
+        </a>
+        ,{" "}
+        <a className="font-semibold text-brand-navy" href={siteConfig.smsHref}>
+          text us
+        </a>
+        , or email{" "}
         <a
           className="font-semibold text-brand-navy"
           href={siteConfig.mailtoHref}

@@ -47,7 +47,13 @@ export function HeroSection() {
             className="hero-fade mt-10 hidden flex-wrap gap-x-8 gap-y-3 border-t border-brand-navy/15 pt-5 text-sm text-brand-slate sm:flex"
             style={{ ["--enter-delay" as string]: "380ms" }}
           >
-            <span>Photo-led estimates</span>
+            <span>Free inspections available</span>
+            <span>
+              <a href={siteConfig.telHref} className="font-semibold text-brand-navy hover:text-brand-limeDark">Call</a>
+              {" or "}
+              <a href={siteConfig.smsHref} className="font-semibold text-brand-navy hover:text-brand-limeDark">text</a>
+              {" for a free quote"}
+            </span>
             <span>Residential · Strata · Commercial</span>
           </div>
         </div>

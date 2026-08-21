@@ -24,6 +24,7 @@ export const siteConfig = {
     primary: "Send Photos for a Free Quote",
     secondary: "Call Now",
   },
+  inspectionMessage: "Free inspections are available for properties in our service area.",
   businessHours: [
     "Hours available on request",
   ],

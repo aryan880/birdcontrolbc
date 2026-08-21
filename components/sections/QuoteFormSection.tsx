@@ -22,7 +22,7 @@ export function QuoteFormSection({
       className="relative overflow-hidden border-t border-brand-navy/25 bg-brand-soft p-6 sm:p-8"
     >
       <p className="eyebrow-pill">
-        Send photos for a free quote
+        Free quote or inspection
       </p>
       <h2 className="font-display mt-5 text-4xl font-medium tracking-[-0.035em] text-brand-navy sm:text-5xl">
         {title}
@@ -31,7 +31,7 @@ export function QuoteFormSection({
         {description}
       </p>
       <div className="mt-6 border-l border-brand-limeDark bg-brand-mist/60 p-4 text-sm leading-6 text-brand-slate">
-        Helpful details: balcony or ledge photos, property type, city, access notes, and whether cleaning is also needed. Business hours: {siteConfig.businessHours.join(" · ")}.
+        Helpful details: balcony or ledge photos, property type, city, access notes, and whether cleaning is also needed. {siteConfig.inspectionMessage}
       </div>
       <div className="mt-8">
         <QuoteForm

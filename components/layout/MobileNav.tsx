@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { navigation } from "@/content/navigation";
+import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export function MobileNav() {
@@ -44,6 +45,11 @@ export function MobileNav() {
             </a>
           ))}
         </nav>
+        <div className="mt-4 flex items-center gap-4 border-t border-brand-line/70 pt-4 text-sm font-semibold text-brand-navy">
+          <a href={siteConfig.telHref}>Call</a>
+          <a href={siteConfig.smsHref}>Text</a>
+          <span className="text-xs font-medium text-brand-slate">{siteConfig.phoneDisplay}</span>
+        </div>
       </div>
     </div>
   );
