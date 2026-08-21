@@ -68,8 +68,8 @@ export default function HomePage() {
         <Container className="grid px-0 lg:grid-cols-2 lg:px-8">
           <div className="relative min-h-[28rem] lg:min-h-[46rem]">
             <Image
-              src="/media/projects/lower-mainland-balcony-netting/netting-wide-view.webp"
-              alt="Black balcony bird netting installed with the Lower Mainland skyline beyond"
+              src="/media/projects/lower-mainland-balcony-netting/support-pole-netting-view.webp"
+              alt="Completed black balcony bird netting installed with the Vancouver skyline beyond"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

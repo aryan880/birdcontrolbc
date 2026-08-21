@@ -1,16 +1,19 @@
 import type { City } from "@/types/city";
 
-const image = { src: "/images/condo-balcony-netting-focused.jpg", alt: "Bird-control installation at a multi-unit property in the Lower Mainland" };
+const image = {
+  src: "/media/projects/lower-mainland-balcony-netting/completed-netting-skyline.webp",
+  alt: "Completed balcony bird netting with Vancouver buildings beyond",
+};
 
 type CitySeed = { slug: string; name: string; context: string; propertyFocus: string; services: string[]; project: string };
 
 const citySeeds: CitySeed[] = [
   { slug: "vancouver", name: "Vancouver", context: "Vancouver properties range from dense condo balconies to retail streets, older rooflines, and larger commercial sites.", propertyFocus: "Condo balconies, mixed-use buildings, storefronts, and property-managed exteriors", services: ["balcony-bird-netting", "bird-spike-installation", "commercial-bird-control"], project: "vancouver-balcony-netting-project" },
-  { slug: "burnaby", name: "Burnaby", context: "Burnaby has a broad mix of high-rise, townhome, and commercial properties where access and shared-building coordination can matter.", propertyFocus: "High-rise balconies, multi-family communities, and commercial edges", services: ["balcony-bird-netting", "pigeon-dropping-cleaning", "strata-bird-control"], project: "burnaby-cleanup-project" },
+  { slug: "burnaby", name: "Burnaby", context: "Burnaby has a broad mix of high-rise, townhome, and commercial properties where access and shared-building coordination can matter.", propertyFocus: "High-rise balconies, multi-family communities, and commercial edges", services: ["balcony-bird-netting", "pigeon-dropping-cleaning", "strata-bird-control"], project: "vancouver-balcony-netting-project" },
   { slug: "richmond", name: "Richmond", context: "Richmond projects often involve condo balconies, retail centres, warehouses, and property edges exposed to repeat bird activity.", propertyFocus: "Condo developments, commercial buildings, rooflines, and loading areas", services: ["balcony-bird-netting", "bird-deterrents", "commercial-bird-control"], project: "roofline-bird-spike-project" },
   { slug: "north-vancouver", name: "North Vancouver", context: "North Vancouver properties frequently combine elevated balconies, exposed rooflines, and terrain-sensitive access considerations.", propertyFocus: "Homes, elevated balconies, building edges, and strata common areas", services: ["bird-spike-installation", "bird-deterrents", "strata-bird-control"], project: "roofline-bird-spike-project" },
   { slug: "west-vancouver", name: "West Vancouver", context: "West Vancouver properties often need careful attention to visible building details, exterior finishes, and how outdoor spaces are used.", propertyFocus: "Homes, view-facing balconies, rooflines, and visible exterior details", services: ["bird-deterrents", "bird-spike-installation", "balcony-bird-netting"], project: "vancouver-balcony-netting-project" },
-  { slug: "coquitlam", name: "Coquitlam", context: "Coquitlam combines newer residential communities, townhomes, commercial corridors, and strata properties with varied bird-control needs.", propertyFocus: "Residential balconies, strata common areas, and commercial exterior surfaces", services: ["pigeon-dropping-cleaning", "strata-bird-control", "balcony-bird-netting"], project: "burnaby-cleanup-project" },
+  { slug: "coquitlam", name: "Coquitlam", context: "Coquitlam combines newer residential communities, townhomes, commercial corridors, and strata properties with varied bird-control needs.", propertyFocus: "Residential balconies, strata common areas, and commercial exterior surfaces", services: ["pigeon-dropping-cleaning", "strata-bird-control", "balcony-bird-netting"], project: "vancouver-balcony-netting-project" },
   { slug: "surrey", name: "Surrey", context: "Surrey has a wide mix of homes, multi-family buildings, retail, warehouse, and other commercial properties needing site-specific planning.", propertyFocus: "Homes, multi-family buildings, retail, industrial, and warehouse properties", services: ["commercial-bird-control", "bird-spike-installation", "bird-deterrents"], project: "roofline-bird-spike-project" },
 ];
 

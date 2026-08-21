@@ -36,8 +36,8 @@ export default function ThankYouPage() {
         title="Thanks. Your quote request is set up for the next business step."
         description="Your quote request has been captured. This page keeps the follow-up path clear while business contact details and form delivery are connected for launch."
         image={{
-          src: "/images/pigeon-proof-balcony-before-after-focused.jpg",
-          alt: "Thank-you page image for the Bird Control BC quote flow",
+          src: "/media/projects/lower-mainland-balcony-netting/finished-balcony-netting-detail.webp",
+          alt: "Finished balcony bird netting detail from a Bird Control BC project",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },

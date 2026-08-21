@@ -58,13 +58,15 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
       />
 
       <section className="section-wrap">
-        <Container className="split-section lg:grid-cols-[0.98fr_1.02fr] lg:items-start">
-          <div data-reveal>
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+            <div data-reveal>
             <SectionHeading
               eyebrow="Project Overview"
               title={project.title}
               description={project.overview}
             />
+            </div>
             <div className="section-gap section-surface p-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">
                 Scope
@@ -77,7 +79,9 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
             </div>
           </div>
           {hasGallery ? (
-            <ProjectGallery images={project.gallery} />
+            <div className="mt-10 sm:mt-12">
+              <ProjectGallery images={project.gallery} />
+            </div>
           ) : null}
         </Container>
       </section>

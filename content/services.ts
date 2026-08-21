@@ -3,10 +3,10 @@ import type { Service } from "@/types/service";
 const imageByService = {
   "balcony-bird-netting": { src: "/media/projects/lower-mainland-balcony-netting/project-hero.webp", alt: "Black bird netting installed across a Lower Mainland residential balcony opening" },
   "bird-spike-installation": { src: "/images/pigeon-spike-roofline-focused.jpg", alt: "Bird spikes installed along a roofline landing edge" },
-  "pigeon-dropping-cleaning": { src: "/images/balcony-cleaning-finished-space.jpg", alt: "Cleaned balcony after pigeon-dropping cleanup" },
-  "bird-deterrents": { src: "/images/pigeon-spikes-close-up-installation.jpg", alt: "Close view of a bird-deterrent installation on a landing surface" },
-  "commercial-bird-control": { src: "/images/condo-balcony-netting-focused.jpg", alt: "Bird-control work on a multi-unit building exterior" },
-  "strata-bird-control": { src: "/images/pigeon-proof-balcony-before-after-focused.jpg", alt: "Bird-proofed balcony at a shared residential property" },
+  "pigeon-dropping-cleaning": { src: "/media/projects/lower-mainland-balcony-netting/cleanup-in-progress.webp", alt: "Balcony floor during pigeon-dropping cleanup in Vancouver" },
+  "bird-deterrents": { src: "/media/projects/lower-mainland-balcony-netting/netting-hardware-layout.webp", alt: "Bird-control hardware prepared for a balcony installation" },
+  "commercial-bird-control": { src: "/media/projects/lower-mainland-balcony-netting/completed-netting-side-view.webp", alt: "Completed bird netting at a multi-unit Vancouver property" },
+  "strata-bird-control": { src: "/media/projects/lower-mainland-balcony-netting/finished-balcony-netting-wide.webp", alt: "Finished balcony bird netting at a shared residential property" },
 } as const;
 
 type ServiceSeed = Pick<Service, "slug" | "name" | "shortLabel" | "summary"> & {
@@ -69,7 +69,12 @@ export const services: Service[] = serviceSeeds.map((seed) => ({
       { title: "Review the best fit", description: "The next step is shaped around the actual issue rather than a generic package." },
     ],
   },
-  featuredProjectSlug: seed.slug === "bird-spike-installation" ? "roofline-bird-spike-project" : "vancouver-balcony-netting-project",
+  featuredProjectSlug:
+    seed.slug === "bird-spike-installation"
+      ? "roofline-bird-spike-project"
+      : seed.slug === "pigeon-dropping-cleaning"
+        ? "vancouver-balcony-cleanup-project"
+        : "vancouver-balcony-netting-project",
   featuredCitySlugs: seed.cities,
   relatedServiceSlugs: serviceSeeds.filter((service) => service.slug !== seed.slug).slice(0, 3).map((service) => service.slug),
   relatedResourceSlugs:

@@ -24,7 +24,7 @@ export default function AboutPage() {
         eyebrow="About Bird Control BC"
         title="A practical way to start solving repeat bird activity."
         description="Bird Control BC is built around clear property context, real project imagery, and service pages that help visitors identify the actual problem area before requesting a quote."
-        image={{ src: "/images/condo-balcony-netting-focused.jpg", alt: "Bird netting at a multi-unit property" }}
+        image={{ src: "/media/projects/lower-mainland-balcony-netting/completed-netting-side-view.webp", alt: "Completed bird netting at a Vancouver multi-unit property" }}
         actions={[{ href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" }, { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" }]}
         supportingPoints={["Vancouver & Lower Mainland", "Homes, strata, and commercial properties", "Photo-led quote requests"]}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "About" }]}

@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Send photos for a free quote for balcony bird netting, bird spikes, pigeon-dropping cleanup, deterrents, commercial, or strata bird control in Vancouver and the Lower Mainland.",
   path: "/contact",
-  image: "/images/balcony-netting-focused-installation.jpg",
+  image: "/media/projects/lower-mainland-balcony-netting/completed-netting-railing-detail.webp",
 });
 
 export default function ContactPage() {
@@ -35,8 +35,8 @@ export default function ContactPage() {
         title="Send photos for a clear bird-control quote."
         description="Share the problem area, city, and property context. It is the fastest way to make the first conversation useful."
         image={{
-          src: "/images/balcony-netting-focused-installation.jpg",
-          alt: "Balcony bird-netting installation supporting a Bird Control BC quote request",
+          src: "/media/projects/lower-mainland-balcony-netting/completed-netting-railing-detail.webp",
+          alt: "Completed Vancouver balcony bird netting supporting a Bird Control BC quote request",
         }}
         actions={[
           { href: "#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },

@@ -76,9 +76,9 @@ export const resources: Resource[] = [
     excerpt:
       "Why dry sweeping can spread contaminated dust, what official guidance recommends, and how cleanup should connect to prevention.",
     image: {
-      src: "/media/projects/lower-mainland-balcony-netting/before-dropping-detail.webp",
-      alt: "Close view of pigeon droppings and debris on a balcony before cleanup",
-      kind: "before",
+      src: "/media/projects/lower-mainland-balcony-netting/cleanup-vacuum-work-area.webp",
+      alt: "Cleanup vacuum and tools on a Vancouver balcony affected by pigeon droppings",
+      kind: "detail",
     },
     seo: {
       title: "Pigeon Dropping Cleanup Safety | Vancouver Guide",
@@ -141,7 +141,7 @@ export const resources: Resource[] = [
     excerpt:
       "A practical way to connect cleanup with the entry point, landing surface, and bird-control method that addresses repeat activity.",
     image: {
-      src: "/media/projects/lower-mainland-balcony-netting/netting-wide-view.webp",
+      src: "/media/projects/lower-mainland-balcony-netting/completed-netting-wide.webp",
       alt: "Completed black bird netting installation protecting a Vancouver balcony opening",
       kind: "after",
     },

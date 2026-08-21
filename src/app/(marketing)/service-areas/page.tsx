@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Bird-control service areas across Vancouver and the Lower Mainland, including Vancouver, Burnaby, Richmond, North Vancouver, West Vancouver, Coquitlam, and Surrey.",
   path: "/service-areas",
-  image: "/images/condo-balcony-netting-focused.jpg",
+  image: "/media/projects/lower-mainland-balcony-netting/completed-netting-skyline.webp",
 });
 
 export default function ServiceAreasPage() {
@@ -41,8 +41,8 @@ export default function ServiceAreasPage() {
         title="Bird-control service areas across Vancouver and the Lower Mainland."
         description="Browse local pages for Vancouver, Burnaby, Richmond, the North Shore, Coquitlam, and Surrey. Each adds useful property context without duplicating the core service information."
         image={{
-          src: "/images/condo-balcony-netting-focused.jpg",
-          alt: "Condo balcony netting installation representing Lower Mainland bird-control service areas",
+          src: "/media/projects/lower-mainland-balcony-netting/completed-netting-skyline.webp",
+          alt: "Completed balcony bird netting overlooking Vancouver and the Lower Mainland",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },

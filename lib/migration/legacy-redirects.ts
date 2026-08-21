@@ -12,4 +12,5 @@ export const legacyRedirects = [
   { source: "/commercial-bird-control.html", destination: "/services/commercial-bird-control" },
   { source: "/service-areas.html", destination: "/service-areas" },
   { source: "/contact.html", destination: "/contact" },
+  { source: "/projects/burnaby-cleanup-project", destination: "/projects/vancouver-balcony-cleanup-project" },
 ] as const;

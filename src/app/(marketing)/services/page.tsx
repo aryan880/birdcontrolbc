@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "Explore balcony bird netting, bird spike installation, pigeon-dropping cleanup, bird deterrents, commercial bird control, and strata bird control across Vancouver and the Lower Mainland.",
   path: "/services",
-  image: "/images/balcony-netting-focused-installation.jpg",
+  image: "/media/projects/lower-mainland-balcony-netting/finished-balcony-netting-wide.webp",
 });
 
 export default function ServicesPage() {
@@ -35,8 +35,8 @@ export default function ServicesPage() {
         title="Bird-control services for balconies, building edges, and shared properties."
         description="Choose the route that fits the actual property issue, whether birds are entering a balcony, returning to a ledge, leaving droppings, or affecting a commercial or strata property."
         image={{
-          src: "/images/balcony-netting-focused-installation.jpg",
-          alt: "Balcony bird-netting installation representing Bird Control BC services",
+          src: "/media/projects/lower-mainland-balcony-netting/finished-balcony-netting-wide.webp",
+          alt: "Finished balcony bird-netting installation by Bird Control BC",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
