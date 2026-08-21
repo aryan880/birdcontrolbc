@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-  <title id="title">Bird Control BC vehicle and uniform lockup</title>
-  <desc id="desc">High-contrast Coastline Wing lockup with contact number and core services.</desc>
-  <rect width="1200" height="320" rx="20" fill="#102F28"/>
-  <g transform="translate(45 42) scale(2.3)">
-    <path d="M18 49c15-17 31-24 49-21 8 1 14-1 22-7-3 8-8 14-15 18l15 5-17 4C61 58 48 63 31 62c8-6 14-13 18-21-11 3-21 6-31 8Z" fill="#F6F1E7"/>
-    <path d="M31 50c10-10 22-16 35-16-9 6-16 13-21 22-5-2-9-4-14-6Z" fill="#A5B772"/>
-    <path d="M20 72h66M83 72v-10" fill="none" stroke="#F6F1E7" stroke-width="3.2" stroke-linecap="square"/>
-  </g>
-  <text x="296" y="139" fill="#F6F1E7" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="700" letter-spacing="-2">Bird Control BC</text>
-  <text x="301" y="188" fill="#C5D09F" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="4">BIRD CONTROL · CLEANUP · EXCLUSION</text>
-  <rect x="907" y="109" width="245" height="70" rx="35" fill="#879B59"/>
-  <text x="1029" y="152" text-anchor="middle" fill="#102F28" font-family="Arial, sans-serif" font-size="22" font-weight="700">672 699 4826</text>
-  <text x="301" y="235" fill="#D6DDC5" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">VANCOUVER · LOWER MAINLAND</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc"><title id="title">Bird Control BC vehicle and uniform lockup</title><desc id="desc">High-contrast bird lockup with contact number and services.</desc><rect width="1200" height="320" rx="20" fill="#0F3B2E"/><g transform="translate(36 30) scale(2.35)"><path d="M39 50C42 35 48 20 59 8c0 10-1 19-4 28 6-11 14-20 24-26-4 13-10 24-18 33 7-7 15-12 24-15-5 11-13 20-23 26-8-2-16-3-23-4Z" fill="#EDE6DD"/><path d="M42 51c5-11 10-20 17-27-1 8-2 15-5 22 5-7 10-13 17-17-3 8-8 15-14 21-5 1-10 1-15 1Z" fill="#A5B772"/><path d="M17 61c11-7 21-11 31-13 8-2 16-2 23 1 4-2 8-3 12-2l10 4-10 4c-3 1-7 1-10 0-5 7-12 12-21 15-11 4-23 3-34-3l17-4-18-2Z" fill="#EDE6DD"/><path d="M82 48l12 3-12 4 4-4-4-3Z" fill="#EDE6DD"/><circle cx="78" cy="49.5" r="1.4" fill="#0F3B2E"/><path d="M18 78h68" stroke="#EDE6DD" stroke-width="3.5"/></g><text x="296" y="139" fill="#EDE6DD" font-family="Georgia,'Times New Roman',serif" font-size="72" font-weight="700" letter-spacing="-2">Bird Control BC</text><text x="301" y="188" fill="#C5D09F" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4">BIRD CONTROL · CLEANUP · EXCLUSION</text><rect x="907" y="109" width="245" height="70" rx="35" fill="#7A8F4A"/><text x="1029" y="152" text-anchor="middle" fill="#0F3B2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">672 699 4826</text><text x="301" y="235" fill="#D6DDC5" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3">VANCOUVER · LOWER MAINLAND</text></svg>
