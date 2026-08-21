@@ -9,4 +9,5 @@ export type QuoteLeadPayload = {
   message: string;
   consent: boolean;
   photoNames: string[];
+  source: string;
 };

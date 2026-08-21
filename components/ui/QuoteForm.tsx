@@ -16,6 +16,11 @@ type QuoteFormProps = {
   defaultService?: string;
 };
 
+type SubmissionState =
+  | { status: "idle"; message: "" }
+  | { status: "submitting"; message: "" }
+  | { status: "error"; message: string };
+
 export function QuoteForm({
   source = "quote_form",
   redirectTo = "/thank-you",
@@ -25,51 +30,88 @@ export function QuoteForm({
   const router = useRouter();
   const { trackQuoteSubmission, trackPhoneClick, trackEmailClick } = useTracking();
   const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
+  const [submission, setSubmission] = useState<SubmissionState>({
+    status: "idle",
+    message: "",
+  });
 
   const defaultSelectedService = useMemo(() => {
     return defaultService ?? services[0]?.name ?? "";
   }, [defaultService]);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    setSubmission({ status: "submitting", message: "" });
 
-    const consent = formData.get("consent") === "on";
-    const payload: QuoteLeadPayload = {
-      name: String(formData.get("name") ?? "").trim(),
-      phone: String(formData.get("phone") ?? "").trim(),
-      email: String(formData.get("email") ?? "").trim(),
-      propertyAddress: String(formData.get("propertyAddress") ?? "").trim(),
-      city: String(formData.get("city") ?? "").trim(),
-      serviceNeeded: String(formData.get("service") ?? "").trim(),
-      propertyType: String(formData.get("propertyType") ?? "").trim(),
-      message: String(formData.get("message") ?? "").trim(),
-      consent,
-      photoNames: selectedFiles,
-    };
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        body: formData,
+      });
+      const result = (await response.json()) as { ok?: boolean; message?: string };
 
-    sessionStorage.setItem("bc_quote_lead", JSON.stringify(payload));
-    trackQuoteSubmission(source, {
-      service: payload.serviceNeeded,
-      city: payload.city,
-      propertyType: payload.propertyType,
-      consent: payload.consent,
-      hasPhotos: payload.photoNames.length > 0,
-    });
+      if (!response.ok || !result.ok) {
+        throw new Error(result.message || "We could not send your request. Please try again.");
+      }
 
-    const searchParams = new URLSearchParams({
-      service: payload.serviceNeeded,
-      city: payload.city,
-      propertyType: payload.propertyType,
-    });
+      const consent = formData.get("consent") === "on";
+      const payload: QuoteLeadPayload = {
+        name: String(formData.get("name") ?? "").trim(),
+        phone: String(formData.get("phone") ?? "").trim(),
+        email: String(formData.get("email") ?? "").trim(),
+        propertyAddress: String(formData.get("propertyAddress") ?? "").trim(),
+        city: String(formData.get("city") ?? "").trim(),
+        serviceNeeded: String(formData.get("service") ?? "").trim(),
+        propertyType: String(formData.get("propertyType") ?? "").trim(),
+        message: String(formData.get("message") ?? "").trim(),
+        consent,
+        photoNames: selectedFiles,
+        source,
+      };
 
-    router.push(`${redirectTo}?${searchParams.toString()}`);
+      sessionStorage.setItem("bc_quote_lead", JSON.stringify(payload));
+      trackQuoteSubmission(source, {
+        service: payload.serviceNeeded,
+        city: payload.city,
+        propertyType: payload.propertyType,
+        consent: payload.consent,
+        hasPhotos: payload.photoNames.length > 0,
+      });
+
+      const searchParams = new URLSearchParams({
+        service: payload.serviceNeeded,
+        city: payload.city,
+        propertyType: payload.propertyType,
+      });
+
+      router.push(`${redirectTo}?${searchParams.toString()}`);
+    } catch (error) {
+      setSubmission({
+        status: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "We could not send your request. Please try again.",
+      });
+    }
   };
 
   return (
     <form className="grid gap-5" onSubmit={handleSubmit}>
+      <input type="hidden" name="source" value={source} />
+      <div className="absolute -left-[10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor={`${source}-company-website`}>Company website</label>
+        <input
+          id={`${source}-company-website`}
+          name="companyWebsite"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Name" htmlFor="name">
           <input
@@ -192,7 +234,7 @@ export function QuoteForm({
             }}
           />
           <p className="text-xs leading-6 text-brand-slate">
-            You can choose photos now so the request stays organized. Selected file names are carried through the thank-you flow until full upload handling is connected.
+            Attach up to 3 JPG, PNG, WebP, HEIC, or HEIF photos, with a combined size under 4 MB. They will be included with your quote request.
           </p>
           {selectedFiles.length ? (
             <p className="text-xs leading-6 text-brand-navy">
@@ -216,10 +258,26 @@ export function QuoteForm({
 
       <button
         type="submit"
-        className="hover-glow inline-flex min-h-12 items-center justify-center rounded-2xl border border-brand-limeSoft/80 bg-gradient-to-b from-[#e7fb8b] to-brand-lime px-5 py-3 text-sm font-semibold text-brand-navy shadow-[0_14px_34px_rgba(169,216,79,0.26)] transition duration-200 hover:-translate-y-0.5 hover:from-[#efffaf] hover:to-brand-limeSoft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 sm:text-base"
+        disabled={submission.status === "submitting"}
+        className="hover-glow inline-flex min-h-12 items-center justify-center rounded-2xl border border-brand-limeSoft/80 bg-gradient-to-b from-[#e7fb8b] to-brand-lime px-5 py-3 text-sm font-semibold text-brand-navy shadow-[0_14px_34px_rgba(169,216,79,0.26)] transition duration-200 hover:-translate-y-0.5 hover:from-[#efffaf] hover:to-brand-limeSoft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-65 disabled:hover:translate-y-0 sm:text-base"
       >
-        {submitLabel}
+        {submission.status === "submitting" ? "Sending your request..." : submitLabel}
       </button>
+
+      <div aria-live="polite" aria-atomic="true">
+        {submission.status === "error" ? (
+          <p
+            role="alert"
+            className="rounded-xl border border-red-800/20 bg-red-50 px-4 py-3 text-sm leading-6 text-red-900"
+          >
+            {submission.message} Call or text us at{" "}
+            <a className="font-semibold underline underline-offset-2" href={siteConfig.telHref}>
+              {siteConfig.phoneDisplay}
+            </a>
+            .
+          </p>
+        ) : null}
+      </div>
 
       <p className="text-sm leading-6 text-brand-slate">
         Prefer to talk directly? Call{" "}

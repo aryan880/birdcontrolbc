@@ -35,6 +35,19 @@ The primary phone, email, and Vancouver business location are configured in `con
 
 The site deliberately does not reuse any previous-business contact information, reviews, certifications, years in business, guarantees, or other unsupported claims.
 
+### Quote delivery
+
+The quote form posts to `src/app/api/quote/route.ts`. It validates the request server-side, emails the lead and up to three photo attachments through Resend, and can send a short secondary SMS alert through Twilio.
+
+Copy `.env.example` to `.env.local` for local development, then configure these Vercel environment variables for Production and Preview:
+
+- `RESEND_API_KEY` (required)
+- `QUOTE_FROM_EMAIL` (required; use an address on a domain verified in Resend)
+- `QUOTE_NOTIFICATION_EMAIL` (required; currently `info@birdcontrolbc.ca`)
+- `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM_NUMBER`, and `QUOTE_NOTIFICATION_PHONE` (optional; all four are required to enable SMS alerts)
+
+Never commit `.env.local` or production credentials. The form will display a call/text fallback instead of showing a false success when email delivery is unavailable.
+
 ## Deployment
 
 Deploy to Vercel with `birdcontrolbc.ca` configured as the production domain. Add `NEXT_PUBLIC_GA4_ID` and/or `NEXT_PUBLIC_GTM_ID` only when analytics IDs are ready. Submit `https://birdcontrolbc.ca/sitemap.xml` in Google Search Console after DNS and the production deployment are live.

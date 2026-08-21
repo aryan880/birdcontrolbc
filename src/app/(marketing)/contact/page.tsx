@@ -43,8 +43,8 @@ export default function ContactPage() {
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[
-          "A quote form built around useful property details",
-          "Photo upload is ready for future backend handling",
+          "Quote requests delivered directly to our inbox",
+          "Attach photos of the problem area",
           "Call or text for a free quote",
           "Free inspections available in our service area",
         ]}
@@ -67,7 +67,7 @@ export default function ContactPage() {
             <QuoteFormSection
               source="contact_page"
               title="Show us what is happening."
-              description="A few clear photos and short practical notes are enough to start. Full upload delivery can be connected to a backend when the business workflow is selected."
+              description="A few clear photos and short practical notes are enough to start. Your request and attachments are sent securely to our business inbox."
             />
           </div>
         </Container>
