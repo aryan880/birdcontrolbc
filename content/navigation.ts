@@ -40,6 +40,7 @@ export const navigation: NavigationGroup = {
   company: [
     { label: "About Bird Control BC", href: "/about", kind: "route" },
     { label: "Projects", href: "/projects", kind: "route" },
+    { label: "Property Care Guides", href: "/resources", kind: "route" },
     { label: "Service Areas", href: "/service-areas", kind: "route" },
     { label: "Contact", href: "/contact", kind: "route" },
   ],

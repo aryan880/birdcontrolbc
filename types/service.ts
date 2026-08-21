@@ -37,6 +37,7 @@ export type Service = {
   featuredProjectSlug?: string;
   featuredCitySlugs?: string[];
   relatedServiceSlugs?: string[];
+  relatedResourceSlugs?: string[];
   whyChoose?: {
     eyebrow: string;
     title: string;

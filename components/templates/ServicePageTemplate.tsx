@@ -6,12 +6,14 @@ import { PageHero } from "@/components/sections/PageHero";
 import { ProjectShowcase } from "@/components/sections/ProjectShowcase";
 import { QuoteBand } from "@/components/sections/QuoteBand";
 import { QuoteFormSection } from "@/components/sections/QuoteFormSection";
+import { ResourceLinks } from "@/components/sections/ResourceLinks";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { FAQPageSchema } from "@/lib/schema/faq";
 import { BreadcrumbSchema } from "@/lib/schema/breadcrumb";
 import { ServiceSchema } from "@/lib/schema/service";
 import { getCitiesBySlugs } from "@/content/cities";
 import { getProjectsBySlugs } from "@/content/projects";
+import { getResourcesBySlugs } from "@/content/resources";
 import { getServiceHref, getServicesBySlugs } from "@/content/services";
 import { siteConfig } from "@/content/site";
 import type { Service } from "@/types/service";
@@ -41,6 +43,9 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
     : undefined;
   const featuredCities = service.featuredCitySlugs
     ? getCitiesBySlugs(service.featuredCitySlugs)
+    : [];
+  const relatedResources = service.relatedResourceSlugs
+    ? getResourcesBySlugs(service.relatedResourceSlugs)
     : [];
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -160,6 +165,19 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
             <div className="section-gap">
               <CityLinksGrid cities={featuredCities} />
             </div>
+          </Container>
+        </section>
+      ) : null}
+
+      {relatedResources.length ? (
+        <section className="section-wrap-tight bg-white">
+          <Container className="split-section lg:grid-cols-[0.68fr_1.32fr] lg:gap-16">
+            <SectionHeading
+              eyebrow="Property care guides"
+              title={`Read before planning ${service.shortLabel?.toLowerCase() ?? service.name.toLowerCase()}.`}
+              description="Source-backed guidance that explains the property condition without exaggerating health claims or prescribing a one-size-fits-all response."
+            />
+            <ResourceLinks resources={relatedResources} />
           </Container>
         </section>
       ) : null}

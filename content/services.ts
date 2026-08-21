@@ -72,6 +72,12 @@ export const services: Service[] = serviceSeeds.map((seed) => ({
   featuredProjectSlug: seed.slug === "bird-spike-installation" ? "roofline-bird-spike-project" : "vancouver-balcony-netting-project",
   featuredCitySlugs: seed.cities,
   relatedServiceSlugs: serviceSeeds.filter((service) => service.slug !== seed.slug).slice(0, 3).map((service) => service.slug),
+  relatedResourceSlugs:
+    seed.slug === "pigeon-dropping-cleaning"
+      ? ["pigeon-droppings-health-risks", "pigeon-dropping-cleanup-safety"]
+      : seed.slug === "balcony-bird-netting"
+        ? ["prevent-pigeon-droppings-balcony"]
+        : undefined,
   whyChoose: {
     eyebrow: "A grounded approach",
     title: "Clear information before a recommendation.",
@@ -87,6 +93,22 @@ export const services: Service[] = serviceSeeds.map((seed) => ({
     { id: `${seed.slug}-quote`, question: `How do I request a ${seed.shortLabel?.toLowerCase()} quote?`, answer: "Send photos of the affected area, your city, and any details about access or the property type. The request can then be reviewed with better context." },
     { id: `${seed.slug}-fit`, question: `How do I know if ${seed.shortLabel?.toLowerCase()} is the right fit?`, answer: "The right approach depends on where birds are entering or landing. Photos help distinguish between a balcony opening, a narrow ledge, cleanup need, or a broader property issue." },
     { id: `${seed.slug}-service-area`, question: "Which areas do you serve?", answer: "Bird Control BC is structured around Vancouver and key Lower Mainland service areas, including Burnaby, Richmond, the North Shore, Coquitlam, and Surrey." },
+    ...(seed.slug === "pigeon-dropping-cleaning"
+      ? [
+          {
+            id: "pigeon-dropping-cleaning-health",
+            question: "Can dried pigeon droppings create airborne dust?",
+            answer:
+              "Yes. Dried material can become airborne when it is swept, scraped, or otherwise disturbed. Health Canada and CDC guidance support avoiding casual dry cleanup of a substantial buildup. The actual health risk varies by the condition, exposure, and individual susceptibility.",
+          },
+          {
+            id: "pigeon-dropping-cleaning-medical",
+            question: "Can Bird Control BC assess a health risk?",
+            answer:
+              "We can assess the visible property condition and bird-access problem, but we do not diagnose illness or test for pathogens. Contact a healthcare professional or public-health authority for personal medical concerns.",
+          },
+        ]
+      : []),
   ],
 }));
 

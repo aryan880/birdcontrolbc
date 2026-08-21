@@ -10,6 +10,7 @@ import { FAQAccordion } from "@/components/sections/FAQAccordion";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { QuoteFormSection } from "@/components/sections/QuoteFormSection";
+import { ResourceLinks } from "@/components/sections/ResourceLinks";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { ServiceLinksGrid } from "@/components/sections/ServiceLinksGrid";
 import { TrustBadgeRow } from "@/components/sections/TrustBadgeRow";
@@ -17,6 +18,7 @@ import { trustBadges } from "@/content/business";
 import { cities } from "@/content/cities";
 import { homeFaqs, processSteps } from "@/content/faqs";
 import { galleryProjects } from "@/content/projects";
+import { resources } from "@/content/resources";
 import { getPublishedServices } from "@/content/services";
 import { LocalBusinessSchema } from "@/lib/schema/local-business";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -127,6 +129,17 @@ export default function HomePage() {
             description="Straight answers about netting, spikes, cleanup, access, and choosing the right first step."
           />
           <FAQAccordion items={homeFaqs} />
+        </Container>
+      </section>
+
+      <section className="section-wrap bg-white">
+        <Container className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
+          <SectionHeading
+            eyebrow="Property care guides"
+            title="Understand the condition before choosing the fix."
+            description="Measured, source-backed guidance about pigeon droppings, cleanup dust, and preventing the same balcony problem from returning."
+          />
+          <ResourceLinks resources={resources} />
         </Container>
       </section>
 
