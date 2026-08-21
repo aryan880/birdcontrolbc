@@ -13,10 +13,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
     <Link
       href={project.routeHref}
       data-reveal
-      className="surface-card group flex overflow-hidden rounded-[1.75rem]"
+      className="surface-card group grid overflow-hidden md:grid-cols-[1fr_1fr]"
       style={{ ["--reveal-delay" as string]: `${index * 55}ms` }}
     >
-      <div className="relative min-h-[240px] overflow-hidden">
+      <div className="relative min-h-[250px] overflow-hidden">
         <Image
           src={project.image.src}
           alt={project.image.alt}
@@ -26,7 +26,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/45 via-transparent to-transparent" />
       </div>
-      <div className="flex flex-1 flex-col p-5 sm:p-6">
+      <div className="flex flex-1 flex-col p-6 sm:p-7">
         <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">
           {project.tags.join(" • ")}
         </p>

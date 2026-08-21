@@ -37,14 +37,13 @@ export function HeroSection() {
           className="hero-image-drift object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="ambient-glow absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(169,216,79,0.2),transparent_28rem)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_58%,rgba(7,23,44,0.32))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,23,44,0.96)_0%,rgba(7,23,44,0.84)_37%,rgba(7,23,44,0.18)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,23,44,0.1)_35%,rgba(7,23,44,0.72)_100%)]" />
       </div>
 
-      <Container className="relative py-16 sm:py-20 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-10 xl:gap-12">
-          <div className="max-w-3xl lg:max-w-[38rem]">
+      <Container className="relative py-16 sm:py-20 lg:py-24">
+        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-16">
+          <div className="max-w-3xl lg:max-w-[36rem] lg:pb-6">
             <p
               className="hero-animate eyebrow-pill-dark"
               style={{ ["--enter-delay" as string]: "80ms" }}
@@ -52,26 +51,26 @@ export function HeroSection() {
               Practical bird control in Vancouver & the Lower Mainland
             </p>
             <h1
-              className="hero-animate mt-6 max-w-[13ch] text-4xl font-semibold leading-[0.97] tracking-[-0.04em] text-balance sm:text-[4rem] lg:text-[4.25rem] xl:text-[4.8rem]"
+              className="hero-animate mt-7 max-w-[12ch] text-4xl font-semibold leading-[0.96] tracking-[-0.055em] text-balance sm:text-[4rem] lg:text-[4.5rem] xl:text-[5.2rem]"
               style={{ ["--enter-delay" as string]: "170ms" }}
             >
               Bird control that respects how your property is used.
             </h1>
             <p
-              className="hero-animate mt-5 max-w-[36rem] text-base leading-7 text-slate-100/92 sm:text-lg"
+              className="hero-animate mt-7 max-w-[31rem] text-base leading-8 text-slate-100/92 sm:text-lg"
               style={{ ["--enter-delay" as string]: "260ms" }}
             >
               Bird netting, spikes, deterrents, and pigeon-dropping cleanup for balconies, rooflines, entries, strata buildings, and commercial properties.
             </p>
 
             <div
-              className="hero-animate mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
+              className="hero-animate mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
               style={{ ["--enter-delay" as string]: "340ms" }}
             >
               <ButtonLink
                 href="/contact"
                 variant="primary"
-                className="sm:min-w-[192px] sm:px-6 sm:py-4"
+                className="sm:min-w-[218px] sm:px-6 sm:py-4"
               >
                 {siteConfig.ctaLabels.primary}
               </ButtonLink>
@@ -85,20 +84,20 @@ export function HeroSection() {
             </div>
 
             <div
-              className="hero-fade mt-4"
+              className="hero-fade mt-5"
               style={{ ["--enter-delay" as string]: "390ms" }}
             >
               <Link href="/services" className="text-sm font-semibold text-slate-200 underline-offset-4 hover:text-white hover:underline">Explore services <span aria-hidden="true" className="text-brand-limeSoft">→</span></Link>
             </div>
 
             <div
-              className="hero-fade mt-6 flex max-w-[34rem] flex-wrap gap-2.5"
+              className="hero-fade mt-10 flex max-w-[34rem] flex-wrap gap-x-5 gap-y-2 border-t border-white/15 pt-5"
               style={{ ["--enter-delay" as string]: "430ms" }}
             >
               {trustPills.map((item) => (
                 <span
                   key={item}
-                  className="glass-panel rounded-full px-4 py-2 text-sm text-slate-100/88"
+                  className="text-sm text-slate-100/88"
                 >
                   {item}
                 </span>
@@ -107,7 +106,7 @@ export function HeroSection() {
           </div>
 
           <div
-            className="hero-animate panel-sheen rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-[0_28px_60px_rgba(0,0,0,0.2)] backdrop-blur-md sm:p-8 lg:ml-auto lg:max-w-[30rem] lg:self-center xl:max-w-[32rem]"
+            className="hero-animate border border-white/15 bg-[#0c223a]/90 p-6 shadow-[0_28px_60px_rgba(0,0,0,0.2)] backdrop-blur-md sm:p-8 lg:ml-auto lg:max-w-[33rem] xl:max-w-[36rem]"
             style={{ ["--enter-delay" as string]: "250ms" }}
           >
             <div className="border-b border-white/10 pb-5">
@@ -115,7 +114,7 @@ export function HeroSection() {
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-limeSoft">
                   Start with photos
                 </p>
-                <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-[11px] font-medium tracking-[0.16em] text-slate-200/90">
+                <span className="border-l border-brand-lime/70 pl-3 text-[11px] font-medium tracking-[0.16em] text-slate-200/90">
                   Fastest way to scope
                 </span>
               </div>
@@ -131,7 +130,7 @@ export function HeroSection() {
               {quotePrompts.map((item, index) => (
                 <div
                   key={item.label}
-                  className="sweep-border flex gap-4 rounded-[1.35rem] border border-white/10 bg-[#081d35]/65 p-4 transition duration-300 hover:-translate-y-0.5 hover:bg-[#0d2743]/88"
+                  className="flex gap-4 border-b border-white/10 py-4 last:border-b-0"
                 >
                   <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-lime/15 text-sm font-semibold text-brand-limeSoft">
                     0{index + 1}
@@ -149,7 +148,7 @@ export function HeroSection() {
             </div>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-[0.9fr_1.1fr]">
-              <div className="rounded-[1.35rem] border border-white/10 bg-white/10 px-4 py-4">
+              <div className="border-t border-white/10 pt-4">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeSoft">
                   Keep it simple
                 </p>
@@ -157,7 +156,7 @@ export function HeroSection() {
                   One clear image of the problem is more useful than a lengthy description.
                 </p>
               </div>
-              <div className="rounded-[1.35rem] border border-white/10 bg-white/10 px-4 py-4">
+              <div className="border-t border-white/10 pt-4">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeSoft">
                   Built around the property
                 </p>

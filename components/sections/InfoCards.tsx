@@ -27,8 +27,8 @@ export function InfoCards({
           data-reveal
           className={
             theme === "dark"
-              ? "glass-panel flex flex-col rounded-[1.7rem] p-6 text-white transition duration-300 hover:-translate-y-1 hover:border-brand-lime/35 hover:bg-white/15"
-              : "surface-card flex flex-col rounded-[1.7rem] p-6"
+              ? "glass-panel flex flex-col p-6 text-white transition duration-300 hover:-translate-y-1 hover:border-brand-lime/35 hover:bg-white/15"
+              : "surface-card flex flex-col p-6"
           }
           style={{ ["--reveal-delay" as string]: `${index * 60}ms` }}
         >

@@ -22,7 +22,7 @@ export function ProjectShowcase({
         <Link
           href={project.routeHref}
           data-reveal
-          className="surface-card group relative overflow-hidden rounded-[2rem]"
+          className="surface-card group relative overflow-hidden"
         >
           <div className="relative min-h-[320px] sm:min-h-[440px]">
             <Image
@@ -33,7 +33,7 @@ export function ProjectShowcase({
               sizes="(max-width: 1024px) 100vw, 48vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/65 via-brand-navy/10 to-transparent" />
-            <div className="absolute bottom-5 left-5 rounded-[1.4rem] border border-white/10 bg-white/10 px-4 py-3 backdrop-blur">
+            <div className="absolute bottom-0 left-0 border-t border-r border-white/10 bg-brand-navy/85 px-5 py-4 backdrop-blur-sm">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeSoft">
                 Project teaser
               </p>
@@ -52,7 +52,7 @@ export function ProjectShowcase({
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-brand-mist px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-limeDark"
+                className="border-l-2 border-brand-lime bg-brand-mist px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-brand-limeDark"
               >
                 {tag}
               </span>

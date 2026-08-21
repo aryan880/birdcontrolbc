@@ -19,8 +19,9 @@ export function QuoteFormSection({
   return (
     <div
       id="quote"
-      className="section-surface overflow-hidden p-6 sm:p-8"
+      className="section-surface relative overflow-hidden p-6 sm:p-8"
     >
+      <div className="absolute inset-x-0 top-0 h-1 bg-brand-lime" />
       <p className="eyebrow-pill">
         Send photos for a free quote
       </p>
@@ -30,7 +31,7 @@ export function QuoteFormSection({
       <p className="mt-4 text-sm leading-7 text-brand-slate sm:text-base">
         {description}
       </p>
-      <div className="mt-6 rounded-[1.4rem] border border-brand-line/70 bg-brand-mist/70 p-4 text-sm leading-6 text-brand-slate">
+      <div className="mt-6 border-l-2 border-brand-lime bg-brand-mist/60 p-4 text-sm leading-6 text-brand-slate">
         Helpful details: balcony or ledge photos, property type, city, access notes, and whether cleaning is also needed. Business hours: {siteConfig.businessHours.join(" · ")}.
       </div>
       <div className="mt-8">

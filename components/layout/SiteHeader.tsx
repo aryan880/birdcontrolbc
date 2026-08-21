@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { Container } from "@/components/layout/Container";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { ButtonLink } from "@/components/ui/Button";
@@ -29,11 +28,9 @@ export function SiteHeader() {
     <header
       className={`sticky top-0 z-40 border-b border-brand-line/70 bg-white/80 backdrop-blur-2xl transition-[box-shadow,border-color,background-color] duration-300 ${isScrolled ? "header-scrolled bg-white/88" : ""}`}
     >
-      <div className="border-b border-white/10 bg-gradient-to-r from-brand-navy via-brand-blue to-[#0c3b55] text-white">
-        <Container className="flex min-h-10 items-center justify-between gap-4 py-1.5 text-xs font-medium sm:text-sm">
-          <p className="text-slate-100/95">
-            Bird control for homes, strata, and commercial properties across the Lower Mainland
-          </p>
+      <div className="border-b border-white/10 bg-brand-navy text-white">
+        <Container className="flex min-h-9 items-center justify-between gap-4 py-1 text-[11px] font-medium uppercase tracking-[0.13em] sm:text-xs">
+          <p className="text-slate-200">Vancouver & Lower Mainland bird control</p>
           <div className="hidden items-center gap-4 sm:flex">
             <a
               href={siteConfig.telHref}
@@ -53,25 +50,18 @@ export function SiteHeader() {
         </Container>
       </div>
 
-      <Container className="relative flex min-h-[4.6rem] items-center justify-between gap-5">
-        <Link
-          href="/"
-          aria-label="Bird Control BC homepage"
-          className="flex items-center gap-3 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2"
-        >
-          <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-navy text-lg font-bold text-brand-limeSoft shadow-soft">BC</span>
-          <span className="leading-none text-brand-navy"><span className="block text-lg font-semibold tracking-[-0.04em]">Bird Control</span><span className="block mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">British Columbia</span></span>
-        </Link>
+      <Container className="relative flex min-h-[5.25rem] items-center justify-between gap-5">
+        <BrandLogo />
 
         <nav
-          className="hidden items-center gap-1.5 rounded-[1.8rem] border border-brand-line/80 bg-white/85 p-1.5 shadow-soft lg:flex"
+          className="hidden items-center gap-1 border border-brand-line/80 bg-white p-1 lg:flex"
           aria-label="Primary navigation"
         >
           {navigation.primary.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="rounded-[1.2rem] px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-brand-mist hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
+              className="px-4 py-2.5 text-sm font-semibold text-brand-navy transition hover:bg-brand-mist hover:text-brand-limeDark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime"
             >
               {item.label}
             </a>
@@ -82,7 +72,7 @@ export function SiteHeader() {
           <ButtonLink
             href={siteConfig.telHref}
             variant="primary"
-            className="cta-pulse min-w-[220px]"
+            className="min-w-[154px]"
             onClick={() => trackPhoneClick("header_primary_cta")}
           >
             {siteConfig.ctaLabels.secondary}

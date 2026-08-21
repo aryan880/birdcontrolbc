@@ -1,21 +1,19 @@
 import { Container } from "@/components/layout/Container";
+import { BrandLogo } from "@/components/layout/BrandLogo";
 import { SmartLink } from "@/components/ui/SmartLink";
 import { navigation } from "@/content/navigation";
 import { siteConfig } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-brand-line bg-brand-navy pb-28 pt-14 text-white sm:pb-14">
-      <Container className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr]">
-        <div className="rounded-[1.8rem] border border-white/10 bg-white/5 p-6 backdrop-blur">
-          <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-lime text-lg font-bold text-brand-navy">BC</span>
-            <span><span className="block text-xl font-semibold tracking-[-0.04em]">Bird Control BC</span><span className="block mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-limeSoft">Vancouver & Lower Mainland</span></span>
-          </div>
+    <footer className="border-t border-white/10 bg-brand-navy pb-28 pt-14 text-white sm:pb-14">
+      <Container className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_0.8fr]">
+        <div>
+          <BrandLogo tone="light" />
           <p className="mt-5 max-w-sm text-sm leading-7 text-slate-300">
             Practical bird control for properties that need to stay clean, usable, and well managed.
           </p>
-          <div className="mt-5 space-y-2 text-sm text-slate-200">
+          <div className="mt-6 space-y-2 text-sm text-slate-200">
             <p>
               <a href={siteConfig.telHref} className="hover:text-white">
                 {siteConfig.phoneDisplay}
@@ -55,7 +53,7 @@ type FooterColumnProps = {
 
 function FooterColumn({ title, links }: FooterColumnProps) {
   return (
-    <div className="pt-2">
+    <div className="border-t border-white/10 pt-5 md:border-0 md:pt-2">
       <h3 className="text-sm font-semibold uppercase tracking-[0.24em] text-brand-limeSoft">
         {title}
       </h3>

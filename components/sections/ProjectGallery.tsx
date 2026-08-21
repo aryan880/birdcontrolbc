@@ -25,7 +25,7 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
           <figure
             key={`${image.src}-${index}`}
             data-reveal
-            className={`surface-card overflow-hidden rounded-[1.8rem] ${isFeatured ? "sm:col-span-2" : ""}`}
+            className={`surface-card overflow-hidden ${isFeatured ? "sm:col-span-2" : ""}`}
             style={{ ["--reveal-delay" as string]: `${index * 60}ms` }}
           >
             <div
@@ -39,7 +39,7 @@ export function ProjectGallery({ images }: ProjectGalleryProps) {
                 className="object-cover"
                 sizes={isFeatured ? "(max-width: 768px) 100vw, 96vw" : "(max-width: 768px) 100vw, 50vw"}
               />
-              <div className="absolute left-4 top-4 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">
+              <div className="absolute left-4 top-4 border-l-2 border-brand-lime bg-brand-navy/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white">
                 {image.kind ?? (isFeatured ? "overview" : "detail")}
               </div>
             </div>
