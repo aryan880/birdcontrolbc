@@ -28,10 +28,16 @@ export function LocalBusinessSchema({
     description,
     areaServed,
     slogan: siteConfig.slogan,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.address.locality,
+      addressRegion: siteConfig.address.region,
+      addressCountry: siteConfig.address.country,
+    },
   };
 
-  if (siteConfig.phoneHref) localBusinessSchema.telephone = siteConfig.phoneHref;
-  if (siteConfig.email && siteConfig.mailtoHref !== "mailto:") localBusinessSchema.email = siteConfig.email;
+  localBusinessSchema.telephone = siteConfig.phoneHref;
+  localBusinessSchema.email = siteConfig.email;
 
   return (
     <script

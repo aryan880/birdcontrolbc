@@ -49,9 +49,10 @@ export function ContactDetailsSection({
 
         <article className={`rounded-[1.6rem] border p-5 shadow-soft ${surfaceClass}`}>
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-limeDark">
-            Business hours
+            Location & hours
           </p>
           <div className="mt-3 space-y-2 text-sm leading-6">
+            <p>{siteConfig.address.display}</p>
             {siteConfig.businessHours.map((item) => (
               <p key={item}>{item}</p>
             ))}

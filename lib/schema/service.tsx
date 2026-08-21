@@ -23,6 +23,12 @@ export function ServiceSchema({ service }: ServiceSchemaProps) {
       telephone: siteConfig.phoneHref,
       email: siteConfig.email,
       url: siteConfig.url,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: siteConfig.address.locality,
+        addressRegion: siteConfig.address.region,
+        addressCountry: siteConfig.address.country,
+      },
     },
   };
 

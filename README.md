@@ -29,10 +29,8 @@ npm run start
 
 ## Launch configuration
 
-Before deploying, update the following in `content/site.ts`:
+The primary phone, email, and Vancouver business location are configured in `content/site.ts`. Before deploying, update:
 
-- `phoneDisplay`, `phoneHref`, `telHref`, and `smsHref`
-- `email` and `mailtoHref`
 - `businessHours` once confirmed
 
 The site deliberately does not reuse any previous-business contact information, reviews, certifications, years in business, guarantees, or other unsupported claims.

@@ -24,6 +24,7 @@ export function SiteFooter() {
                 {siteConfig.email}
               </a>
             </p>
+            <p>{siteConfig.address.display}</p>
             <div className="space-y-1">
               {siteConfig.businessHours.map((item) => (
                 <p key={item}>{item}</p>
