@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="620" viewBox="0 0 620 620" role="img" aria-labelledby="title desc">
-  <title id="title">Bird Control BC stacked logo</title>
-  <desc id="desc">Stacked Refined Coastline Wing identity with a subtle property ledge.</desc>
-  <g transform="translate(210 58) scale(2)">
-    <path d="M18 49c15-17 31-24 49-21 8 1 14-1 22-7-3 8-8 14-15 18l15 5-17 4C61 58 48 63 31 62c8-6 14-13 18-21-11 3-21 6-31 8Z" fill="#102F28"/>
-    <path d="M31 50c10-10 22-16 35-16-9 6-16 13-21 22-5-2-9-4-14-6Z" fill="#879B59"/>
-    <circle cx="72" cy="33" r="1.7" fill="#F6F1E7"/>
-    <path d="M20 72h66M83 72v-10" fill="none" stroke="#102F28" stroke-width="3.2" stroke-linecap="square"/>
-  </g>
-  <text x="310" y="355" text-anchor="middle" fill="#102F28" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" letter-spacing="-2">Bird Control BC</text>
-  <path d="M112 388h396" stroke="#879B59" stroke-width="3"/>
-  <text x="310" y="430" text-anchor="middle" fill="#667451" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5">VANCOUVER · LOWER MAINLAND</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="620" viewBox="0 0 620 620" role="img" aria-labelledby="title desc"><title id="title">Bird Control BC stacked logo</title><desc id="desc">Stacked refined flying bird identity.</desc><g transform="translate(205 45) scale(2.1)"><path d="M39 50C42 35 48 20 59 8c0 10-1 19-4 28 6-11 14-20 24-26-4 13-10 24-18 33 7-7 15-12 24-15-5 11-13 20-23 26-8-2-16-3-23-4Z" fill="#0F3B2E"/><path d="M42 51c5-11 10-20 17-27-1 8-2 15-5 22 5-7 10-13 17-17-3 8-8 15-14 21-5 1-10 1-15 1Z" fill="#7A8F4A"/><path d="M17 61c11-7 21-11 31-13 8-2 16-2 23 1 4-2 8-3 12-2l10 4-10 4c-3 1-7 1-10 0-5 7-12 12-21 15-11 4-23 3-34-3l17-4-18-2Z" fill="#0F3B2E"/><path d="M82 48l12 3-12 4 4-4-4-3Z" fill="#0F3B2E"/><circle cx="78" cy="49.5" r="1.4" fill="#EDE6DD"/><path d="M18 78h68" stroke="#0F3B2E" stroke-width="3.5"/></g><text x="310" y="355" text-anchor="middle" fill="#0F3B2E" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="700" letter-spacing="-2">Bird Control BC</text><path d="M112 388h396" stroke="#7A8F4A" stroke-width="3"/><text x="310" y="430" text-anchor="middle" fill="#667451" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="5">VANCOUVER · LOWER MAINLAND</text></svg>
