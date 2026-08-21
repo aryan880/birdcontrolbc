@@ -1,5 +1,6 @@
 import { AnalyticsProvider } from "@/components/analytics/AnalyticsProvider";
 import { MotionController } from "@/components/layout/MotionController";
+import { RouteScrollManager } from "@/components/layout/RouteScrollManager";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
@@ -22,6 +23,7 @@ export default function MarketingLayout({
         gtmId={process.env.NEXT_PUBLIC_GTM_ID}
       />
       <MotionController />
+      <RouteScrollManager />
       <SiteHeader />
       <main id="main-content">{children}</main>
       <SiteFooter />

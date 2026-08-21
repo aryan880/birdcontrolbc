@@ -3,11 +3,19 @@ import { SmartLink } from "@/components/ui/SmartLink";
 
 type CityLinksGridProps = {
   cities: City[];
+  className?: string;
 };
 
-export function CityLinksGrid({ cities }: CityLinksGridProps) {
+export function CityLinksGrid({ cities, className }: CityLinksGridProps) {
   return (
-    <div className="section-grid-balanced mx-auto grid-cols-1 items-stretch sm:grid-cols-2 lg:max-w-5xl lg:grid-cols-3">
+    <div
+      className={[
+        "section-grid-balanced grid grid-cols-1 items-stretch sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       {cities.map((city) => (
         <SmartLink
           key={city.slug}

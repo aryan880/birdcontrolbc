@@ -7,6 +7,7 @@ export function MotionController() {
   const pathname = usePathname();
 
   useEffect(() => {
+    document.documentElement.classList.add("motion-ready");
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const revealElements = () => {
       document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((element) => {
@@ -47,6 +48,7 @@ export function MotionController() {
     const frame = window.requestAnimationFrame(observeTargets);
 
     return () => {
+      document.documentElement.classList.remove("motion-ready");
       window.cancelAnimationFrame(frame);
       observer.disconnect();
     };

@@ -19,7 +19,7 @@ export function TrustBadgeRow({ items, theme = "light" }: TrustBadgeRowProps) {
         <article
           key={item.label}
           data-reveal
-          className={`rounded-[1.35rem] border px-4 py-4 shadow-[0_10px_28px_rgba(7,23,44,0.05)] ${surfaceClass}`}
+          className={`reveal-load sweep-border rounded-[1.35rem] border px-4 py-4 shadow-[0_10px_28px_rgba(7,23,44,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(7,23,44,0.09)] ${surfaceClass}`}
           style={{ ["--reveal-delay" as string]: `${index * 40}ms` }}
         >
           <div className="flex items-start gap-3">
