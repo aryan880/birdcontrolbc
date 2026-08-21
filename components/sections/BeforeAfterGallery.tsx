@@ -12,7 +12,8 @@ type BeforeAfterGalleryProps = {
 export function BeforeAfterGallery({ projects }: BeforeAfterGalleryProps) {
   const [featuredProject, ...secondaryProjects] = projects;
   const beforeImage = featuredProject.gallery.find((image) => image.kind === "before");
-  const afterImage = featuredProject.gallery.find((image) => image.kind === "after") ?? featuredProject.image;
+  // The project cover is the curated finished view; gallery "after" images may include installation progress.
+  const afterImage = featuredProject.image;
 
   return (
     <section

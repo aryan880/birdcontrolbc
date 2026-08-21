@@ -4,7 +4,7 @@ export const galleryProjects: Project[] = [
   {
     slug: "vancouver-balcony-netting-project", title: "Balcony cleanup and bird-netting installation", routeHref: "/projects/vancouver-balcony-netting-project", location: "Lower Mainland, BC", relatedCitySlug: "vancouver",
     summary: "Before-and-after job photography documenting the original balcony condition, cleanup, preparation, and a black bird-netting installation across the opening.", tags: ["Balcony netting", "Cleanup", "Residential"],
-    image: { src: "/media/projects/lower-mainland-balcony-netting/project-hero.webp", alt: "Black bird netting installed across a Lower Mainland residential balcony opening", kind: "overview" },
+    image: { src: "/media/projects/lower-mainland-balcony-netting/project-hero.webp", alt: "Completed black bird netting installation across a Lower Mainland residential balcony opening", kind: "overview" },
     gallery: [
       { src: "/media/projects/lower-mainland-balcony-netting/before-open-balcony.webp", alt: "Open residential balcony before bird netting was installed", caption: "Before: the full balcony opening was accessible to birds, with no exclusion barrier across the exterior edge.", kind: "before" },
       { src: "/media/projects/lower-mainland-balcony-netting/before-dropping-condition-wide.webp", alt: "Balcony floor with pigeon droppings before cleanup and bird netting installation", caption: "Before cleanup: droppings and debris were spread across the balcony floor, particularly around the sheltered corners.", kind: "before" },
