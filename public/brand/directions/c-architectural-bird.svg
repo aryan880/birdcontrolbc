@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Direction C, Architectural Bird Mark</title>
+  <desc id="desc">Bird Control BC architectural bird direction shown in horizontal, stacked, icon, monochrome, vehicle and website header applications.</desc>
+  <defs>
+    <g id="mark-c">
+      <path d="M22 147h149V53M22 164h149" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
+      <path d="M112 58h58M112 76h58M130 39v95M150 39v95" fill="none" stroke="#879B59" stroke-width="3" opacity=".84"/>
+      <path d="M34 116c18-25 42-39 70-41 17-2 30-10 42-24-2 17-10 30-24 40l24 9-29 8c-18 14-42 19-70 13 12-8 21-18 28-30-15 6-29 14-41 25Z" fill="currentColor"/>
+      <path d="M54 110c16-15 34-24 53-27-12 10-21 21-28 35-8-2-16-5-25-8Z" fill="#879B59"/>
+      <circle cx="119" cy="84" r="2.3" fill="#F6F1E7"/>
+    </g>
+    <g id="mark-c-mono">
+      <path d="M22 147h149V53M22 164h149" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="square"/>
+      <path d="M34 116c18-25 42-39 70-41 17-2 30-10 42-24-2 17-10 30-24 40l24 9-29 8c-18 14-42 19-70 13 12-8 21-18 28-30-15 6-29 14-41 25Z" fill="currentColor"/>
+      <path d="M54 110c16-15 34-24 53-27-12 10-21 21-28 35-8-2-16-5-25-8Z" fill="#F6F1E7"/>
+    </g>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#102F28" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="1600" height="1200" fill="#F6F1E7"/>
+  <text x="72" y="78" fill="#102F28" font-family="Georgia, serif" font-size="43" font-weight="700">C. Architectural Bird Mark</text>
+  <text x="72" y="116" fill="#68736D" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3">BALCONY EDGE · TAUT NET LINE · PREMIUM CONTRACTOR SIGNAL</text>
+  <line x1="72" y1="148" x2="1528" y2="148" stroke="#C9CDC5"/>
+
+  <g transform="translate(72 184)" filter="url(#shadow)">
+    <rect width="900" height="280" rx="18" fill="#FFFEFA"/>
+    <text x="30" y="40" fill="#68736D" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.5">HORIZONTAL LOGO</text>
+    <g transform="translate(45 68) scale(.86)" color="#102F28"><use href="#mark-c"/></g>
+    <text x="245" y="162" fill="#102F28" font-family="Georgia, serif" font-size="59" font-weight="700" letter-spacing="-2">Bird Control BC</text>
+    <text x="249" y="198" fill="#667451" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="4">VANCOUVER · LOWER MAINLAND</text>
+  </g>
+
+  <g transform="translate(1010 184)" filter="url(#shadow)">
+    <rect width="518" height="500" rx="18" fill="#FFFEFA"/>
+    <text x="30" y="40" fill="#68736D" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2.5">STACKED LOGO</text>
+    <g transform="translate(170 64) scale(.94)" color="#102F28"><use href="#mark-c"/></g>
+    <text x="259" y="330" text-anchor="middle" fill="#102F28" font-family="Georgia, serif" font-size="49" font-weight="700" letter-spacing="-1.5">Bird Control BC</text>
+    <text x="259" y="366" text-anchor="middle" fill="#667451" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3.5">VANCOUVER · LOWER MAINLAND</text>
+    <line x1="100" y1="405" x2="418" y2="405" stroke="#D8DAD4"/>
+    <text x="259" y="443" text-anchor="middle" fill="#68736D" font-family="Arial, sans-serif" font-size="14">Elegant property-first expression.</text>
+  </g>
+
+  <g transform="translate(72 500)" filter="url(#shadow)">
+    <rect width="270" height="270" rx="18" fill="#E7E8DF"/>
+    <text x="24" y="36" fill="#68736D" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">ICON / FAVICON</text>
+    <rect x="62" y="62" width="148" height="148" rx="30" fill="#102F28"/>
+    <g transform="translate(78 77) scale(.61)" color="#F6F1E7"><use href="#mark-c"/></g>
+  </g>
+
+  <g transform="translate(378 500)" filter="url(#shadow)">
+    <rect width="594" height="270" rx="18" fill="#FFFFFF"/>
+    <text x="24" y="36" fill="#68736D" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">BLACK / WHITE</text>
+    <g transform="translate(34 69) scale(.62)" color="#171A18"><use href="#mark-c-mono"/></g>
+    <text x="178" y="151" fill="#171A18" font-family="Georgia, serif" font-size="38" font-weight="700">Bird Control BC</text>
+    <text x="181" y="180" fill="#171A18" font-family="Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="3">VANCOUVER · LOWER MAINLAND</text>
+  </g>
+
+  <g transform="translate(72 808)">
+    <rect width="900" height="270" rx="18" fill="#102F28"/>
+    <text x="26" y="38" fill="#C6CDC8" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">VEHICLE / UNIFORM</text>
+    <path d="M46 209h760l38-65h-116l-46-58H46Z" fill="#F6F1E7" opacity=".08"/>
+    <g transform="translate(54 67) scale(.62)" color="#F6F1E7"><use href="#mark-c"/></g>
+    <text x="198" y="145" fill="#F6F1E7" font-family="Georgia, serif" font-size="40" font-weight="700">Bird Control BC</text>
+    <text x="201" y="177" fill="#B7C88C" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3">BIRD CONTROL · CLEANUP · EXCLUSION</text>
+    <rect x="684" y="182" width="170" height="40" rx="20" fill="#879B59"/>
+    <text x="769" y="207" text-anchor="middle" fill="#102F28" font-family="Arial, sans-serif" font-size="13" font-weight="700">672 699 4826</text>
+  </g>
+
+  <g transform="translate(1010 722)" filter="url(#shadow)">
+    <rect width="518" height="356" rx="18" fill="#FFFEFA"/>
+    <text x="24" y="36" fill="#68736D" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">WEBSITE HEADER</text>
+    <rect x="24" y="62" width="470" height="94" fill="#FFFFFF" stroke="#DADDD6"/>
+    <g transform="translate(40 78) scale(.31)" color="#102F28"><use href="#mark-c"/></g>
+    <text x="110" y="110" fill="#102F28" font-family="Georgia, serif" font-size="21" font-weight="700">Bird Control BC</text>
+    <text x="112" y="130" fill="#667451" font-family="Arial, sans-serif" font-size="6.5" font-weight="700" letter-spacing="2">VANCOUVER · LOWER MAINLAND</text>
+    <text x="291" y="114" fill="#102F28" font-family="Arial, sans-serif" font-size="10" font-weight="700">Services</text>
+    <text x="350" y="114" fill="#102F28" font-family="Arial, sans-serif" font-size="10" font-weight="700">Projects</text>
+    <rect x="414" y="92" width="64" height="38" rx="4" fill="#102F28"/>
+    <text x="446" y="115" text-anchor="middle" fill="#F6F1E7" font-family="Arial, sans-serif" font-size="8" font-weight="700">Quote</text>
+    <text x="24" y="207" fill="#102F28" font-family="Georgia, serif" font-size="24" font-weight="700">Why it works</text>
+    <text x="24" y="244" fill="#5E6A64" font-family="Arial, sans-serif" font-size="14">The horizontal ledge and upright turn a bird silhouette</text>
+    <text x="24" y="268" fill="#5E6A64" font-family="Arial, sans-serif" font-size="14">into an architectural service mark. Fine net lines clarify</text>
+    <text x="24" y="292" fill="#5E6A64" font-family="Arial, sans-serif" font-size="14">exclusion without becoming a generic pest-control icon.</text>
+    <text x="24" y="329" fill="#667451" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.5">STRONGEST CONTRACTOR / PROPERTY SIGNAL</text>
+  </g>
+
+  <text x="72" y="1148" fill="#68736D" font-family="Arial, sans-serif" font-size="13">Palette: Forest #102F28 · Charcoal #171A18 · Warm ivory #F6F1E7 · Muted olive #879B59</text>
+</svg>
