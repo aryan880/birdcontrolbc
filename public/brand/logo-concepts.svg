@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 1600 1240" role="img" aria-labelledby="title desc">
+  <title id="title">Bird Control BC Coastline Wing logo system</title>
+  <desc id="desc">Refined Option A shown as horizontal, stacked, social, monochrome, vehicle and website-header applications.</desc>
+  <rect width="1600" height="1240" fill="#F5F1E7"/>
+  <text x="80" y="82" fill="#0B2F27" font-family="Georgia, serif" font-size="48" font-weight="700">Coastline Wing, refined</text>
+  <text x="80" y="120" fill="#61736C" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4">BIRD CONTROL BC · OPTION A SYSTEM</text>
+  <line x1="80" y1="154" x2="1520" y2="154" stroke="#C8CDC4"/>
+
+  <g transform="translate(80 190)">
+    <rect width="930" height="260" rx="14" fill="#FCFBF7" stroke="#D5D8D0"/>
+    <text x="28" y="36" fill="#61736C" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">PRIMARY HORIZONTAL</text>
+    <image href="coastline-wing/logo-horizontal.svg" x="28" y="48" width="874" height="190"/>
+  </g>
+  <g transform="translate(1050 190)">
+    <rect width="470" height="540" rx="14" fill="#FCFBF7" stroke="#D5D8D0"/>
+    <text x="28" y="36" fill="#61736C" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">STACKED</text>
+    <image href="coastline-wing/logo-stacked.svg" x="35" y="48" width="400" height="460"/>
+  </g>
+  <g transform="translate(80 490)">
+    <rect width="430" height="430" rx="14" fill="#E4E7DF"/>
+    <text x="28" y="36" fill="#61736C" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">SOCIAL AVATAR</text>
+    <image href="coastline-wing/social-avatar.svg" x="50" y="58" width="330" height="330"/>
+  </g>
+  <g transform="translate(550 490)">
+    <rect width="460" height="430" rx="14" fill="#FFFFFF" stroke="#D5D8D0"/>
+    <text x="28" y="36" fill="#61736C" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">ONE COLOUR</text>
+    <image href="coastline-wing/logo-monochrome.svg" x="25" y="112" width="410" height="170"/>
+    <text x="28" y="374" fill="#61736C" font-family="Arial, sans-serif" font-size="14">For invoices, embroidery, stamps, and simple production.</text>
+  </g>
+  <g transform="translate(80 960)">
+    <rect width="930" height="210" rx="14" fill="#0B2F27"/>
+    <text x="28" y="34" fill="#D6DDD8" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">VEHICLE / UNIFORM</text>
+    <image href="coastline-wing/logo-vehicle-uniform.svg" x="28" y="45" width="874" height="142"/>
+  </g>
+  <g transform="translate(1050 770)">
+    <rect width="470" height="400" rx="14" fill="#FCFBF7" stroke="#D5D8D0"/>
+    <text x="28" y="36" fill="#61736C" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">WEBSITE HEADER</text>
+    <image href="coastline-wing/logo-website-header.svg" x="28" y="78" width="414" height="90"/>
+    <line x1="28" y1="218" x2="442" y2="218" stroke="#D5D8D0"/>
+    <text x="28" y="264" fill="#0B2F27" font-family="Georgia, serif" font-size="25" font-weight="700">Design notes</text>
+    <text x="28" y="300" fill="#52675F" font-family="Arial, sans-serif" font-size="15">Distinct bird profile and wing.</text>
+    <text x="28" y="328" fill="#52675F" font-family="Arial, sans-serif" font-size="15">Protected opening + subtle exclusion grid.</text>
+    <text x="28" y="356" fill="#52675F" font-family="Arial, sans-serif" font-size="15">Forest green, ivory, restrained lime.</text>
+  </g>
+</svg>
