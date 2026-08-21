@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   description:
     "View Bird Control BC project examples for balcony netting, bird spikes, and pigeon-dropping cleanup across Vancouver and the Lower Mainland.",
   path: "/projects",
-  image: "/images/pigeon-proof-balcony-before-after-focused.jpg",
+  image: "/media/projects/lower-mainland-balcony-netting/project-hero.webp",
 });
 
 export default function ProjectsPage() {
@@ -30,18 +30,18 @@ export default function ProjectsPage() {
 
       <PageHero
         eyebrow="Projects"
-        title="Project examples grounded in the real image library."
-        description="Review examples for balcony netting, bird spikes, and cleanup work, each linked to the relevant service and local page."
+        title="Bird-control projects documented on real properties."
+        description="Review recent balcony netting, cleanup, and deterrent examples, each linked to the relevant service and local page."
         image={{
-          src: "/images/pigeon-proof-balcony-before-after-focused.jpg",
-          alt: "Bird-proofed balcony project representing Bird Control BC work",
+          src: "/media/projects/lower-mainland-balcony-netting/project-hero.webp",
+          alt: "Black bird netting installed across a Lower Mainland residential balcony",
         }}
         actions={[
           { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[
-          "Existing photography, clearly captioned",
+          "Real job photography and video",
           "Project context linked to services",
           "Local paths back to quote requests",
         ]}
@@ -51,7 +51,7 @@ export default function ProjectsPage() {
         ]}
         note={{
           eyebrow: "Project gallery",
-          body: "Each project page uses existing images honestly and connects the example to the related service and city page.",
+          body: "Each project page identifies real photography honestly and connects the work to the related service and local page.",
         }}
       />
 

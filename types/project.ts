@@ -1,5 +1,12 @@
 import type { ContentPoint, MediaAsset, SeoFields } from "@/types/content";
 
+export type ProjectVideo = {
+  src: string;
+  poster: string;
+  title: string;
+  caption: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -9,6 +16,7 @@ export type Project = {
   tags: string[];
   image: MediaAsset;
   gallery: MediaAsset[];
+  videos?: ProjectVideo[];
   seo: SeoFields;
   hero: {
     eyebrow: string;

@@ -20,9 +20,9 @@ export function BeforeAfterGallery({ projects }: BeforeAfterGalleryProps) {
     >
       <Container>
         <SectionHeading
-          eyebrow="Project Proof"
-          title="Recent project examples, shown with honest context."
-          description="Existing project photography gives the work a more tangible feel. Each example links to the related service and local area rather than making unsupported performance claims."
+          eyebrow="Recent Work"
+          title="Real bird-control work, documented on site."
+          description="The featured balcony project follows cleanup, preparation, and netting installation using photography and video from the actual job."
         />
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.16fr_0.84fr]">
@@ -50,7 +50,7 @@ export function BeforeAfterGallery({ projects }: BeforeAfterGalleryProps) {
                     Project detail
                   </p>
                   <p className="mt-1 text-sm text-white">
-                    An existing project image, captioned as a visual reference for the type of property issue shown.
+                    Real job photography with the project scope and installation details clearly captioned.
                   </p>
                 </div>
               </div>

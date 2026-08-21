@@ -1,7 +1,7 @@
 import type { Service } from "@/types/service";
 
 const imageByService = {
-  "balcony-bird-netting": { src: "/images/balcony-netting-focused-installation.jpg", alt: "Bird netting installed across a condo balcony opening" },
+  "balcony-bird-netting": { src: "/media/projects/lower-mainland-balcony-netting/project-hero.webp", alt: "Black bird netting installed across a Lower Mainland residential balcony opening" },
   "bird-spike-installation": { src: "/images/pigeon-spike-roofline-focused.jpg", alt: "Bird spikes installed along a roofline landing edge" },
   "pigeon-dropping-cleaning": { src: "/images/balcony-cleaning-finished-space.jpg", alt: "Cleaned balcony after pigeon-dropping cleanup" },
   "bird-deterrents": { src: "/images/pigeon-spikes-close-up-installation.jpg", alt: "Close view of a bird-deterrent installation on a landing surface" },

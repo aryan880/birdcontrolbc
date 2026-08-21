@@ -13,6 +13,17 @@ export function ProjectSchema({ project }: ProjectSchemaProps) {
     description: project.seo.description,
     mainEntityOfPage: `${siteConfig.url}${project.routeHref}`,
     image: project.gallery.map((image) => `${siteConfig.url}${image.src}`),
+    ...(project.videos?.length
+      ? {
+          video: project.videos.map((video) => ({
+            "@type": "VideoObject",
+            name: video.title,
+            description: video.caption,
+            contentUrl: `${siteConfig.url}${video.src}`,
+            thumbnailUrl: `${siteConfig.url}${video.poster}`,
+          })),
+        }
+      : {}),
     author: {
       "@type": "Organization",
       name: siteConfig.name,

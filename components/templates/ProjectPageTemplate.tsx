@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/Container";
 import { InfoCards } from "@/components/sections/InfoCards";
 import { PageHero } from "@/components/sections/PageHero";
 import { ProjectGallery } from "@/components/sections/ProjectGallery";
+import { ProjectVideoGallery } from "@/components/sections/ProjectVideoGallery";
 import { QuoteBand } from "@/components/sections/QuoteBand";
 import { SectionHeading } from "@/components/sections/SectionHeading";
 import { ServiceLinksGrid } from "@/components/sections/ServiceLinksGrid";
@@ -20,6 +21,7 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
   const relatedServices = getServicesBySlugs(project.relatedServiceSlugs);
   const relatedCity = getCityBySlug(project.relatedCitySlug);
   const hasGallery = project.gallery.length > 0;
+  const hasVideos = Boolean(project.videos?.length);
   const hasChallenges = project.challenges.length > 0;
   const hasSolutions = project.solution.length > 0;
   const hasResults = project.results.length > 0;
@@ -51,7 +53,7 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
         ]}
         note={{
           eyebrow: project.location,
-          body: "This page uses existing project imagery to show how the service can be applied on a real property without inventing unsupported results or metrics.",
+          body: "Real job photography documents the property condition, preparation, and installation details without unsupported performance claims.",
         }}
       />
 
@@ -79,6 +81,21 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
           ) : null}
         </Container>
       </section>
+
+      {hasVideos ? (
+        <section className="section-wrap-tight bg-brand-mist/55">
+          <Container className="split-section lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+            <div data-reveal>
+              <SectionHeading
+                eyebrow="On Site"
+                title="A short view of the installation area."
+                description="The clip is compressed for fast playback and shows the real balcony opening and netting layout during the job."
+              />
+            </div>
+            <ProjectVideoGallery videos={project.videos ?? []} />
+          </Container>
+        </section>
+      ) : null}
 
       {hasChallenges || hasSolutions ? (
         <section className="section-wrap bg-[linear-gradient(180deg,rgba(248,247,239,0.72)_0%,rgba(255,255,255,0.98)_100%)]">
