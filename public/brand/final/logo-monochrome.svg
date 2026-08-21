@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
-  <title id="title">Bird Control BC monochrome logo</title>
-  <desc id="desc">One-colour Coastline Wing logo for stamps, embroidery, and production.</desc>
-  <g transform="translate(24 22) scale(1.74)">
-    <path d="M18 49c15-17 31-24 49-21 8 1 14-1 22-7-3 8-8 14-15 18l15 5-17 4C61 58 48 63 31 62c8-6 14-13 18-21-11 3-21 6-31 8Z" fill="#171A18"/>
-    <path d="M31 50c10-10 22-16 35-16-9 6-16 13-21 22-5-2-9-4-14-6Z" fill="#F6F1E7"/>
-    <path d="M20 72h66M83 72v-10" fill="none" stroke="#171A18" stroke-width="3.2" stroke-linecap="square"/>
-  </g>
-  <g transform="translate(228 51)">
-    <text x="0" y="67" fill="#171A18" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" letter-spacing="-2">Bird Control BC</text>
-    <path d="M2 91h592" stroke="#171A18" stroke-width="3"/>
-    <text x="2" y="124" fill="#171A18" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5">VANCOUVER · LOWER MAINLAND</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-labelledby="title desc"><title id="title">Bird Control BC monochrome logo</title><desc id="desc">One-colour flying bird logo for production use.</desc><g transform="translate(24 16) scale(1.72)" fill="#171A18"><path d="M39 50C42 35 48 20 59 8c0 10-1 19-4 28 6-11 14-20 24-26-4 13-10 24-18 33 7-7 15-12 24-15-5 11-13 20-23 26-8-2-16-3-23-4Z"/><path d="M17 61c11-7 21-11 31-13 8-2 16-2 23 1 4-2 8-3 12-2l10 4-10 4c-3 1-7 1-10 0-5 7-12 12-21 15-11 4-23 3-34-3l17-4-18-2Z"/><path d="M82 48l12 3-12 4 4-4-4-3Z"/><path d="M18 78h68" stroke="#171A18" stroke-width="3.5"/></g><g transform="translate(228 51)" fill="#171A18"><text x="0" y="67" font-family="Georgia,'Times New Roman',serif" font-size="66" font-weight="700" letter-spacing="-2">Bird Control BC</text><path d="M2 91h592" stroke="#171A18" stroke-width="3"/><text x="2" y="124" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="5">VANCOUVER · LOWER MAINLAND</text></g></svg>
