@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">Bird Control BC icon</title>
-  <desc id="desc">Simplified Coastline Wing bird above an architectural exclusion ledge.</desc>
+  <desc id="desc">Simplified Coastline Wing bird above an architectural ledge.</desc>
   <rect width="512" height="512" rx="108" fill="#102F28"/>
   <g transform="translate(62 70) scale(3.9)">
     <path d="M16 76h80V27M24 85h72" fill="none" stroke="#F6F1E7" stroke-width="5.5" stroke-linecap="square"/>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
+  <title id="title">Bird Control BC monochrome logo</title>
+  <desc id="desc">One-colour Coastline Wing logo for stamps, embroidery, and production.</desc>
+  <g transform="translate(24 22) scale(1.74)">
+    <path d="M16 76h80V27M24 85h72" fill="none" stroke="#171A18" stroke-width="5" stroke-linecap="square"/>
+    <path d="M13 51c16-18 33-26 53-23 9 1 17-3 27-12-3 10-8 18-17 23l18 6-20 6C61 63 44 67 25 62c9-7 16-15 21-25-12 3-23 8-33 14Z" fill="#171A18"/>
+    <path d="M29 51c11-11 24-17 38-18-9 7-16 15-21 26-6-2-11-5-17-8Z" fill="#F6F1E7"/>
+  </g>
+  <g transform="translate(228 51)">
+    <text x="0" y="67" fill="#171A18" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700" letter-spacing="-2">Bird Control BC</text>
+    <path d="M2 91h592" stroke="#171A18" stroke-width="3"/>
+    <text x="2" y="124" fill="#171A18" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="5">VANCOUVER · LOWER MAINLAND</text>
+  </g>
+</svg>

@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   applicationName: siteConfig.name,
   icons: {
     icon: [
-      { url: siteConfig.brandIcon, type: "image/png" },
+      { url: siteConfig.brandIcon, type: "image/svg+xml" },
     ],
     shortcut: [siteConfig.brandIcon],
     apple: [
-      { url: siteConfig.brandIcon, type: "image/png" },
+      { url: siteConfig.brandIcon, type: "image/svg+xml" },
     ],
   },
   openGraph: {
