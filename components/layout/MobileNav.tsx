@@ -95,7 +95,7 @@ export function MobileNav() {
               ))}
             </nav>
 
-            <ButtonLink href="/contact" variant="primary" className="mt-6 w-full" onClick={closeMenu}>
+            <ButtonLink href="/#quote" variant="primary" className="mt-6 w-full" onClick={closeMenu}>
               Send Photos for a Free Quote
             </ButtonLink>
 
