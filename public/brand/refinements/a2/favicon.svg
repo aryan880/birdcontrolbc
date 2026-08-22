@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">A2 Premium Architectural favicon</title>
+  <desc id="desc">Simplified Bird Control BC favicon optimized for 32 pixel recognition.</desc>
+  <rect width="512" height="512" rx="104" fill="#10352D"/>
+  <g transform="translate(54 77) scale(4.1)"><path d="M13 51 42 29c12-9 28-11 43-5 7 3 14 0 23-8-2 11-8 20-18 26l19 8-22 6C71 68 52 74 31 68c10-8 18-18 23-30-15 3-28 8-41 13Z" fill="#F7F2E8"/>
+    <path d="M31 55c13-13 29-20 47-22-12 9-22 20-29 32-6-3-12-6-18-10Z" fill="#AEBB82"/>
+    <circle cx="85" cy="30" r="2.6" fill="#10352D"/>
+    <path d="M19 81h82" fill="none" stroke="#F7F2E8" stroke-width="5" stroke-linecap="square"/></g>
+</svg>

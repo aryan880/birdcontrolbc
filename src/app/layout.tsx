@@ -14,10 +14,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: siteConfig.brandIcon, type: "image/svg+xml" },
+      { url: siteConfig.favicon, type: "image/png", sizes: "32x32" },
     ],
-    shortcut: [siteConfig.brandIcon],
+    shortcut: [siteConfig.favicon],
     apple: [
-      { url: siteConfig.brandIcon, type: "image/svg+xml" },
+      { url: siteConfig.appleTouchIcon, type: "image/png", sizes: "180x180" },
     ],
   },
   openGraph: {

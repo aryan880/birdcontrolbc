@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-labelledby="title desc">
+  <title id="title">A3 Bold Social-First vehicle and uniform lockup</title>
+  <desc id="desc">Contractor-grade Bird Control BC vehicle and uniform lockup.</desc>
+  <rect width="1280" height="340" rx="22" fill="#10352D"/>
+  <g transform="translate(48 49) scale(2.32)"><path d="M14 52c18-21 39-29 61-22 10 3 19-2 30-12-3 12-9 21-19 27l20 8-22 6C70 72 50 77 28 69c11-8 19-18 25-31-14 3-27 8-39 14Z" fill="#F7F2E8"/>
+    <path d="M31 56c14-14 30-21 48-23-12 9-22 20-29 33-7-3-13-6-19-10Z" fill="#AEBB82"/>
+    <circle cx="83" cy="33" r="2.1" fill="#10352D"/>
+    <path d="M22 81h76" fill="none" stroke="#F7F2E8" stroke-width="5" stroke-linecap="square"/></g>
+  <text x="310" y="145" fill="#F7F2E8" font-family="Georgia, 'Times New Roman', serif" font-size="74" font-weight="700" letter-spacing="-1.4">Bird Control BC</text>
+  <text x="315" y="196" fill="#C9D4AD" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="4">BIRD CONTROL · CLEANUP · EXCLUSION</text>
+  <text x="315" y="250" fill="#E1E5DC" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="3">VANCOUVER · LOWER MAINLAND</text>
+  <rect x="982" y="118" width="245" height="70" rx="8" fill="#899A5B"/>
+  <text x="1104" y="162" text-anchor="middle" fill="#10352D" font-family="Arial, sans-serif" font-size="22" font-weight="700">672 699 4826</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="620" viewBox="0 0 640 620" role="img" aria-labelledby="title desc">
+  <title id="title">A3 Bold Social-First stacked logo</title>
+  <desc id="desc">Stacked Bird Control BC Bold Social-First identity.</desc>
+  <g transform="translate(208 62) scale(2.08)"><path d="M14 52c18-21 39-29 61-22 10 3 19-2 30-12-3 12-9 21-19 27l20 8-22 6C70 72 50 77 28 69c11-8 19-18 25-31-14 3-27 8-39 14Z" fill="#10352D"/>
+    <path d="M31 56c14-14 30-21 48-23-12 9-22 20-29 33-7-3-13-6-19-10Z" fill="#899A5B"/>
+    <circle cx="83" cy="33" r="2.1" fill="#F7F2E8"/>
+    <path d="M22 81h76" fill="none" stroke="#10352D" stroke-width="5" stroke-linecap="square"/></g>
+  <text x="320" y="360" text-anchor="middle" fill="#10352D" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" letter-spacing="-1.4">Bird Control BC</text>
+  <path d="M112 394h416" stroke="#899A5B" stroke-width="3"/>
+  <text x="320" y="437" text-anchor="middle" fill="#647067" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4.6">VANCOUVER · LOWER MAINLAND</text>
+</svg>

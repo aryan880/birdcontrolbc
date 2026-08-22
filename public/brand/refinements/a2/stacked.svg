@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="620" viewBox="0 0 640 620" role="img" aria-labelledby="title desc">
+  <title id="title">A2 Premium Architectural stacked logo</title>
+  <desc id="desc">Stacked Bird Control BC Premium Architectural identity.</desc>
+  <g transform="translate(208 62) scale(2.08)"><path d="M13 51 42 29c12-9 28-11 43-5 7 3 14 0 23-8-2 11-8 20-18 26l19 8-22 6C71 68 52 74 31 68c10-8 18-18 23-30-15 3-28 8-41 13Z" fill="#10352D"/>
+    <path d="M31 55c13-13 29-20 47-22-12 9-22 20-29 32-6-3-12-6-18-10Z" fill="#899A5B"/>
+    <circle cx="85" cy="30" r="2.1" fill="#F7F2E8"/>
+    <path d="M19 81h82V69" fill="none" stroke="#10352D" stroke-width="4" stroke-linecap="square"/></g>
+  <text x="320" y="360" text-anchor="middle" fill="#10352D" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" letter-spacing="-1.8">Bird Control BC</text>
+  <path d="M112 394h416" stroke="#899A5B" stroke-width="3"/>
+  <text x="320" y="437" text-anchor="middle" fill="#647067" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4.6">VANCOUVER · LOWER MAINLAND</text>
+</svg>

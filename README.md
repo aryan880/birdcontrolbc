@@ -27,6 +27,24 @@ npm run start
 - `lib/migration/legacy-redirects.ts` documents legacy Pigeon Defenders URL mapping for 301 migration.
 - `public/images` contains inherited project photos; captions describe them as existing reference images until a new Bird Control BC photography library is available.
 
+## Brand exports
+
+The production logo files are in `public/brand/final`. Each lockup is available as an editable SVG and a high-resolution PNG:
+
+- Primary horizontal and stacked logos
+- Social avatar and favicon
+- Monochrome and dark-background logos
+- Vehicle and uniform lockup
+
+Ready-to-use marketing layouts are in `public/brand/applications`:
+
+- Website banner
+- Social media cover
+- Service poster
+- Tri-fold pamphlet
+
+Run `npm run brand:generate` after changing `scripts/generate-final-brand-kit.mjs` to regenerate every logo and application from the same vector master.
+
 ## Launch configuration
 
 The primary phone, email, and Vancouver business location are configured in `content/site.ts`. Before deploying, update:

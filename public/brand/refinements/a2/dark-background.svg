@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="220" viewBox="0 0 960 220" role="img" aria-labelledby="title desc">
+  <title id="title">A2 Premium Architectural dark background logo</title>
+  <desc id="desc">High-contrast Bird Control BC identity on deep forest green.</desc>
+  <rect width="960" height="220" rx="18" fill="#10352D"/>
+  <g transform="translate(28 27) scale(1.68)"><path d="M13 51 42 29c12-9 28-11 43-5 7 3 14 0 23-8-2 11-8 20-18 26l19 8-22 6C71 68 52 74 31 68c10-8 18-18 23-30-15 3-28 8-41 13Z" fill="#F7F2E8"/>
+    <path d="M31 55c13-13 29-20 47-22-12 9-22 20-29 32-6-3-12-6-18-10Z" fill="#AEBB82"/>
+    <circle cx="85" cy="30" r="2.1" fill="#10352D"/>
+    <path d="M19 81h82V69" fill="none" stroke="#F7F2E8" stroke-width="4" stroke-linecap="square"/></g>
+  <g transform="translate(238 51)"><text x="0" y="64" fill="#F7F2E8" font-family="Georgia, 'Times New Roman', serif" font-size="65" font-weight="700" letter-spacing="-1.8">Bird Control BC</text>
+    <path d="M2 88h582" stroke="#AEBB82" stroke-width="3"/>
+    <text x="2" y="121" fill="#D8DECD" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4.6">VANCOUVER · LOWER MAINLAND</text></g>
+</svg>

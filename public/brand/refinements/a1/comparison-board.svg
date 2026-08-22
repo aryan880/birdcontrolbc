@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">A1 Premium Coastal brand system</title>
+  <desc id="desc">A flowing coastline-inspired wing, confident serif wordmark, and one quiet ledge line. Includes web, social, favicon, monochrome, dark and contractor applications.</desc>
+  <rect width="1600" height="1200" fill="#F7F2E8"/>
+  <text x="72" y="76" fill="#10352D" font-family="Georgia, serif" font-size="44" font-weight="700">A1 · Premium Coastal</text>
+  <text x="72" y="116" fill="#647067" font-family="Arial, sans-serif" font-size="16">A flowing coastline-inspired wing, confident serif wordmark, and one quiet ledge line.</text>
+  <line x1="72" y1="148" x2="1528" y2="148" stroke="#CDD1C8"/>
+
+  <g transform="translate(72 184)"><rect width="940" height="272" rx="18" fill="#FFFEFA"/><text x="28" y="38" fill="#647067" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">PRIMARY HORIZONTAL</text><g transform="translate(34 67) scale(1.45)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#10352D"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#899A5B"/>
+    <circle cx="83" cy="31" r="2.1" fill="#F7F2E8"/>
+    <path d="M19 81h82" fill="none" stroke="#10352D" stroke-width="4" stroke-linecap="square"/></g><g transform="translate(225 88)"><text x="0" y="64" fill="#10352D" font-family="Georgia, 'Times New Roman', serif" font-size="65" font-weight="700" letter-spacing="-2.1">Bird Control BC</text>
+    <path d="M2 88h582" stroke="#899A5B" stroke-width="3"/>
+    <text x="2" y="121" fill="#647067" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4.6">VANCOUVER · LOWER MAINLAND</text></g></g>
+  <g transform="translate(1048 184)"><rect width="480" height="500" rx="18" fill="#FFFEFA"/><text x="26" y="38" fill="#647067" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">STACKED</text><g transform="translate(145 66) scale(1.85)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#10352D"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#899A5B"/>
+    <circle cx="83" cy="31" r="2.1" fill="#F7F2E8"/>
+    <path d="M19 81h82" fill="none" stroke="#10352D" stroke-width="4" stroke-linecap="square"/></g><text x="240" y="330" text-anchor="middle" fill="#10352D" font-family="Georgia" font-size="48" font-weight="700">Bird Control BC</text><text x="240" y="370" text-anchor="middle" fill="#647067" font-family="Arial" font-size="11" font-weight="700" letter-spacing="3">VANCOUVER · LOWER MAINLAND</text></g>
+
+  <g transform="translate(72 492)"><rect width="286" height="286" rx="18" fill="#FFFEFA"/><text x="24" y="36" fill="#647067" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">SOCIAL AVATAR</text><circle cx="143" cy="164" r="91" fill="#10352D"/><g transform="translate(79 104) scale(1.3)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#F7F2E8"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#AEBB82"/>
+    <circle cx="83" cy="31" r="2.6" fill="#10352D"/>
+    <path d="M19 81h82" fill="none" stroke="#F7F2E8" stroke-width="5" stroke-linecap="square"/></g></g>
+  <g transform="translate(390 492)"><rect width="286" height="286" rx="18" fill="#FFFEFA"/><text x="24" y="36" fill="#647067" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">FAVICON / 32PX</text><rect x="84" y="102" width="118" height="118" rx="26" fill="#10352D"/><g transform="translate(101 118) scale(.85)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#F7F2E8"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#AEBB82"/>
+    <circle cx="83" cy="31" r="2.6" fill="#10352D"/>
+    <path d="M19 81h82" fill="none" stroke="#F7F2E8" stroke-width="5" stroke-linecap="square"/></g></g>
+  <g transform="translate(708 492)"><rect width="304" height="286" rx="18" fill="#FFFEFA"/><text x="24" y="36" fill="#647067" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">MONOCHROME</text><g transform="translate(32 83) scale(1.25)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#202622"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#F7F2E8"/>
+    <circle cx="83" cy="31" r="2.1" fill="#F7F2E8"/>
+    <path d="M19 81h82" fill="none" stroke="#202622" stroke-width="4" stroke-linecap="square"/></g><text x="165" y="151" fill="#202622" font-family="Georgia" font-size="26" font-weight="700">Bird Control BC</text></g>
+
+  <g transform="translate(72 816)"><rect width="940" height="272" rx="18" fill="#10352D"/><text x="26" y="38" fill="#D8DECD" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">VEHICLE / UNIFORM</text><g transform="translate(42 66) scale(1.45)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#F7F2E8"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#AEBB82"/>
+    <circle cx="83" cy="31" r="2.1" fill="#10352D"/>
+    <path d="M19 81h82" fill="none" stroke="#F7F2E8" stroke-width="4" stroke-linecap="square"/></g><text x="226" y="144" fill="#F7F2E8" font-family="Georgia" font-size="48" font-weight="700">Bird Control BC</text><text x="230" y="184" fill="#C9D4AD" font-family="Arial" font-size="12" font-weight="700" letter-spacing="3">BIRD CONTROL · CLEANUP · EXCLUSION</text><rect x="718" y="106" width="178" height="54" rx="6" fill="#899A5B"/><text x="807" y="139" text-anchor="middle" fill="#10352D" font-family="Arial" font-size="16" font-weight="700">672 699 4826</text></g>
+  <g transform="translate(1048 722)"><rect width="480" height="366" rx="18" fill="#10352D"/><text x="26" y="38" fill="#D8DECD" font-family="Arial" font-size="12" font-weight="700" letter-spacing="2">DARK BACKGROUND</text><g transform="translate(36 80) scale(1.25)"><path d="M12 50C29 29 50 20 73 27c11 3 21-2 34-13-3 13-10 23-21 29l22 8-24 6C68 72 46 77 23 68c12-8 20-18 26-31-14 3-26 7-37 13Z" fill="#F7F2E8"/>
+    <path d="M29 55c14-14 31-22 50-24-14 10-24 21-31 34-7-3-13-6-19-10Z" fill="#AEBB82"/>
+    <circle cx="83" cy="31" r="2.1" fill="#10352D"/>
+    <path d="M19 81h82" fill="none" stroke="#F7F2E8" stroke-width="4" stroke-linecap="square"/></g><text x="190" y="149" fill="#F7F2E8" font-family="Georgia" font-size="31" font-weight="700">Bird Control BC</text><text x="193" y="182" fill="#D8DECD" font-family="Arial" font-size="9" font-weight="700" letter-spacing="2.4">VANCOUVER · LOWER MAINLAND</text><line x1="26" y1="230" x2="454" y2="230" stroke="#FFFFFF" opacity=".16"/><text x="26" y="275" fill="#F7F2E8" font-family="Georgia" font-size="24" font-weight="700">Small-format strategy</text><text x="26" y="310" fill="#D8DECD" font-family="Arial" font-size="13">The social and favicon marks use heavier details</text><text x="26" y="334" fill="#D8DECD" font-family="Arial" font-size="13">without changing the primary identity.</text></g>
+</svg>

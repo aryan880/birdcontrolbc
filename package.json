@@ -1,9 +1,10 @@
 {
-  "name": "pigeon-defenders",
+  "name": "bird-control-bc",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
+    "brand:generate": "node scripts/generate-final-brand-kit.mjs",
     "dev": "next dev",
     "build": "next build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
