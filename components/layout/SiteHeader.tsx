@@ -54,7 +54,7 @@ export function SiteHeader() {
             Text us
           </a>
           <ButtonLink
-            href="/contact"
+            href="/#quote"
             variant="primary"
             className="min-w-[196px] py-2.5"
           >
