@@ -22,7 +22,7 @@ export function CTASection() {
             </p>
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0">
-            <ButtonLink href="/contact" variant="primary" className="sm:min-w-[220px]">
+            <ButtonLink href="/#quote" variant="primary" className="sm:min-w-[220px]">
               {siteConfig.ctaLabels.primary}
             </ButtonLink>
             <ButtonLink href={siteConfig.telHref} variant="outline" className="sm:min-w-[160px]">
