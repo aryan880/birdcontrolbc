@@ -35,7 +35,7 @@ export function HeroSection() {
             className="hero-animate mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
             style={{ ["--enter-delay" as string]: "300ms" }}
           >
-            <ButtonLink href="/contact" variant="primary" className="text-[13px] sm:min-w-[248px] sm:text-base">
+            <ButtonLink href="/#quote" variant="primary" className="text-[13px] sm:min-w-[248px] sm:text-base">
               {siteConfig.ctaLabels.primary}
             </ButtonLink>
             <ButtonLink href={siteConfig.telHref} variant="outline" className="sm:min-w-[150px]">
