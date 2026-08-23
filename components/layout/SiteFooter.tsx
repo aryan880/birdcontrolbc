@@ -10,7 +10,7 @@ export function SiteFooter() {
       <Container>
         <div className="mb-14 grid gap-8 border-b border-white/15 pb-12 lg:grid-cols-[1fr_auto] lg:items-end">
           <p className="font-display max-w-4xl text-4xl leading-tight tracking-[-0.035em] sm:text-6xl">A cleaner, more usable property starts with a few clear photos.</p>
-          <SmartLink href="/#quote" className="inline-flex border-b border-brand-lime pb-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-limeSoft">Send photos for a quote →</SmartLink>
+          <SmartLink href="/contact#quote" className="inline-flex border-b border-brand-lime pb-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-limeSoft">Send photos for a quote →</SmartLink>
         </div>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.35fr_0.8fr_0.8fr_0.8fr]">
         <div>

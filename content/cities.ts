@@ -24,8 +24,8 @@ export const cities: City[] = citySeeds.map((seed) => ({
   summary: `Bird-control services in ${seed.name} for balconies, building edges, shared properties, and commercial sites.`,
   image,
   seo: { title: `Bird Control ${seed.name} | Bird Control BC`, description: `Bird Control BC provides practical bird netting, spikes, deterrents, and pigeon-dropping cleanup in ${seed.name}. Send photos for a free quote.` },
-  hero: { eyebrow: `Bird control in ${seed.name}`, title: `Bird control for ${seed.name} properties.`, description: `${seed.context} Send photos of the problem area and property context to start a more useful quote conversation.`, supportingPoints: [seed.propertyFocus, "Photo-led quote requests", "Linked services and project examples"] },
-  intro: { eyebrow: "Local context", title: `A practical approach to bird activity in ${seed.name}.`, description: `${seed.context} The local page adds context while the service pages stay focused on the work itself.` },
+  hero: { eyebrow: `Bird control in ${seed.name}`, title: `Bird control for ${seed.name} properties.`, description: `${seed.context} Send photos of the problem area and property context to start a more useful quote conversation.`, supportingPoints: [seed.propertyFocus, "Photo-led quote requests", "Netting, deterrents, spikes, and cleanup"] },
+  intro: { eyebrow: "Local context", title: `A practical approach to bird activity in ${seed.name}.`, description: `${seed.context} Photos of the affected surface, along with the property type and access details, help identify the most suitable next step.` },
   propertyFocus: [
     { title: "Property focus", description: seed.propertyFocus },
     { title: "Problem surfaces", description: "Balcony openings, ledges, rooflines, signs, entry areas, and other repeat landing surfaces." },
@@ -44,7 +44,7 @@ export const cities: City[] = citySeeds.map((seed) => ({
   relatedServiceSlugs: seed.services,
   featuredProjectSlugs: [seed.project],
   faqs: [
-    { id: `${seed.slug}-areas`, question: `Do you serve ${seed.name}?`, answer: `Yes. Bird Control BC has a dedicated ${seed.name} page to connect local property context with the relevant service routes and quote form.` },
+    { id: `${seed.slug}-areas`, question: `Do you serve ${seed.name}?`, answer: `Yes. Bird Control BC serves ${seed.name} properties for bird netting, spikes, deterrents, pigeon-dropping cleanup, strata work, and commercial bird control, subject to property access and scope.` },
     { id: `${seed.slug}-quote`, question: `What should I send for a ${seed.name} quote?`, answer: "Send photos of the affected area, the city, property type, and any access or timing context that could affect the work." },
   ],
 }));

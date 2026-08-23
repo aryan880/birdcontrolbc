@@ -20,7 +20,9 @@ type CityPageTemplateProps = {
 
 export function CityPageTemplate({ city }: CityPageTemplateProps) {
   const relatedServices = getServicesBySlugs(city.relatedServiceSlugs);
-  const featuredProject = getProjectsBySlugs(city.featuredProjectSlugs)[0];
+  const featuredProject = getProjectsBySlugs(city.featuredProjectSlugs).find(
+    (project) => project.relatedCitySlug === city.slug,
+  );
   const hasPropertyFocus = city.propertyFocus.length > 0;
   const hasCommonIssues = city.commonIssues.length > 0;
   const hasServiceFit = city.serviceFit.length > 0;
@@ -28,11 +30,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
 
   return (
     <>
-      <LocalBusinessSchema
-        url={`${siteConfig.url}${city.routeHref}`}
-        description={city.seo.description}
-        areaServed={city.name}
-      />
+      <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: siteConfig.url },
@@ -49,7 +47,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
         image={city.image}
         actions={[
           {
-            href: "/contact",
+            href: "/contact#quote",
             label: siteConfig.ctaLabels.primary,
             variant: "primary",
           },
@@ -89,7 +87,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
               <SectionHeading
                 eyebrow="Common Problems"
                 title={`Common bird-control issues on ${city.name} properties.`}
-                description="These recurring issue patterns help clarify whether the right fit is balcony netting, pigeon spikes, cleaning, or a broader commercial recommendation."
+                description="The right approach depends on whether birds are entering an opening, landing on a defined edge, or leaving contamination that needs cleanup."
                 align="center"
               />
             </div>
@@ -107,7 +105,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
               <SectionHeading
                 eyebrow="Best Fit Services"
                 title={`Bird-proofing services people in ${city.name} often need first.`}
-                description="Each linked service page is built around a different property problem so the quote path stays clearer once you choose the right route."
+                description="Choose the service that most closely matches the affected surface and property type, then send photos for a property-specific quote."
                 align="center"
               />
             </div>
@@ -121,7 +119,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
       {featuredProject ? (
         <ProjectShowcase
           project={featuredProject}
-          description={`A relevant Lower Mainland project example that supports the kinds of balcony, ledge, or building-edge issues described on the ${city.name} page.`}
+          description={`A completed ${featuredProject.title.toLowerCase()} example from ${city.name}.`}
         />
       ) : null}
 
@@ -132,7 +130,7 @@ export function CityPageTemplate({ city }: CityPageTemplateProps) {
               <SectionHeading
                 eyebrow="How The Work Usually Fits"
                 title={`Which service usually fits best in ${city.name}?`}
-                description="This section keeps the city page useful by clarifying service fit without turning it into duplicate service copy."
+                description="Access, property use, contamination, and the surfaces birds are using determine the most suitable next step."
                 align="center"
               />
             </div>

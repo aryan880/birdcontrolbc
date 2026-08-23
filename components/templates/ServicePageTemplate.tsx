@@ -77,7 +77,7 @@ export function ServicePageTemplate({ service }: ServicePageTemplateProps) {
         image={service.image}
         actions={[
           {
-            href: "/contact",
+            href: "/contact#quote",
             label: siteConfig.ctaLabels.primary,
             variant: "primary",
           },

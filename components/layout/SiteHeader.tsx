@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { Container } from "@/components/layout/Container";
 import { MobileNav } from "@/components/layout/MobileNav";
@@ -10,8 +11,10 @@ import { siteConfig } from "@/content/site";
 import { useTracking } from "@/lib/analytics/useTracking";
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const { trackPhoneClick } = useTracking();
+  const quoteHref = pathname === "/" ? "/#quote" : pathname === "/contact" ? "#quote" : "/contact#quote";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +57,7 @@ export function SiteHeader() {
             Text us
           </a>
           <ButtonLink
-            href="/#quote"
+            href={quoteHref}
             variant="primary"
             className="min-w-[196px] py-2.5"
           >

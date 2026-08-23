@@ -43,6 +43,7 @@ export const navigation: NavigationGroup = {
     { label: "Property Care Guides", href: "/resources", kind: "route" },
     { label: "Service Areas", href: "/service-areas", kind: "route" },
     { label: "Contact", href: "/contact", kind: "route" },
+    { label: "Privacy", href: "/privacy", kind: "route" },
   ],
   legacy: [],
 };

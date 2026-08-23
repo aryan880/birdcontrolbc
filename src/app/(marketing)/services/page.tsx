@@ -39,7 +39,7 @@ export default function ServicesPage() {
           alt: "Finished balcony bird-netting installation by Bird Control BC",
         }}
         actions={[
-          { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
+          { href: "/contact#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[

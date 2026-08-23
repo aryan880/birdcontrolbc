@@ -16,12 +16,13 @@ export const metadata: Metadata = buildMetadata({
 
 export default function ResourcesPage() {
   return (
-    <main>
+    <>
       <header className="border-b border-brand-line bg-brand-cream py-14 sm:py-20 lg:py-24">
         <Container className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
           <SectionHeading
             eyebrow="Property care resources"
             title="Clear guidance for a cleaner, better-protected property."
+            headingLevel="h1"
           />
           <p className="max-w-2xl text-base leading-8 text-brand-slate lg:justify-self-end lg:text-lg">
             Evidence-based information about pigeon-dropping buildup, airborne dust during cleanup, and choosing a prevention method that fits the property.
@@ -33,6 +34,6 @@ export default function ResourcesPage() {
           <ResourceLinks resources={resources} />
         </Container>
       </section>
-    </main>
+    </>
   );
 }

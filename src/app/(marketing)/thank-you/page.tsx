@@ -33,14 +33,14 @@ export default function ThankYouPage() {
 
       <PageHero
         eyebrow="Thank You"
-        title="Thanks. Your quote request is set up for the next business step."
-        description="Your quote request has been captured. This page keeps the follow-up path clear while business contact details and form delivery are connected for launch."
+        title="Thanks. Your quote request has been sent."
+        description="We received your property details and any attached photos. We will review the request and follow up using the contact information you provided."
         image={{
           src: "/media/projects/lower-mainland-balcony-netting/finished-balcony-netting-detail.webp",
           alt: "Finished balcony bird netting detail from a Bird Control BC project",
         }}
         actions={[
-          { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
+          { href: "/contact#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         breadcrumbs={[
@@ -49,7 +49,7 @@ export default function ThankYouPage() {
         ]}
         note={{
           eyebrow: "Next step",
-          body: "If the issue is urgent, calling is still the fastest path. Otherwise, this thank-you page confirms that the request details have been captured successfully.",
+          body: "If the issue is urgent, calling is still the fastest path. Otherwise, this page confirms that the request was delivered successfully.",
         }}
       />
 
@@ -61,10 +61,10 @@ export default function ThankYouPage() {
                 <div className="section-surface p-6 sm:p-8">
                   <p className="eyebrow-pill">What Happens Next</p>
                   <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-brand-navy sm:text-4xl">
-                    Your request is ready for the next step.
+                    Your request was sent successfully.
                   </h2>
                   <p className="mt-4 text-sm leading-7 text-brand-slate sm:text-base">
-                    Preparing the confirmation details for this quote request.
+                    Loading the request summary.
                   </p>
                 </div>
               }

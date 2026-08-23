@@ -43,7 +43,7 @@ export function ProjectPageTemplate({ project }: ProjectPageTemplateProps) {
         description={project.hero.description}
         image={project.image}
         actions={[
-          { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
+          { href: "/contact#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         breadcrumbs={[

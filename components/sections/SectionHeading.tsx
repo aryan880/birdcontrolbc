@@ -6,6 +6,7 @@ type SectionHeadingProps = {
   description?: string;
   align?: "left" | "center";
   theme?: "light" | "dark";
+  headingLevel?: "h1" | "h2";
 };
 
 export function SectionHeading({
@@ -14,7 +15,9 @@ export function SectionHeading({
   description,
   align = "left",
   theme = "light",
+  headingLevel = "h2",
 }: SectionHeadingProps) {
+  const Heading = headingLevel;
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
       <p
@@ -25,7 +28,7 @@ export function SectionHeading({
       >
         {eyebrow}
       </p>
-      <h2
+      <Heading
         className={cn(
           "font-display mt-5 text-4xl font-medium leading-[1.02] tracking-[-0.035em] sm:text-6xl",
           theme === "light" && "text-brand-navy",
@@ -33,7 +36,7 @@ export function SectionHeading({
         )}
       >
         {title}
-      </h2>
+      </Heading>
       {description ? (
         <p
           className={cn(

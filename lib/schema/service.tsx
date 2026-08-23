@@ -11,7 +11,8 @@ export function ServiceSchema({ service }: ServiceSchemaProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.seo?.title ?? service.name,
+    "@id": `${serviceUrl}#service`,
+    name: service.name,
     serviceType: service.name,
     description: service.seo?.description ?? service.summary,
     areaServed: "Vancouver and the Lower Mainland, BC",
@@ -19,16 +20,7 @@ export function ServiceSchema({ service }: ServiceSchemaProps) {
     image: `${siteConfig.url}${service.image.src}`,
     provider: {
       "@type": "LocalBusiness",
-      name: siteConfig.name,
-      telephone: siteConfig.phoneHref,
-      email: siteConfig.email,
-      url: siteConfig.url,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: siteConfig.address.locality,
-        addressRegion: siteConfig.address.region,
-        addressCountry: siteConfig.address.country,
-      },
+      "@id": `${siteConfig.url}/#localbusiness`,
     },
   };
 

@@ -1,27 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { useTracking } from "@/lib/analytics/useTracking";
-import type { QuoteLeadPayload } from "@/types/lead";
 
 export function ThankYouSummary() {
   const searchParams = useSearchParams();
   const { trackEvent } = useTracking();
-  const [lead, setLead] = useState<null | QuoteLeadPayload>(null);
 
   useEffect(() => {
-    try {
-      const saved = sessionStorage.getItem("bc_quote_lead");
-
-      if (saved) {
-        setLead(JSON.parse(saved) as QuoteLeadPayload);
-      }
-    } catch {
-      setLead(null);
-    }
-
     trackEvent({
       event: "thank_you_view",
       location: "thank-you",
@@ -32,18 +20,18 @@ export function ThankYouSummary() {
     });
   }, [searchParams, trackEvent]);
 
-  const service = lead?.serviceNeeded || searchParams.get("service");
-  const city = lead?.city || searchParams.get("city");
-  const propertyType = lead?.propertyType || searchParams.get("propertyType");
+  const service = searchParams.get("service");
+  const city = searchParams.get("city");
+  const propertyType = searchParams.get("propertyType");
 
   return (
     <div className="section-surface p-6 sm:p-8">
       <p className="eyebrow-pill">What Happens Next</p>
       <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-brand-navy sm:text-4xl">
-        Your request is ready for the next step.
+        Your request was sent successfully.
       </h2>
       <p className="mt-4 text-sm leading-7 text-brand-slate sm:text-base">
-        We now have the core details for your quote request, including the service, city, and property type when they were provided.
+        We received the quote details and any attached photos. We will review the request and follow up using the contact information you provided.
       </p>
 
       {(service || city || propertyType) ? (
@@ -59,9 +47,9 @@ export function ThankYouSummary() {
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">
         {[
-          "Your request summary is saved so the follow-up can start with the right context.",
-          "Photos, approvals, and access notes can still be added during the next conversation if needed.",
-          "Call now if the issue is urgent and you want to move faster than the standard follow-up flow.",
+          "Your request was delivered to the Bird Control BC business inbox.",
+          "Additional photos, approvals, or access notes can be shared during follow-up if needed.",
+          "Call now if the issue is urgent and you need to discuss the property directly.",
         ].map((item) => (
           <div key={item} className="rounded-[1.4rem] border border-brand-line/80 bg-white p-4 text-sm leading-6 text-brand-slate">
             {item}

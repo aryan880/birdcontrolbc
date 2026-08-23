@@ -5,11 +5,16 @@ import {
   sendQuoteNotifications,
   type QuoteAttachment,
 } from "@/lib/leads/quote-notifications";
+import {
+  checkQuoteRateLimit,
+  createRateLimitHeaders,
+} from "@/lib/security/quote-rate-limit";
 import type { QuoteLeadPayload } from "@/types/lead";
 
 export const runtime = "nodejs";
 
 const maxFiles = 3;
+const maxRequestBytes = 6 * 1024 * 1024;
 const maxTotalFileBytes = 4 * 1024 * 1024;
 const allowedImageTypes = new Set([
   "image/jpeg",
@@ -20,11 +25,31 @@ const allowedImageTypes = new Set([
 ]);
 
 export async function POST(request: NextRequest) {
+  const rateLimit = await checkQuoteRateLimit(request);
+  const rateLimitHeaders = createRateLimitHeaders(rateLimit);
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      {
+        ok: false,
+        message: "Too many quote requests. Please wait a few minutes, or call or text us directly.",
+      },
+      {
+        status: 429,
+        headers: {
+          ...rateLimitHeaders,
+          "Retry-After": String(rateLimit.retryAfterSeconds),
+        },
+      }
+    );
+  }
+
   try {
+    assertAllowedRequestSize(request);
     const formData = await request.formData();
 
     if (readText(formData, "companyWebsite")) {
-      return NextResponse.json({ ok: true });
+      return NextResponse.json({ ok: true }, { headers: rateLimitHeaders });
     }
 
     const lead = readAndValidateLead(formData);
@@ -32,19 +57,26 @@ export async function POST(request: NextRequest) {
       .getAll("photos")
       .filter((entry): entry is File => entry instanceof File && entry.size > 0);
     const attachments = await prepareAttachments(files);
+    lead.photoNames = attachments.map((attachment) => attachment.filename);
 
     const notification = await sendQuoteNotifications({ lead, attachments });
 
-    return NextResponse.json({
-      ok: true,
-      notifications: {
-        email: notification.emailSent,
-        sms: notification.smsSent,
+    return NextResponse.json(
+      {
+        ok: true,
+        notifications: {
+          email: notification.emailSent,
+          sms: notification.smsSent,
+        },
       },
-    });
+      { headers: rateLimitHeaders }
+    );
   } catch (error) {
     if (error instanceof QuoteRequestValidationError) {
-      return NextResponse.json({ ok: false, message: error.message }, { status: 400 });
+      return NextResponse.json(
+        { ok: false, message: error.message },
+        { status: error.status, headers: rateLimitHeaders }
+      );
     }
 
     if (error instanceof QuoteDeliveryConfigurationError) {
@@ -55,7 +87,7 @@ export async function POST(request: NextRequest) {
           message:
             "Online quote delivery is being configured. Please call or text us so we do not miss your request.",
         },
-        { status: 503 }
+        { status: 503, headers: rateLimitHeaders }
       );
     }
 
@@ -66,7 +98,7 @@ export async function POST(request: NextRequest) {
         message:
           "We could not send your request right now. Please try again, or call or text us directly.",
       },
-      { status: 502 }
+      { status: 502, headers: rateLimitHeaders }
     );
   }
 }
@@ -151,4 +183,20 @@ function sanitizeFilename(filename: string) {
   return cleaned || "quote-photo.jpg";
 }
 
-class QuoteRequestValidationError extends Error {}
+function assertAllowedRequestSize(request: Request) {
+  const contentLength = Number(request.headers.get("content-length"));
+
+  if (Number.isFinite(contentLength) && contentLength > maxRequestBytes) {
+    throw new QuoteRequestValidationError(
+      "The quote request is too large. Please attach fewer or smaller photos.",
+      413
+    );
+  }
+}
+
+class QuoteRequestValidationError extends Error {
+  constructor(message: string, readonly status = 400) {
+    super(message);
+    this.name = "QuoteRequestValidationError";
+  }
+}

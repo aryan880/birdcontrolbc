@@ -25,10 +25,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ServiceAreasPage() {
   return (
     <>
-      <LocalBusinessSchema
-        url={`${siteConfig.url}/service-areas`}
-        description="Lower Mainland service area pages for balcony bird netting, bird spikes, cleanup, deterrents, strata, and commercial bird control."
-      />
+      <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: siteConfig.url },
@@ -39,18 +36,18 @@ export default function ServiceAreasPage() {
       <PageHero
         eyebrow="Service Areas"
         title="Bird-control service areas across Vancouver and the Lower Mainland."
-        description="Browse local pages for Vancouver, Burnaby, Richmond, the North Shore, Coquitlam, and Surrey. Each adds useful property context without duplicating the core service information."
+        description="Review the cities we serve, the property types we work around, and the bird-control services available across the region."
         image={{
           src: "/media/projects/lower-mainland-balcony-netting/completed-netting-skyline.webp",
           alt: "Completed balcony bird netting overlooking Vancouver and the Lower Mainland",
         }}
         actions={[
-          { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
+          { href: "/contact#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[
           "Residential, strata, and commercial property context",
-          "Local pages linked to core services and projects",
+          "Netting, deterrents, spikes, and cleanup",
           "Start a quote by sharing photos",
         ]}
         breadcrumbs={[
@@ -59,7 +56,7 @@ export default function ServiceAreasPage() {
         ]}
         note={{
           eyebrow: "Local service context",
-          body: "Each city page adds a useful local angle and connects back to core services, project examples, and the quote path.",
+          body: "Service availability depends on the property, access, affected surfaces, and the city. Photos help us assess the best next step.",
         }}
       />
 
@@ -85,7 +82,7 @@ export default function ServiceAreasPage() {
             <SectionHeading
               eyebrow="Property Types"
               title="Bird-proofing needs across condo, residential, strata, and commercial properties."
-              description="The service-area hub stays useful by highlighting the real property types behind local searches rather than relying on thin location-only pages."
+              description="Different property types require different access plans, materials, cleanup considerations, and approval steps."
               align="center"
             />
           </div>
@@ -119,8 +116,8 @@ export default function ServiceAreasPage() {
           <div data-reveal>
             <SectionHeading
               eyebrow="Core Services"
-              title="Core bird-proofing services linked from every service-area page."
-              description="These routes handle the main search intent for balcony netting, bird spikes, pigeon-dropping cleanup, deterrents, strata, and commercial bird control."
+              title="Bird-proofing and cleanup services across our service area."
+              description="Compare balcony netting, bird spikes, pigeon-dropping cleanup, deterrents, strata, and commercial bird-control options."
               align="center"
             />
           </div>

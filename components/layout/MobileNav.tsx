@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { ButtonLink } from "@/components/ui/Button";
@@ -9,9 +10,11 @@ import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 export function MobileNav() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const quoteHref = pathname === "/" ? "/#quote" : pathname === "/contact" ? "#quote" : "/contact#quote";
 
   useEffect(() => {
     if (!open) return;
@@ -95,7 +98,7 @@ export function MobileNav() {
               ))}
             </nav>
 
-            <ButtonLink href="/#quote" variant="primary" className="mt-6 w-full" onClick={closeMenu}>
+            <ButtonLink href={quoteHref} variant="primary" className="mt-6 w-full" onClick={closeMenu}>
               Send Photos for a Free Quote
             </ButtonLink>
 

@@ -16,15 +16,16 @@ export function buildMetadata({
   image,
 }: BuildMetadataInput): Metadata {
   const ogImage = image ?? siteConfig.defaultOgImage;
+  const normalizedTitle = title.replace(/\s*\|\s*Bird Control BC\s*$/i, "");
 
   return {
-    title,
+    title: normalizedTitle,
     description,
     alternates: {
       canonical: path,
     },
     openGraph: {
-      title,
+      title: normalizedTitle,
       description,
       url: path,
       images: [
@@ -32,13 +33,13 @@ export function buildMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: title,
+          alt: normalizedTitle,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: normalizedTitle,
       description,
       images: [ogImage],
     },

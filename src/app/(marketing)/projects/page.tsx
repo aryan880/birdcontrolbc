@@ -37,7 +37,7 @@ export default function ProjectsPage() {
           alt: "Black bird netting installed across a Lower Mainland residential balcony",
         }}
         actions={[
-          { href: "/contact", label: siteConfig.ctaLabels.primary, variant: "primary" },
+          { href: "/contact#quote", label: siteConfig.ctaLabels.primary, variant: "primary" },
           { href: siteConfig.telHref, label: siteConfig.ctaLabels.secondary, variant: "light" },
         ]}
         supportingPoints={[

@@ -58,7 +58,7 @@ export function ResourcePageTemplate({ resource }: ResourcePageTemplateProps) {
         </Container>
       </header>
 
-      <main className="section-wrap bg-white">
+      <section aria-label="Article content" className="section-wrap bg-white">
         <Container className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-20">
           <article className="max-w-3xl">
             <p className="border-l-2 border-brand-limeDark pl-5 text-sm leading-7 text-brand-slate">
@@ -123,7 +123,7 @@ export function ResourcePageTemplate({ resource }: ResourcePageTemplateProps) {
             </div>
           </aside>
         </Container>
-      </main>
+      </section>
 
       <section className="section-wrap-tight bg-brand-cream">
         <Container>

@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <>
-      <LocalBusinessSchema url={`${siteConfig.url}/contact`} />
+      <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[
           { name: "Home", url: siteConfig.url },

@@ -6,12 +6,17 @@ type ProjectSchemaProps = {
 };
 
 export function ProjectSchema({ project }: ProjectSchemaProps) {
+  const projectUrl = `${siteConfig.url}${project.routeHref}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: project.seo.title,
+    "@id": `${projectUrl}#article`,
+    headline: project.title,
     description: project.seo.description,
-    mainEntityOfPage: `${siteConfig.url}${project.routeHref}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": projectUrl,
+    },
     image: project.gallery.map((image) => `${siteConfig.url}${image.src}`),
     ...(project.videos?.length
       ? {
@@ -25,16 +30,12 @@ export function ProjectSchema({ project }: ProjectSchemaProps) {
         }
       : {}),
     author: {
-      "@type": "Organization",
-      name: siteConfig.name,
+      "@type": "LocalBusiness",
+      "@id": `${siteConfig.url}/#localbusiness`,
     },
     publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteConfig.url}${siteConfig.brandIcon}`,
-      },
+      "@type": "LocalBusiness",
+      "@id": `${siteConfig.url}/#localbusiness`,
     },
   };
 

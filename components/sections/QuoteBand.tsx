@@ -29,7 +29,7 @@ export function QuoteBand({
       <h2 className="mt-5 text-3xl font-semibold tracking-[-0.03em] sm:text-5xl">{title}</h2>
       <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200">{description}</p>
       <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-        <ButtonLink href="/contact" variant="primary" className="sm:min-w-[220px]">
+        <ButtonLink href="/contact#quote" variant="primary" className="sm:min-w-[220px]">
           {siteConfig.ctaLabels.primary}
         </ButtonLink>
         <ButtonLink href={siteConfig.telHref} variant="light" className="sm:min-w-[200px]">

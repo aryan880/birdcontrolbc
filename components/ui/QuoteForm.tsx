@@ -1,13 +1,13 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { useTracking } from "@/lib/analytics/useTracking";
 import { cities } from "@/content/cities";
 import { siteConfig } from "@/content/site";
 import { services } from "@/content/services";
-import type { QuoteLeadPayload } from "@/types/lead";
 
 type QuoteFormProps = {
   source?: string;
@@ -57,37 +57,25 @@ export function QuoteForm({
         throw new Error(result.message || "We could not send your request. Please try again.");
       }
 
+      const serviceNeeded = String(formData.get("service") ?? "").trim();
+      const city = String(formData.get("city") ?? "").trim();
+      const propertyType = String(formData.get("propertyType") ?? "").trim();
       const consent = formData.get("consent") === "on";
-      const payload: QuoteLeadPayload = {
-        name: String(formData.get("name") ?? "").trim(),
-        phone: String(formData.get("phone") ?? "").trim(),
-        email: String(formData.get("email") ?? "").trim(),
-        propertyAddress: String(formData.get("propertyAddress") ?? "").trim(),
-        city: String(formData.get("city") ?? "").trim(),
-        serviceNeeded: String(formData.get("service") ?? "").trim(),
-        propertyType: String(formData.get("propertyType") ?? "").trim(),
-        message: String(formData.get("message") ?? "").trim(),
-        consent,
-        photoNames: selectedFiles,
-        source,
-      };
-
-      sessionStorage.setItem("bc_quote_lead", JSON.stringify(payload));
       trackQuoteSubmission(source, {
-        service: payload.serviceNeeded,
-        city: payload.city,
-        propertyType: payload.propertyType,
-        consent: payload.consent,
-        hasPhotos: payload.photoNames.length > 0,
+        service: serviceNeeded,
+        city,
+        propertyType,
+        consent,
+        hasPhotos: selectedFiles.length > 0,
       });
 
-      const searchParams = new URLSearchParams({
-        service: payload.serviceNeeded,
-        city: payload.city,
-        propertyType: payload.propertyType,
-      });
+      const searchParams = new URLSearchParams();
+      if (serviceNeeded) searchParams.set("service", serviceNeeded);
+      if (city) searchParams.set("city", city);
+      if (propertyType) searchParams.set("propertyType", propertyType);
 
-      router.push(`${redirectTo}?${searchParams.toString()}`);
+      const query = searchParams.toString();
+      router.push(query ? `${redirectTo}?${query}` : redirectTo);
     } catch (error) {
       setSubmission({
         status: "error",
@@ -252,7 +240,11 @@ export function QuoteForm({
           className="mt-1 h-4 w-4 rounded border-brand-line text-brand-limeDark focus:ring-brand-lime"
         />
         <span>
-          I agree to be contacted about this quote request by phone or email and confirm that the details above relate to a real property inquiry.
+          I agree to be contacted about this quote request by phone or email and confirm that the details above relate to a real property inquiry. See our{" "}
+          <Link href="/privacy" className="font-semibold text-brand-navy underline underline-offset-2">
+            privacy notice
+          </Link>
+          .
         </span>
       </label>
 

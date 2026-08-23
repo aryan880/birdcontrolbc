@@ -1,15 +1,6 @@
 import { siteConfig } from "@/content/site";
 
-type LocalBusinessSchemaProps = {
-  url?: string;
-  description?: string;
-  areaServed?: string | string[];
-};
-
-export function LocalBusinessSchema({
-  url = siteConfig.url,
-  description = siteConfig.defaultDescription,
-  areaServed = [
+const serviceAreas = [
     "Vancouver",
     "Burnaby",
     "Richmond",
@@ -17,16 +8,21 @@ export function LocalBusinessSchema({
     "Coquitlam",
     "North Vancouver",
     "West Vancouver",
-  ],
-}: LocalBusinessSchemaProps) {
+];
+
+export function LocalBusinessSchema() {
   const localBusinessSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#localbusiness`,
     name: siteConfig.name,
     image: `${siteConfig.url}${siteConfig.brandIcon}`,
-    url,
-    description,
-    areaServed,
+    url: siteConfig.url,
+    description: siteConfig.defaultDescription,
+    areaServed: serviceAreas.map((name) => ({
+      "@type": "City",
+      name,
+    })),
     slogan: siteConfig.slogan,
     address: {
       "@type": "PostalAddress",

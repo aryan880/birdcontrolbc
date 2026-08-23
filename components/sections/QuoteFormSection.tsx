@@ -19,7 +19,7 @@ export function QuoteFormSection({
   return (
     <div
       id="quote"
-      className="relative overflow-hidden border-t border-brand-navy/25 bg-brand-soft p-6 sm:p-8"
+      className="relative scroll-mt-24 overflow-hidden border-t border-brand-navy/25 bg-brand-soft p-6 sm:scroll-mt-28 sm:p-8"
     >
       <p className="eyebrow-pill">
         Free quote or inspection

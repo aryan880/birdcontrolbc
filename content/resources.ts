@@ -128,7 +128,7 @@ export const resources: Resource[] = [
     relatedLinks: [
       { href: "/services/pigeon-dropping-cleaning", label: "Pigeon dropping cleaning" },
       { href: "/projects/vancouver-balcony-netting-project", label: "See a Vancouver balcony project" },
-      { href: "/contact", label: "Send cleanup photos" },
+      { href: "/contact#quote", label: "Send cleanup photos" },
     ],
   },
   {

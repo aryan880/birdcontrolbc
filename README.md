@@ -55,16 +55,17 @@ The site deliberately does not reuse any previous-business contact information, 
 
 ### Quote delivery
 
-The quote form posts to `src/app/api/quote/route.ts`. It validates the request server-side, emails the lead and up to three photo attachments through Resend, and can send a short secondary SMS alert through Twilio.
+The quote form posts to `src/app/api/quote/route.ts`. It validates the request server-side, limits each client to five submissions per ten minutes, rejects oversized requests before parsing uploads, emails the lead and up to three photo attachments through Resend, and can send a short secondary SMS alert through Twilio.
 
 Copy `.env.example` to `.env.local` for local development, then configure these Vercel environment variables for Production and Preview:
 
 - `RESEND_API_KEY` (required)
 - `QUOTE_FROM_EMAIL` (required; use an address on a domain verified in Resend)
 - `QUOTE_NOTIFICATION_EMAIL` (required; currently `info@birdcontrolbc.ca`)
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` (recommended for a shared production rate limit across Vercel instances)
 - `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM_NUMBER`, and `QUOTE_NOTIFICATION_PHONE` (optional; all four are required to enable SMS alerts)
 
-Never commit `.env.local` or production credentials. The form will display a call/text fallback instead of showing a false success when email delivery is unavailable.
+Never commit `.env.local` or production credentials. Without Upstash, the endpoint uses a bounded in-memory limiter suitable for local development, but that fallback is not shared across Vercel instances. The form will display a call/text fallback instead of showing a false success when email delivery is unavailable.
 
 ## Deployment
 

@@ -6,25 +6,25 @@ type ArticleSchemaProps = {
 };
 
 export function ArticleSchema({ resource }: ArticleSchemaProps) {
+  const articleUrl = `${siteConfig.url}${resource.routeHref}`;
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${articleUrl}#article`,
     headline: resource.title,
     description: resource.seo.description,
-    mainEntityOfPage: `${siteConfig.url}${resource.routeHref}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
     image: `${siteConfig.url}${resource.image.src}`,
     author: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      url: siteConfig.url,
+      "@type": "LocalBusiness",
+      "@id": `${siteConfig.url}/#localbusiness`,
     },
     publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteConfig.url}${siteConfig.brandIcon}`,
-      },
+      "@type": "LocalBusiness",
+      "@id": `${siteConfig.url}/#localbusiness`,
     },
     citation: resource.sources.map((source) => source.href),
   };
