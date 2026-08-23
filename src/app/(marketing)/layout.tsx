@@ -19,8 +19,8 @@ export default function MarketingLayout({
         Skip to content
       </a>
       <AnalyticsProvider
-        ga4Id={process.env.NEXT_PUBLIC_GA4_ID}
-        gtmId={process.env.NEXT_PUBLIC_GTM_ID}
+        ga4Id={process.env.NEXT_PUBLIC_GA4_ID ?? "G-TG28VHP75F"}
+        gtmId={process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-P45CW49C"}
       />
       <MotionController />
       <RouteScrollManager />
