@@ -1,17 +1,21 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 import { ButtonLink } from "@/components/ui/Button";
 import { siteConfig } from "@/content/site";
 import { useTracking } from "@/lib/analytics/useTracking";
 
 export function StickyMobileCTA() {
+  const pathname = usePathname();
   const { trackCtaClick, trackPhoneClick } = useTracking();
+  const quoteHref = pathname === "/" || pathname === "/contact" ? "#quote" : "/contact#quote";
 
   return (
     <div className="sticky-cta-enter fixed inset-x-0 bottom-0 z-40 border-t border-brand-line/80 bg-white/92 p-3 shadow-[0_-12px_30px_rgba(7,23,44,0.08)] backdrop-blur-xl lg:hidden">
       <div className="mx-auto flex max-w-xl gap-3">
         <ButtonLink
-          href="/contact"
+          href={quoteHref}
           variant="dark"
           className="flex-1 px-3 text-[12px] leading-4"
           onClick={() => trackCtaClick(siteConfig.ctaLabels.primary, "sticky_mobile_cta")}
