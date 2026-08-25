@@ -5,6 +5,11 @@ type ProjectSchemaProps = {
   project: Project;
 };
 
+const knownVideoUploadDates: Record<string, string> = {
+  "/media/projects/lower-mainland-balcony-netting/netting-walkthrough.mp4": "2026-08-21T04:14:14Z",
+  "/media/projects/lower-mainland-balcony-netting/before-balcony-walkthrough.mp4": "2026-08-21T04:20:52Z",
+};
+
 export function ProjectSchema({ project }: ProjectSchemaProps) {
   const projectUrl = `${siteConfig.url}${project.routeHref}`;
   const schema = {
@@ -26,6 +31,7 @@ export function ProjectSchema({ project }: ProjectSchemaProps) {
             description: video.caption,
             contentUrl: `${siteConfig.url}${video.src}`,
             thumbnailUrl: `${siteConfig.url}${video.poster}`,
+            uploadDate: video.uploadDate ?? knownVideoUploadDates[video.src],
           })),
         }
       : {}),
