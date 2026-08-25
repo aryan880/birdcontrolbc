@@ -5,7 +5,7 @@ export type ProjectVideo = {
   poster: string;
   title: string;
   caption: string;
-  uploadDate: string;
+  uploadDate?: string;
 };
 
 export type Project = {
