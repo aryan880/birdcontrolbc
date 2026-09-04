@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Bird Control BC",
   url: "https://birdcontrolbc.ca",
   regionName: "Vancouver & the Lower Mainland",
-  defaultTitle: "Bird Control Vancouver | Bird Netting, Spikes & Cleanup",
+  defaultTitle: "Bird Control BC - Bird Netting, Spikes & Pigeon Control",
   defaultDescription:
     "Bird Control BC provides practical bird netting, bird spike installation, pigeon-dropping cleanup, and commercial bird-control solutions across Vancouver and the Lower Mainland.",
   defaultOgImage: "/media/projects/lower-mainland-balcony-netting/project-hero.webp",
